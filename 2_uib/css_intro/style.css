@@ -8,4 +8,14 @@ ul
 {
     background: cyan;
     font-size: small;
+    list-style-type: none;
+}
+/* Vererbeung kann spezifiziert werden */
+ul li
+{
+    background: purple;
+}
+#liste-2 li
+{
+    color: red;
 }
