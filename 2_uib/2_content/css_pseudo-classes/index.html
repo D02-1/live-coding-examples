@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box
+        {
+            width: 200px;
+            height: 200px;
+            background: blue;
+        }
+        .box:hover
+        {
+            background: red;
+            width: 250px;
+            cursor: pointer; /* Maus cursor verändern */
+        }
+        .box:active
+        {
+            background: green;
+        }
+
+        /* Wir ändern die farbe des links */
+        a
+        {
+            color: black;
+        }
+
+        /* Wir nutzen :hover, wenn wir ändern wollen was passiert wenn der benutzer mit der maus über das element geht */
+        a:hover
+        {
+            color: orange;
+        }
+
+        /* Wir nutzen :active, wenn wir ändern wollen was passiert, wenn der benutzer mit der maus auf das element klickt */
+        a:active
+        {
+            color: red;
+        }
+        
+        /* Wir nutzen :visited, wenn wir ändern wollen, wie dem benutzer ein schonmal besuchter link präsentiert wird */
+        a:visited
+        {
+            color: green;
+        }
+
+        /* a.test-link */
+
+        .test-link,
+        .test-link:visited
+        {
+            color: black;
+        }
+        .test-link:active,
+        .test-link:hover
+        {
+            background: red;
+            color: white !important; /* mit !important können wir regeln überschreiben */
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Pseudo Klassen</h1>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Weitere informationen</a>
+
+    <br>
+    <br>
+
+    <a href="https://www.google.de">Link zu google</a>
+    <br>
+    <a href="https://www.testwebseite.de">Link woandershin</a>
+
+    <div class="box"></div>
+
+    <br>
+    <br>
+
+    <a href="https://www.google.de" class="test-link">Google Link</a>
+    <br>
+    <a href="https://www.sdsdsdsdds.de" class="test-link">Test Link</a>
+
+</body>
+</html>

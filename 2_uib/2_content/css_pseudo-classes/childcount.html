@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Children Count</h1>
+
+    <a href="https://css-tricks.com/useful-nth-child-recipies/">Ein paar infos zum child counter</a>
+
+    <h2>Das erste listenelement stylen</h2>
+
+    <p>Mit :first-child können wir den ersten eintrag stylen</p>
+
+    <ul id="liste-1">
+        <li>Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+        <li>Eintrag 4</li>
+        <li>Eintrag 5</li>
+    </ul>
+
+    <h2>Das letzte listenelement stylen</h2>
+
+    <p>Mit :last-child können wir den letzten eintrag stylen</p>
+
+    <ul id="liste-2">
+        <li>Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+        <li>Eintrag 4</li>
+        <li>Eintrag 5</li>
+    </ul>
+
+    <h2>Spezfisches listenelement stylen</h2>
+
+    <p>Mit :nth-child() können wir einen spezifischen eintrag stylen</p>
+
+    <ul id="liste-3">
+        <li>Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+        <li>Eintrag 4</li>
+        <li>Eintrag 5</li>
+    </ul>
+
+    <h2>Gerade listenelemente stylen</h2>
+
+    <p>Mit :nth-child(even) können wir die GERADEN einträge stylen</p>
+
+    <ul id="liste-4">
+        <li>Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+        <li>Eintrag 4</li>
+        <li>Eintrag 5</li>
+    </ul>
+
+    <h2>Ungerade listenelemente stylen</h2>
+
+    <p>Mit :nth-child(odd) können wir UNGERADE einträge stylen</p>
+
+    <ul id="liste-5">
+        <li>Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+        <li>Eintrag 4</li>
+        <li>Eintrag 5</li>
+    </ul>
+
+    <h1>Erweiterte child-count befehle</h1>
+
+    <h2>Vom letzten kind aus rückwärts selektieren</h2>
+
+    <p>Mit :nth-last-child() können wir von hinten gezählt ein spezifisches element stylen</p>
+
+    <ul id="liste-6">
+        <li>Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+        <li>Eintrag 4</li>
+        <li>Eintrag 5</li>
+    </ul>
+
+    <h2>Ab einem bestimmten eintrag die elemente stylen</h2>
+
+    <p>Mit :nth-child(n+[Eintrag nummer]) können wir alle folgenden elemente stylen</p>
+
+    <ul id="liste-7">
+        <li>Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+        <li>Eintrag 4</li>
+        <li>Eintrag 5</li>
+    </ul>
+
+    <h2>Vom ersten bis zu einem bestimmten eintrag die elemente stylen</h2>
+
+    <p>Mit einem minus vor dem n können wir die reihenfolge, des counters umdrehen</p>
+    
+    <ul id="liste-8">
+        <li>Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+        <li>Eintrag 4</li>
+        <li>Eintrag 5</li>
+    </ul>
+
+    <h2>Jeden Xten eintrag stylen</h2>
+
+    <p>Wenn wir vor das n eine zahl schreiben, selektieren wir jeden von der zahl definierten Xten eintrag</p>
+
+    <ul id="liste-9">
+        <li>Eintrag 1</li>
+        <li>Eintrag 2</li>
+        <li>Eintrag 3</li>
+        <li>Eintrag 4</li>
+        <li>Eintrag 5</li>
+        <li>Eintrag 6</li>
+        <li>Eintrag 7</li>
+        <li>Eintrag 8</li>
+        <li>Eintrag 9</li>
+        <li>Eintrag 10</li>
+    </ul>
+
+    <h2>Beweis</h2>
+
+    <div id="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+</body>
+</html>

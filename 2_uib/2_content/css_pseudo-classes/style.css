@@ -1,0 +1,57 @@
+#liste-1 li:first-child
+{
+    color: red;
+}
+
+#liste-2 li:last-child
+{
+    color: red;
+}
+
+#liste-3 li:nth-child(2)
+{
+    color: red;
+}
+
+#liste-4 li:nth-child(even)
+{
+    color: red;
+}
+
+#liste-5 li:nth-child(odd)
+{
+    color: red;
+}
+
+#liste-6 li:nth-last-child(2)
+{
+    color: red;
+}
+
+#liste-7 li:nth-child(n+3)
+{
+    color:red;
+}
+
+#liste-8 li:nth-child(-n+3)
+{
+    color:red;
+}
+
+#liste-9 li:nth-child(4n+1)
+{
+    color: red;
+}
+
+#container .box
+{
+    background: tomato;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+#container .box:nth-child(2)
+{
+    background: lime;
+}
