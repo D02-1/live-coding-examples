@@ -1,0 +1,111 @@
+img
+{
+    width: 400px;
+}
+
+#style-dotted
+{
+    border-style: dotted;
+}
+#style-dashed
+{
+    border-style: dashed;
+}
+#style-solid
+{
+    border-style: solid;
+}
+#style-double
+{
+    border-style: double;
+}
+#style-groove
+{
+    border-style: groove;
+}
+#style-ridge
+{
+    border-style: ridge
+}
+#style-inset
+{
+    border-style: inset;
+}
+#style-outset
+{
+    border-style: outset;
+}
+#style-specific
+{
+    /* top, left, right, bottom */
+    border-top-style: solid;
+}
+#style-mixed
+{
+    /*            oben   rechts unten links */
+    border-style: dotted dashed solid none
+}
+#width-specific
+{
+    border-style: solid;
+    border-width: 15px;
+}
+#width-multi
+{
+    border-style: solid;
+    border-top-style: dotted;
+    border-left-width: 10px;
+    border-top-width: 20px;
+}
+#width-mixed
+{
+    border-style: solid;
+         /*       top right bottom left  */
+    border-width: 10px 25px 5px 0;
+}
+#color-single
+{
+    border-style: solid;
+    border-width: 10px;
+    border-color: tomato;
+}
+#color-specific
+{
+    border-style: solid;
+    border-width: 10px;
+    border-color: lime;
+    border-left-color: tomato;
+}
+#color-mixed
+{
+    border-style: solid;
+    border-width: 10px;
+    border-color: lime tomato cyan yellow;
+}
+
+#shorthand-default
+{
+    border: 10px solid tomato;
+}
+#shorthand-mixed
+{
+    border: 10px solid tomato;
+    border-bottom-color: lime;
+}
+#shorthand-specific
+{
+    border-top: 10px solid red;
+}
+#radius-specific
+{
+    border-top-left-radius: 100px;
+}
+#radius-mixed
+{
+    /*             t/l  t/r  b/r   b/l */
+    border-radius: 50px 10px 100px 200px;
+}
+#radius-shortcode
+{
+    border-radius: 50%;
+}
