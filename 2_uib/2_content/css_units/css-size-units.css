@@ -1,6 +1,6 @@
 html
 {
-    font-size: 16px;
+    font-size: 16px; /* dieser eintrag stellt ein, wie groß ein REM ist */
 }
 
 #pixel-unit-example-1
@@ -36,4 +36,32 @@ html
 .em-child-small
 {
     font-size: 0.75em;
+}
+
+.rem-parent
+{
+    font-size: 24px;
+}
+
+.rem-child
+{
+    font-size: 2rem; /* 2rem = 2 * schriftgröße in pixel des rootelements (<html>) */
+}
+
+.pro-parent
+{
+    font-size: 16px;
+}
+.pro-child
+{
+    font-size: 150%;
+}
+
+#vw-1
+{
+    font-size: 100vw;
+}
+#vw-2
+{
+    font-size: 75vw;
 }
