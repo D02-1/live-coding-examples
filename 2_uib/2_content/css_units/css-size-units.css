@@ -80,13 +80,13 @@ html
     width: 70vw;
     height: 600px;
 }
-#test-box-2
+#test-box-1 #test-box-2
 {
     background: lime;
     width: 90%;
     height: 200px;
 }
-#test-box-3
+#test-box-1 #test-box-3
 {
     background: cyan;
     width: 100vw;

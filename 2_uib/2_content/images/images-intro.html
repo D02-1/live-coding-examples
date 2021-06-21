@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="images.css">
+</head>
+<body>
+    
+    <h1>Images</h1>
+
+    <p>Attribute des img elements:</p>
+
+    <ul>
+        <li>src = der pfad zum bild</li>
+        <li>alt = der alternativ angezeigte text</li>
+        <li>width = die breite des bildes in pixel</li>
+        <li>height = die höhe des bildes in pixel</li>
+        <li>title = der titel des bildes</li>
+    </ul>
+
+    <p>typische bildformate: PNG, APNG, GIF, ICO, JPG, JPEG, SVG</p>
+
+    <p>Wenn ein bildlink nicht funktioniert, wird der inhalt des alt attributes angezeigt</p>
+
+    <img src="käse.jpg" alt="Hier sollten wir etwas käse sehen">
+
+    <br><br>
+
+    <img src="testbild.jpeg" alt="Unser Testbild" title="Testbild">
+
+    <p>Wir können mit width und height die größe des bildes spezifisch in pixeln verändern</p>
+    <img src="testbild.jpeg" alt="Unser Testbild" width="200" height="120">
+
+    <p>Wenn wir nur eine größeneinheit in css angeben, wird das bild nicht verzogen</p>
+
+    <img src="testbild.jpeg" alt="User Testbild" id="image-1">
+
+    <p>Wenn wir beide größen angeben, wird das bild verzogen</p>
+
+    <img src="testbild.jpeg" alt="User Testbild" id="image-2">
+
+    <p>Auch verschachtelt, können wir die größe von bildern steuern</p>
+
+    <div id="schachtel">
+        <img src="testbild.jpeg" alt="User Testbild" id="schachtel-image">
+    </div>
+
+    <p>In ein Anchor-tag gesteckt, können wir bilder auch als link benutzen</p>
+
+    <a href="https://www.google.de">
+        <img src="testbild.jpeg" alt="Unser Testbild">
+    </a>
+
+    <p>src kann auch direkte weblinks enthalten</p>
+
+    <img src="https://www.burosch.de/images/tv-testbild-butp4/tv-testbild-testzonen-sharpness.png" alt="Ein anderes Testbild">
+
+</body>
+</html>

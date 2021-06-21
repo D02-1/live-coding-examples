@@ -1,0 +1,19 @@
+#image-1
+{
+    height: 100px;
+}
+#image-2
+{
+    height: 100px;
+    width: 400px;
+}
+#schachtel
+{
+    width: 200px;
+    height: 400px;
+    background: tomato;
+}
+#schachtel #schachtel-image
+{
+    width: 100%;
+}
