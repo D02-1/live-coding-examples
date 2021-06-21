@@ -1,0 +1,39 @@
+html
+{
+    font-size: 16px;
+}
+
+#pixel-unit-example-1
+{
+    background: tomato;
+    width: 16px;
+    height: 16px;
+}
+#pixel-unit-example-2
+{
+    background: lime;
+    width: 100px;
+    height: 30px;
+}
+#pixel-groesserer-text
+{
+    /* font-size ändert die größe des texts */
+    font-size: 32px;
+}
+#pixel-noch-groesserer-text
+{
+    font-size: 64px;
+}
+
+.em-parent
+{
+    font-size: 24px;
+}
+.em-child
+{
+    font-size: 2em; /* 2em = 2 * schriftgröße in pixel des elternelements */
+}
+.em-child-small
+{
+    font-size: 0.75em;
+}
