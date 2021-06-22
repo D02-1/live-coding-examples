@@ -47,3 +47,8 @@ b
 {
     color: lime;
 }
+
+.elternElement-5 *
+{
+    background: tomato;
+}
