@@ -1,0 +1,49 @@
+#testtext
+{
+    color: tomato;
+}
+
+#testtext,
+#testtext-2
+{
+    background: lime;
+}
+
+*
+{
+    font-style: italic;
+}
+
+b
+{
+    color: plum;
+}
+
+.elternElement-1 p
+{
+    color: lime;
+}
+
+.elternElement-2 > p
+{
+    color: lime;
+}
+.elternElement-2 .kindElement-1 > p
+{
+    color: lime;
+}
+
+.elternElement-3 .kindElement-1 p + a
+{
+    color: lime;
+}
+
+.elternElement-4 .kindElement-1 p ~ a
+{
+    color: lime;
+}
+
+.elternElement-5 > .kindElement-1 > .paragraph:nth-child(2)
+{
+    color: lime;
+}

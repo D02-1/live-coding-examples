@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Selektoren</h1>
+
+    <p>in css nutzen wir selektoren um das element, das wir stylen wollen anzuwählen, ein css kommando ist wie folgt aufgebaut:</p>
+
+    <ul>
+        <li>[element] { = der selektor</li>
+        <li>[eigenschaft]: [wert]; = die option</li>
+        <li>} = das ende des kommandos</li>
+    </ul>
+
+    <p>mit komma getrennt, können wir mehrere selektionen das selbe komando geben</p>
+
+    <h2>beispiel:</h2>
+
+    <p id="testtext">Hallo Welt</p>
+
+    <p id="testtext-2">Noch einmal Hallo Welt</p>
+
+    <p>mit sternchen (der universalselektor) können wir alles selektieren</p>
+
+    <p>wir können auch direkt elemente ohne klasse oder id verändern</p>
+
+    <b>Ich bin ein fetter text</b>
+
+    <h2>Nachfahrenselektor</h2>
+
+    <p>Wenn wir keinen spezifischen selektor angeben, selektieren wir alle elemente des ausgewählten typs innerhalb unseres elternelementes</p>
+
+    <div class="elternElement-1">
+        <p>Erster text</p>
+
+        <div class="kindElement-1">
+            <p>Zweiter Text</p>
+            <p>Dritter Text</p>
+
+            <div class="kindElement-2">
+                <p>Vierter Text</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>Kindselektor</h2>
+
+    <p>Der kindselektor wählt alle direkten kindelemente vom elternelement aus.</p>
+
+    <div class="elternElement-2">
+        <p>Erster text</p>
+
+        <div class="kindElement-1">
+            <p>Zweiter Text</p>
+            <p>Dritter Text</p>
+
+            <div class="kindElement-2">
+                <p>Vierter Text</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>Nachbarselektor</h2>
+
+    <p>Der Nachbarselektor wählt das nachbarelement aus, wenn er dem auswahlelement direkt folgt</p>
+
+    <div class="elternElement-3">
+        <p>Erster text</p>
+
+        <div class="kindElement-1">
+            <p>Zweiter Text</p>
+            <p>Dritter Text</p>
+
+            <a href="#">Hallo Welt</a>
+
+            <div class="kindElement-2">
+                <p>Vierter Text</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>Geschwisterselektor</h2>
+
+    <p>Der geschwisterselektor spricht alle nachfolgenden geschwister an, die auf der gleichen ebene sind</p>
+
+    <div class="elternElement-4">
+        <p>Erster text</p>
+
+        <div class="kindElement-1">
+            <p>Zweiter Text</p>
+            <p>Dritter Text</p>
+
+            <b>Hallo Welt</b>
+
+            <br>
+
+            <a href="#">Hallo Welt</a>
+
+            <div class="kindElement-2">
+                <p>Vierter Text</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>Beispiel</h2>
+
+    <div class="elternElement-5">
+        <p>Erster text</p>
+
+        <div class="kindElement-1">
+            <p class="paragraph">Zweiter Text</p>
+            <p class="paragraph">Dritter Text</p>
+
+            <b>Hallo Welt</b>
+
+            <br>
+
+            <a href="#">Hallo Welt</a>
+
+            <div class="kindElement-2">
+                <p>Vierter Text</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
