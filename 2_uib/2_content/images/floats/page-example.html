@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .header
+        {
+            height: 50px;
+            background: black;
+            color: white;
+            text-align: center;
+        }
+        .top-menu
+        {
+            height: 50px;
+            background: #333;
+        }
+        .top-menu ul
+        {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .top-menu ul li
+        {
+            float: left;
+            padding: 16px 16px;
+        }
+        .top-menu ul li a
+        {
+            color: lightgray;
+            text-align: center;
+            padding: 16px 16px;
+            text-decoration: none;
+        }
+        .top-menu ul li a:hover
+        {
+            color: white;
+            padding: 16px 16px;
+            background: black;
+        }
+        .sidebar
+        {
+            float: left;
+            width: 25%;
+            height: 500px;
+            background: grey;
+        }
+        .page
+        {
+            height: 500px;
+            width: 100%;
+            background: tomato;
+        }
+        .footer .menu div
+        {
+            float: left;
+            color: white;
+            height: 50px;
+            width: 33.33%;
+            background: black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid">
+        <div class="header">
+            <h1>CrazyCoders</h1>
+        </div>
+        <div class="top-menu">
+            <ul>
+                <li><a href="#">Startseite</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+                <li style="float: right;"><a href="#">Login</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="sidebar">
+                <ul>
+                    <li>Startseite</li>
+                    <li>Shop</li>
+                    <li>Blog</li>
+                </ul>
+            </div>
+            <div class="page">
+                hier gäbe es inhalt...
+            </div>
+        </div>
+        <div class="footer">
+            <div class="menu">
+                <div class="menu-left">Rechtliches</div>
+                <div class="menu-center">Impressum</div>
+                <div class="menu-right">Sonstiger käse...</div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

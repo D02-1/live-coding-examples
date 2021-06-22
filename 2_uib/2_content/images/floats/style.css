@@ -1,0 +1,47 @@
+.box
+{
+    background: tomato;
+    width: 100px;
+    height: 100px;
+}
+
+.left
+{
+    background: lime;
+    float: left;
+}
+.right
+{
+    float: right;
+}
+p
+{
+    /* kleiner tipp, um den text zu blocktext zu ändern */
+    text-align: justify;
+}
+.testbild
+{
+    width: 200px;
+    float: right;
+    /* kleiner tipp, um dem bild abstand zum text zu geben */
+    border-left: 10px solid transparent;
+}
+.nebeneinander
+{
+    background: tomato;
+    border-right: 10px solid white;
+}
+.grid .column
+{
+    float: left;
+    width: 33.33%;
+    height: 100px;
+    background: grey;
+}
+.grid .column-2
+{
+    float: left;
+    width: 25%;
+    height: 100px;
+    background: tomato;
+}
