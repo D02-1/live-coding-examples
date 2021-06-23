@@ -9,7 +9,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
     <style>
+        body
+        {
+            background: lightgray;
+        }
+        .container
+        {
+            border: 10px solid transparent;
+            background: darkslategray;
+            color: white;
+            width: 550px;
+            margin: auto;
+        }
+        .fahrzeuge
+        {
+            background: lightgray;
+            color: black;
+            width: 100%;
+            height: 500px;
 
+            /* overflow gibt uns die möglichkeit, zu steuern was mit dem inhalt eines elementes passiert, das größer ist, als das elternelement */
+            /* mit overflow: hidden; wird der inhalt abschnitten und versteckt */
+            /* overflow: hidden; */
+
+            /* mit overflow: scroll; können wir scrollbars erstellen um in beide richtungen zu scrollen */
+            /* overflow: scroll; */
+
+            /* mit overflow-x und overflow-y können wir steuern wie sich der überstand horizontal oder vertikal verhält */
+            /* overflow-y: scroll; */
+            /* overflow-x: hidden; */
+            /* overflow-y: hidden; */
+            /* overflow-x: scroll; */
+            
+            /* mit overflow: auto; lassen wir den browser selber entscheiden welchen overflow er nimmt, da er sehen kann, welches element in welcher relation zueinander größer ist */
+            overflow: auto;
+        }
+        article
+        {
+            border-left: 10px solid transparent;
+            /* width: 100%; */
+            width: 150%; 
+        }
     </style>
 </head>
 <body>
