@@ -1,0 +1,44 @@
+.container
+{
+    background: darkslategray;
+    color: white;
+    /* mit max-width stel
+    len wir ein wie breit ein element maximal sein kann */
+    max-width: 720px;
+    /* mit margin: auto stellen wir ein, dass das element horizontal zentriert ist */
+    margin: 0 auto;
+}
+
+header
+{
+    background: black;
+    color: white;
+}
+
+aside
+{
+    font-size: 12px;
+}
+
+footer
+{
+    background: black;
+    color: white;
+}
+nav
+{
+    background: black;
+    color: white;
+}
+nav ul
+{
+    list-style-type: none;
+}
+nav ul li
+{
+    display: inline;
+}
+nav ul li:nth-child(2)
+{
+    background: tomato;
+}
