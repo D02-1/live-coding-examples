@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .klasse-1.unterklasse-1
+        {
+            color: red;
+        }
+        .klasse-1.unterklasse-2
+        {
+            color: orange;
+        }
+
+        .klasse-1
+        {
+            background: cyan;
+        }
+
+        .box
+        {
+            background: tomato;
+            width: 100px;
+            height: 100px;
+        }
+
+        .elternbox-1 .box-1
+        {
+            background: lime;
+        }
+        .elternbox-2 .box-1
+        {
+            background: cyan;
+        }
+        .box-2
+        {
+            background: #ffa500;
+        }
+        .elternbox-1 .box-3
+        {
+            background: #800080;
+        }
+        .elternbox-1 .box-4,
+        .elternbox-2 .box-4
+        {
+            background: #008000;
+        }
+        .elternbox-1 div
+        {
+            border: 1px solid #ff0000;
+        }
+        .elternbox-2 div[class*="box"]
+        {
+            border: 1px solid #000000;
+        }
+
+        .farbbox
+        {
+            width: 100px;
+            height: 100px;
+            /*             R G B */
+            background: #3CAFE2;
+            /* background: #3C0000; */
+            /* background: #00AF00; */
+            /* background: #0000E2; */
+            /* background: #000; */
+        }
+    </style>
+</head>
+<body>
+    <div class="farbbox"></div>
+    
+    <br>
+    
+    <div class="klasse-1 unterklasse-3">
+        Hallo Welt
+    </div>
+
+    <div class="klasse-1 unterklasse-1">Hallo Welt</div>
+    <div class="klasse-1 unterklasse-2">Hallo Welt</div>
+
+    <div class="elternbox-1">
+        <div class="box box-1"></div>
+        <div class="box box-2"></div>
+        <div class="box box-3"></div>
+        <div class="box box-4"></div>
+    </div>
+
+    <div class="elternbox-2">
+        <div class="box box-1"></div>
+        <div class="box box-2"></div>
+        <div class="box box-3"></div>
+        <div class="box box-4"></div>
+    </div>
+
+    
+</body>
+</html>
