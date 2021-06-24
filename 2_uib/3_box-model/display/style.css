@@ -1,0 +1,45 @@
+.blockbox
+{
+    background: tomato;
+}
+
+.box
+{
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    margin-top: 10px;
+}
+#display-block
+{
+    display: block;
+}
+#display-none
+{
+    display: none;
+}
+.display-inline-block
+{
+    display: inline-block;
+    /* margin-left: -4px; */
+}
+.display-inline
+{
+    display: inline;
+    padding: 10px;
+}
+
+.box-left
+{
+    background: tomato;
+    width: 25%;
+    height: 100px;
+    display: inline-block;
+}
+.box-right
+{
+    background: lime;
+    width: 75%;
+    height: 100px;
+    display: inline-block;
+}

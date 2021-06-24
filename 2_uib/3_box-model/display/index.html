@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Display</h1>
+
+    <p>Mit display: ; können wir festlegen wie sich ein element in zusammenhang mit anderen elementen verhält, der default wert ist display: block; ausser text-inline elementen wie a, b und em</p>
+
+    <h2>display: block;</h2>
+
+    <div class="blockbox">Hallo Box</div>
+
+    <div class="box" id="display-block">Hallo Box</div>
+
+    <h2>display: none;</h2>
+
+    <p>display: none; versteckt ein element komplett, es nimmt dann auch keinen platz mehr auf der html seite ein</p>
+
+    <div class="box" id="display-none">Hallo Box</div>
+
+    <h2>display: inline-block;</h2>
+
+    <p>display: inline-block; sorgt dafür, das wir block elemente nebeneinander legen können, alle styles wie width und height funktionen dann immernoch</p>
+
+    <p>es gibt in css einen bug, der dafür sorgt, das elemente die nebeneinader liegen bei display: inline-block; ein unsichtbares leerzeichen zwischen ihnen entsteht, um dieses zu beheben gibt es ein paar möglichkeiten, die zuverlässigste (standard) lösung dafür ist, in der zeile wo ein element endet, ein kommentar anzufangen und beim nächsten element das kommentar zu beenden</p>
+
+    <div class="box display-inline-block">Hallo Box</div><!--
+    --><div class="box display-inline-block">Hallo Box</div>
+    <div class="box display-inline-block">Hallo Box</div>
+
+    <h2>display: inline;</h2>
+
+    <p>display: inline; legt die elemente nebeneinander, aber styles die mit größenangaben zutun haben, werden ignoriert.</p>
+
+    <div class="box display-inline">Hallo Box</div>
+    <div class="box display-inline">Hallo Box</div>
+    <div class="box display-inline">Hallo Box</div>
+
+    <br>
+    <br>
+    
+    <div class="box-left"></div><!--
+    --><div class="box-right"></div>
+    
+</body>
+</html>
