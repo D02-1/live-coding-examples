@@ -1,0 +1,78 @@
+body
+{
+    background: grey;
+}
+.beispielbox
+{
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    padding: 10px;
+    border: 10px solid black;
+    margin: 10px;
+}
+.innen
+{
+    width: 100%;
+    height: 100%;
+    background: lime;
+}
+
+.box
+{
+    width: 100px;
+    height: 100px;
+    background: tomato;
+}
+#padding-top
+{
+    padding-top: 50px;
+}
+#padding-right
+{
+    padding-right: 50px;
+}
+#padding-bottom
+{
+    padding-bottom: 50px;
+}
+#padding-left
+{
+    padding-left: 50px;
+}
+#padding-shortcode
+{
+    /*       T    R    B L*/
+    padding: 10px 20px 0 30px;
+}
+#margin-top
+{
+    margin-top: 50px;
+}
+#margin-right
+{
+    float: right;
+    margin-right: 50px;
+}
+#margin-bottom
+{
+    /* clear sorgt dafür das ein float aufgehoben wird */
+    clear: both;
+    margin-bottom: 50px;
+}
+#margin-left
+{
+    margin-left: 50px;
+}
+#margin-shortcode
+{
+    /*      T    R   B    L */
+    margin: 10px 5px 20px 40px;
+}
+#padding-paragraph
+{
+    background: tomato;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 20px;
+}

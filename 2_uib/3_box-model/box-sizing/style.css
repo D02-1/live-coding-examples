@@ -3,6 +3,12 @@
     box-sizing: border-box;
 }
 
+/* kleiner tipp zum debugging von elementen */
+*:hover
+{
+    border: 1px solid red;
+}
+
 .box
 {
     width: 100px;
