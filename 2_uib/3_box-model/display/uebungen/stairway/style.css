@@ -1,0 +1,73 @@
+div
+{
+    box-sizing: border-box;
+}
+
+/* Margin Staircase */
+.box-margin
+{
+    display: inline-block;
+    border: 5px solid hotpink;
+}
+
+.box-margin div
+{
+    width: 80px;
+    height: 80px;
+    background: chartreuse;
+}
+
+.box-margin .box-1
+{
+    margin-left: 240px;
+}
+.box-margin .box-2
+{
+    margin-left: 160px;
+    border: 5px solid dimgray;
+}
+.box-margin .box-3
+{
+    margin-left: 80px;
+}
+.box-margin .box-4
+{
+    border: 5px solid dimgray;
+}
+
+/* Padding Staircase */
+.box-padding div
+{
+    box-sizing: border-box;
+    height: 100px;
+    background: red;
+}
+.box-padding .box-1
+{
+    width: 100px;
+}
+.box-padding .box-2
+{
+    width: 200px;
+    padding-left: 100px;
+}
+.box-padding .box-3
+{
+    width: 300px;
+    padding-left: 200px;
+}
+.box-padding .box-4
+{
+    width: 400px;
+    padding-left: 300px;
+}
+
+.box-padding .box-1 > div,
+.box-padding .box-2 > div,
+.box-padding .box-3 > div,
+.box-padding .box-4 > div
+{
+    border: 5px solid tomato;
+    background: yellow;
+}
+
