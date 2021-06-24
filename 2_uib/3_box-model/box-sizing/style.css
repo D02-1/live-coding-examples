@@ -1,0 +1,39 @@
+*
+{
+    box-sizing: border-box;
+}
+
+.box
+{
+    width: 100px;
+    height: 100px;
+}
+.innen
+{
+    background: lime;
+    height: 100%;
+    width: 100%;
+}
+#box-1
+{
+    background: tomato;
+    padding-left: 25px;
+    box-sizing: content-box;
+}
+#box-2
+{
+    background: yellow;
+    padding-left: 25px;
+}
+#box-3
+{
+    background: cyan;
+    border: 5px solid red;
+    box-sizing: border-box;
+}
+#box-4
+{
+    background: cyan;
+    border: 5px solid red;
+    box-sizing: content-box;
+}

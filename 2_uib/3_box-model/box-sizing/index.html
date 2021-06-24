@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Box-Sizing</h1>
+
+    <p>box-sizing: border-box; gibt uns die möglichkeit den border eines elements nach innen zu verschieben, so nimmt der border ausserhalb des elements keinen platz weg. Der default wert ist box-sizing: content-box;</p>
+
+    <p>
+        Im normalfall nimmt eine box ihre zugewiesene größe ein, und fügt jeglichen padding und border aussen an
+    </p>
+    <div class="box" id="box-1">
+        <div class="innen">
+            Hallo Box
+        </div>
+    </div>
+
+    <p>
+        mit box-sizing: border-box; nimmt padding und border den platz innerhalb des elementes ein, und nimmt dadurch keinen platz aussen mehr weg
+    </p>
+    <div class="box" id="box-2">
+        <div class="innen">
+            Hallo Box
+        </div>
+    </div>
+
+    <p>
+        Bei einem border, der nach innen geht, braucht man sich keine sorgen mehr zu machen, das der platz nicht mehr reicht, und elemente durch den border verschoben werden.
+    </p>
+    <div class="box" id="box-3">
+        Hallo Box
+    </div>
+
+    <p>
+        Ein Element mit border ist pro seite ihre border-breite größer, als die breite/höhe des elements, also eine box die 100x100px groß ist, wäre mit einem border von 5px 110x110px groß.
+    </p>
+    <div class="box" id="box-4">
+        Hallo Box
+    </div>
+    
+</body>
+</html>
