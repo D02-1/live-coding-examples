@@ -1,0 +1,107 @@
+.box
+{
+    margin-top: 20px;
+    display: block;
+    height: 300px;
+    width: 300px;
+    border: 5px solid black;
+}
+
+.farbBox
+{
+    background: tomato;
+}
+
+.farbBildBox
+{
+    background: tomato url(https://picsum.photos/id/1001/300/300);
+}
+
+.bildBox
+{
+    background-image: url(https://picsum.photos/id/1002/300/300);
+}
+.farbBoxNormal
+{
+    background-color: tomato;
+}
+.sizeBox
+{
+    background-image: url(https://picsum.photos/id/1003/150/300);
+    background-size: 150px 150px;
+    /* background-size: auto; */
+}
+.coverBox
+{
+    background-image: url(https://picsum.photos/id/1005/200/300);
+    background-size: cover;
+}
+.containBox
+{
+    background-image: url(https://picsum.photos/id/1006/200/300);
+    background-size: contain;
+}
+.repeatBox
+{
+    background-image: url(https://picsum.photos/id/1008/200/250);
+    background-repeat: repeat;
+}
+.repeatXBox
+{
+    background-color: tomato;
+    background-image: url(https://picsum.photos/id/1009/200/250);
+    background-repeat: repeat-x;
+}
+.repeatYBox
+{
+    background-color: tomato;
+    background-image: url(https://picsum.photos/id/1010/200/250);
+    background-repeat: repeat-y;
+}
+.noRepeatBox
+{
+    background-color: tomato;
+    background-image: url(https://picsum.photos/id/1011/200/250);
+    background-repeat: no-repeat;
+}
+.spaceBox
+{
+    background-color: tomato;
+    background-image: url(https://picsum.photos/id/1012/110/120);
+    background-repeat: space;
+}
+.roundBox
+{
+    background-color: tomato;
+    background-image: url(https://picsum.photos/id/1013/200/100);
+    background-repeat: round;
+}
+.positionBox
+{
+    background-color: tomato;
+    background-image: url(https://picsum.photos/id/1014/200/100);
+    background-repeat: no-repeat;
+    background-position: 10px 75%;
+}
+.positionCenterBox
+{
+    background-color: tomato;
+    background-image: url(https://picsum.photos/id/1015/200/100);
+    background-repeat: no-repeat;
+    /* wenn wir nur ein center schreiben, zentrieren wir das bild sowohl horizontal wie auch vertikal */
+    background-position: center;
+}
+.positionWordBox
+{
+    background-color: tomato;
+    background-image: url(https://picsum.photos/id/1016/200/100);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+.shortCodeBox
+{
+    /*          farbe    link                                       wiederholung position / größe */
+    background: tomato url(https://picsum.photos/id/1018/200/100) no-repeat left center/100px 100px;
+    /* mit background-blend-mode: ; können wir unsere photoshop skills in css nutzen */
+    background-blend-mode: soft-light;
+}

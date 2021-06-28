@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Background Image</h1>
+
+    <h2>IMG Element</h2>
+
+    <img src="https://picsum.photos/id/1000/300/300" alt="Beach">
+
+    <h2>FarbBox</h2>
+    <div class="box farbBox"></div>
+
+    <h2>FarbBox mit Bild</h2>
+    <p>wenn wir in css bei background eine url angeben, können wir damit ein bild auf unserer seite in css verlinken</p>
+
+    <div class="box farbBildBox"></div>
+
+    <h2>Box mit Bild</h2>
+
+    <p>mit background-image: url(); geben wir das bild an, das wir verlinken wollen</p>
+
+    <div class="box bildBox"></div>
+
+    <h2>Box mit Farbe</h2>
+
+    <p>Wenn wir eine farbe für den hintergrund (vor, oder ohne bild) definieren wollen, nutzen wir background-color: ;</p>
+
+    <div class="box farbBoxNormal"></div>
+
+    <h2>Größe vom Bild</h2>
+
+    <p>
+        mit background-size könenn wir die größe des bildes definieren, dies bezieht sich nicht auf die größe des geladenen bildes, sondern darauf, wie groß unser bild angezeigt wird. Wenn es kleiner ist, als die box, wird es im standard wiederholt.
+    </p>
+
+    <p>background-size: ; ist der default wert, und gibt das bild in der größe aus, in der es angelegt wurde.</p>
+
+    <div class="box sizeBox"></div>
+
+    <h2>Cover größe</h2>
+
+    <p>Mit background-size: cover; wird die komplette fläche horizontal ausgefüllt, auch wenn etwas abgeschnitten wird</p>
+
+    <div class="box coverBox"></div>
+
+    <p>Mit background-size: contain; wird die komplette fläche vertikal ausgefüllt, auch wenn etwas wiederholt wird</p>
+
+    <div class="box containBox"></div>
+
+    <h2>Background wiederholen</h2>
+
+    <p>background-repeat: repeat; ist der standardwert, mit ihm wird das bild in alle richtungen wiederholt um die box auszufüllen</p>
+
+    <div class="box repeatBox"></div>
+
+    <p>mit background-repeat: repeat-x; wiederholen wir das bild in der horizontalen</p>
+
+    <div class="box repeatXBox"></div>
+
+    <p>mit background-repeat: repeat-y; wiederholen wir das bild in der vertikalen</p>
+
+    <div class="box repeatYBox"></div>
+
+    <p>mit background-repeat: no-repeat; schalten wir die wiederholung aus.</p>
+
+    <div class="box noRepeatBox"></div>
+
+    <p>mit background-repeat: space; breitet sich das bild innerhalb seines elternelements aus, und füll den platz so aus, wie es kann ohne abgeschnitten zu werden</p>
+
+    <div class="box spaceBox"></div>
+
+    <p>background-repeat: round; sorgt dafür das das bild den platz der box so sehr auffüllt, wie es passt, ohne lücken zu hinterlassen</p>
+
+    <div class="box roundBox"></div>
+
+    <h2>Positionen</h2>
+
+    <div class="box positionBox"></div>
+
+    <div class="box positionCenterBox"></div>
+
+    <p>Bei positionsdefinierungen mit wörtern, können wir die worte mixen, zb: "left top" oder "center bottom"</p>
+
+    <div class="box positionWordBox"></div>
+
+    <h2>Shortcode</h2>
+
+    <div class="box shortCodeBox"></div>
+
+</body>
+</html>
