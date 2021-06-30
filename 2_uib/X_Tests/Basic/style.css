@@ -1,0 +1,47 @@
+header
+{
+    position: fixed;
+    background: cyan;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+main
+{
+    padding-top: 80px;
+}
+#list-item
+{
+    color: blue;
+}
+.image
+{
+    display: inline;
+}
+.heading
+{
+    color: rgb(255, 128, 0);
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+footer a:hover
+{
+    color: red;
+}
+footer a:visited
+{
+    color: green;
+}
+.box-model
+{
+    padding: 5px;
+    margin: 10%;
+}
+.tree-image
+{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}

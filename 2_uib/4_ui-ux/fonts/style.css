@@ -1,0 +1,126 @@
+/* mit @import können wir mehrere css dateien miteiander kombinieren */
+@import url('./style2.css');
+
+/* mit :root können wir optionen angeben die an der "wurzel der datei" änderungen vornehmen. Egal wo es sich befindet */
+/* :root
+{
+    font-size: 60%;
+} */
+
+#beispiel-1
+{
+    font-family: "Times New Roman", Times, serif;
+}
+#beispiel-2
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#beispiel-3
+{
+    font-family: Verdana, sans-serif;
+}
+#beispiel-4
+{
+    font-family: Helvetica, sans-serif;
+}
+#beispiel-5
+{
+    font-family: Tahoma, sans-serif;
+}
+#beispiel-6
+{
+    font-family: Georgia, serif;
+}
+#beispiel-7
+{
+    font-family: "Corier New", monospace;
+}
+#beispiel-8
+{
+    font-family: Monaco, monospace;
+}
+#beispiel-9
+{
+    font-family: "Comic Sans MS", "Comic Sans", cursive
+}
+#beispiel-10
+{
+    font-family: Papyrus, fantasy;
+}
+#beispiel-11
+{
+    font-family: 'Permanent Marker', cursive;
+}
+
+#size-1
+{
+    font-size: 20px;
+}
+#size-2
+{
+    font-size: 2em;
+}
+#size-3
+{
+    font-size: 1.5rem;
+}
+#size-4
+{
+    font-size: 200%;
+}
+#size-5
+{
+    font-size: large;
+}
+#direction-ltr
+{
+    direction: ltr;
+}
+#direction-rtl
+{
+    direction: rtl;
+}
+#orientation-1
+{
+    width: 200px;
+    writing-mode: horizontal-tb;
+}
+#orientation-2
+{
+    width: 200px;
+    writing-mode:vertical-lr;
+}
+#orientation-3
+{
+    width: 200px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+#orientation-4
+{
+    width: 200px;
+    writing-mode: vertical-rl;
+}
+#orientation-5
+{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+#align-left
+{
+    text-align: left;
+}
+#align-center
+{
+    text-align: center;
+}
+#align-right
+{
+    text-align: right;
+}
+#align-justify
+{
+    width: 70%;
+    margin: 0 auto;
+    text-align: justify;
+}
