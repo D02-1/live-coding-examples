@@ -63,9 +63,9 @@
 }
 .breadcrumb a::after
 {
-    content: " /"
+    content: " /";
 }
 .breadcrumb a:last-child::after
 {
-    content: ""
+    content: "";
 }
