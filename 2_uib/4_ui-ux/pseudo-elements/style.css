@@ -1,0 +1,71 @@
+#container
+{
+    width: 500px;
+    margin: auto;
+}
+#pseudo-before::before
+{
+    content: "!";
+    color: red;
+    font-size: 32px;
+    font-style: italic;
+}
+#pseudo-after
+{
+    text-decoration: none;
+}
+#pseudo-after::after
+{
+    content: "↗";
+    color: tomato;
+}
+
+.box
+{
+    width: 100px;
+    height: 100px;
+    background: lime;
+    display: block;
+    /* mit position: relative; setzen wir die absolute position der pseudo elemente auf die linke obere ecke DIESES elementes */
+    position: relative;
+}
+.box::before
+{
+    /* WICHTIG: für ::before und ::after MUSS content angegeben sein */
+    content: "";
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 15px 5px rgba(0,0,0,0);
+    z-index: -1;
+}
+.box::after
+{
+    content: "";
+    width: 50px;
+    height: 150px;
+    background: cyan;
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 40px;
+}
+
+.breadcrumb a
+{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+.breadcrumb a::after
+{
+    content: " /"
+}
+.breadcrumb a:last-child::after
+{
+    content: ""
+}
