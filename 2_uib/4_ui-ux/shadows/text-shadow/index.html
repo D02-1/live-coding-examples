@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Schatten</h1>
+
+    <h2>Text schatten</h2>
+
+    <p>folgende optionen haben wir um unseren schatten zu definieren:</p>
+
+    <ul>
+        <li>h-shadow = die horizontale position des schattens</li>
+        <li>v-shadow = die vertikale position des schattens</li>
+        <li>blur-radius = die menge, wie verschwommen der schatten ist</li>
+        <li>color = die farbe des schattens</li>
+    </ul>
+
+    <p id="text-shadow-1">Hallo Welt</p>
+    <br>
+    <p id="text-shadow-2">Hallo Welt</p>
+    <br>
+    <p id="text-shadow-3">Hallo Welt</p>
+    <br>
+    <p id="text-shadow-4">Embossed Hallo Welt</p>
+    <br>
+    <p id="text-shadow-5">Neon Glow Hallo Welt</p>
+    <br>
+
+    <p>Wir können einem element auch mehrere schatten geben, indem wir das kommando, mit einem komma getrennt wiederholen</p>
+
+    <p id="text-shadow-6">Multi Shadow Hallo Welt</p>
+
+    <p>Wenn wir den schatten nicht verschwimmen lassen wollen, können wir den blur-wert auch weglassen</p>
+    
+    <p id="text-shadow-7">Hallo Welt</p>
+
+    <h3>Text Stroking</h3>
+
+    <p id="text-shadow-stroke">Hallo Welt</p>
+
+    <p>Um einen schönen stroke effekt zu erzielen, nutzen wir den befehl text-stroke: ;, dieser ist allerdings zum zeitpunkt unseres kurses noch nicht standartisiert, weswegen wir den präprozessor -webkit- nutzen müssen. Das bedeutet, das dieses kommando, bisher NUR in webkit-browsern (CHROME, SAFARI) funktioniert, und auf Mozilla, EDGE und Brave wohl eher nicht.</p>
+    <p id="text-stroke">Hallo Welt</p>
+
+    <h2>Box schatten</h2>
+
+    <a href="https://html-css-js.com/css/generator/box-shadow/">Toller shadow generator</a>
+
+    <p>Mit dem befehl box-shadow: ; können wir elementen einen schatten geben, die kein text sind</p>
+
+    <div class="box" id="box-shadow-default">
+        box shadow default
+    </div>
+    <div class="box" id="box-shadow-right">
+        box shadow right
+    </div>
+    <div class="box" id="box-shadow-blur">
+        box shadow blur
+    </div>
+
+    <p>der spread wert sorgt dafür, das der schatten größer ist (in pixel) als die box</p>
+
+    <div class="box" id="box-shadow-spread">
+        box shadow spread
+    </div>
+    <div class="box" id="box-shadow-neon">
+        box shadow neon
+    </div>
+    <div class="box" id="box-shadow-multiple">
+        box shadow multiple
+    </div>
+
+    <div class="box" id="box-shadow-inset">
+        box shadow inset
+    </div>
+    <div class="box" id="box-shadow-inset-blur">
+        box shadow inset blur
+    </div>
+
+    <div class="box" id="box-shadow-mixed">
+        box shadow mixed
+    </div>
+
+    <div class="box" id="box-shadow-cool">
+        box shadow "cool"
+    </div>
+
+    <div class="box" id="box-shadow-generator">
+        box shadow generator
+    </div>
+
+</body>
+</html>
