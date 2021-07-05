@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 1. Browser normalisieren -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!-- 2. externe CSS dateien einladen -->
+    <!-- Hier ist platz für andere CSS dateien... -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- 3. Unsere eigenen CSS Dateien einladen -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Fonticons</h1>
+
+    <h2>Font-Awesome</h2>
+
+    <a href="https://fontawesome.com/v5.15/icons/">font-awesome icons</a>
+
+    <p>Um ein icon aus font-awesome einzuladen, müssen wir ein i element erstellen, mit 2 klassen, die erste davon ist die font awesome bibliothek (fab, fa, fas) und die zweite ist fa (font awesome) gefolgt mit dem namen des icons</p>
+    <p>... wir gehen normalerweise einfach auf die font-awesome webseite und kopieren uns den code.</p>
+
+    <i class="fab fa-amazon"></i>
+    <br>
+
+    <p>mit einer weiteren klasse, fa- gefolgt von einigen größeneinheiten können wir die icons direkt vergrößern oder verkleinern</p>
+
+    <ul>
+        <li><i class="fas fa-cogs fa-xs"></i></li>
+        <li><i class="fas fa-cogs fa-sm"></i></li>
+        <li><i class="fas fa-cogs fa-lg"></i></li>
+        <li><i class="fas fa-cogs fa-2x"></i></li>
+        <li><i class="fas fa-cogs fa-3x"></i></li>
+        <li><i class="fas fa-cogs fa-4x"></i></li>
+        <li><i class="fas fa-cogs fa-5x"></i></li>
+        <li><i class="fas fa-cogs fa-6x"></i></li>
+        <li><i class="fas fa-cogs fa-7x"></i></li>
+        <li><i class="fas fa-cogs fa-8x"></i></li>
+        <li><i class="fas fa-cogs fa-9x"></i></li>
+        <li><i class="fas fa-cogs fa-10x"></i></li>
+    </ul>
+
+    <p>Wir können mit klassen in css arbeiten und fonticons genauso benutzen wie schriften.</p>
+
+    <div class="box">
+        <i class="fas fa-dizzy"></i>
+        <i class="fas fa-cogs"></i>
+        <i class="fas fa-camera"></i>Hallo Welt
+    </div>
+
+    <p>Wir können symbole auch selber einfügen, wenn wir in das before einer klasse im content den unicode des symbols benutzen, und die inhalte der .fas klasse kopieren.</p>
+
+    <div class="fas eigenes-symbol">Hallo Welt</div>
+
+    <p>mit der klasse .fa-pulse und .fa-spin können wir icons auch rotieren lassen</p>
+
+    <i class="fas fa-cog fa-pulse fa-6x"></i>
+    <i class="fas fa-bus fa-pulse fa-6x"></i>
+    <i class="fas fa-dizzy fa-pulse fa-6x"></i>
+    <i class="fas fa-dizzy fa-spin fa-6x"></i>
+    
+    <p>Mit .fa-rotate können wir die icons von vorneherein ein wenig drehen</p>
+
+    <i class="fas fa-bus fa-rotate-90 fa-6x"></i>
+
+    <p>Mit .fa-flip können wir die icons umdrehen/spiegeln, vertikal und horizontal</p>
+
+    <i class="fab fa-cc-apple-pay fa-flip-horizontal fa-6x"></i>
+    <i class="fab fa-cc-apple-pay fa-flip-vertical fa-6x"></i>
+    <i class="fab fa-cc-apple-pay fa-flip-both fa-6x"></i>
+
+    <p>Wir können icons auch miteinander verwenden, wenn wir den "stack" benutzen</p>
+
+    <p>.fa-stack beinhaltet alle gestapelten icons</p>
+    <p>innerhalb des stacks können wir die elemente mit .fa-stack-größe in der größe verändern</p>
+
+    <p>Auch hier wird das dokument von oben nach unten gelesen, elemente die tiefer sitzen, sind also im vordergrund</p>
+
+    <span class="fa-stack fa-2x">
+        <i class="fas fa-camera fa-stack-1x" style="color: black"></i>
+        <i class="fas fa-ban fa-stack-2x" style="color:tomato"></i>
+    </span>
+   
+</body>
+</html>

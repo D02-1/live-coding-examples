@@ -46,7 +46,7 @@
 .box::after
 {
     content: "";
-    width: 50px;
+    width: 40px;
     height: 150px;
     background: cyan;
     display: block;

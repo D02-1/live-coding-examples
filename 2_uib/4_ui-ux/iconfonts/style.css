@@ -1,0 +1,25 @@
+.box
+{
+    margin: 0 auto;
+    width: 300px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.box .fa-dizzy
+{
+    font-size: 32px;
+    color: tomato;
+}
+.box .fa-cogs
+{
+    font-size: 64px;
+    color: plum;
+}
+.box .fa-camera
+{
+    margin-right: 10px;
+}
+.eigenes-symbol::before
+{
+    content: "\f793";
+}
