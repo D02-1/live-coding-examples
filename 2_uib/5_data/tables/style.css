@@ -1,0 +1,92 @@
+table,
+th,
+td
+{
+    border: 1px solid black;
+}
+
+#table-3
+{
+    width: 100%;
+    /* mit border-collapse löschen wir den abstand zwischen den spalten */
+    border-collapse: collapse;
+}
+#table-3 caption
+{
+    color: tomato;
+}
+#table-4 th,
+#table-4 td
+{
+    padding: 15px;
+}
+#table-5
+{
+    width: 100%;
+    border-spacing: 10px;
+}
+#table-8
+{
+    width: 100%;
+    border-collapse: collapse;
+    background: tomato;
+}
+#table-8 caption
+{
+    background: orange;
+    font-size: 32px;
+    height: 50px;
+    /* line-height: ; gibt an, wie "zentriert" ein text innerhalb seines elternelements ist, (oder der abstand zwischen den zeilen) */
+    line-height: 50px;
+}
+#table-8 caption.bottom
+{
+    /* mit caption-side: ; können wir definieren auf welcher seite der tabelle sich unsere caption befindet */
+    caption-side: bottom;
+}
+#table-8 th
+{
+    background: black;
+    color: white;
+    height: 50px;
+    text-align: left;
+    /* Mit vertical-align: ; können wir definieren wo sich unser text auf der vertikalen achse befindet (top, middle, bottom) */
+    vertical-align: bottom;
+    padding-left: 10px;
+}
+#table-8 td
+{
+    padding: 10px;
+}
+#table-8 tr:nth-child(even)
+{
+    background: darkgray;
+}
+#table-8 tr:nth-child(odd)
+{
+    background: grey;
+}
+#table-8 th,
+#table-8 td
+{
+    border: 2px solid black;
+}
+#table-8 tr:hover
+{
+    background: black;
+    color: white;
+}
+#table-8 td:hover
+{
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+#table-8 .first-name
+{
+    width: 300px;
+}
+#table-8 .first-name::before
+{
+    content: ">"
+}

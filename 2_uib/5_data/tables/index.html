@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 1. Browser normalisieren -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!-- 2. externe CSS dateien einladen -->
+    <!-- Hier ist platz für andere CSS dateien... -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- 3. Unsere eigenen CSS Dateien einladen -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <h1>Tabellen</h1>
+
+    <h2>Default Table</h2>
+
+    <p>Eine tabelle erstellen wir mit dem element "table", dort können wir dann "tr" für eine neue zeile und dort drin "td" für neue spalten nutzen</p>
+
+    <!-- table = das tabellen element -->
+    <table id="table-1">
+
+        <!-- table row = eine tabellenzeile -->
+        <tr>
+
+            <!-- table data = ein tabellenspalten element -->
+            <td>A</td>
+            <td>B</td>
+
+        </tr>
+    </table>
+
+    <br>
+
+    <h2>Tabellen Header</h2>
+
+    <p>Um einer tabelle eine kopfzeile zu geben, nutzen wir das th element, innerhalb einer eigenen zeile (tr)</p>
+
+    <table id="table-2">
+        <tr>
+            <!-- table header = kopfzeile der tabelle -->
+            <th>First Name</th><th>Last Name</th>
+        </tr>
+        <tr>
+            <!-- links       rechts -->
+            <td>Max</td><td>Mustermann</td>
+        </tr>
+        <tr>
+            <td>James</td><td>Bond</td>
+        </tr>
+    </table>
+
+    <h2>Fluide Tabellen & Tabellen Titel</h2>
+
+    <p>Wenn wir die größe von spalten ändern, ist der inhalt der "th", also des table headers zentriert</p>
+
+    <p>Mit "caption" können wir der tabelle einen titel geben, das caption element sollte immer das erste kind von "table" sein, also über "tr"</p>
+
+    <table id="table-3">
+        <!-- caption = tabellen titel -->
+        <caption>
+            <h1>Name Table</h1>
+        </caption>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        <tr>
+            <td>Max</td>
+            <td>Mustermann</td>
+        </tr>
+        <tr>
+            <td>James</td>
+            <td>Bond</td>
+        </tr>
+    </table>
+
+    <h2>Tabellen Zellen Padding</h2>
+
+    <p>Wenn wir padding haben wollen, müssen wir die Table data und table header elemente ansprechen</p>
+
+    <table id="table-4">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        <tr>
+            <td>Max</td>
+            <td>Mustermann</td>
+        </tr>
+        <tr>
+            <td>James</td>
+            <td>Bond</td>
+        </tr>
+    </table>
+
+    <h2>Tabellen zellen abstand</h2>
+
+    <p>Mit dem css befehl border-spacing: ; können wir angeben wie groß der abstand zwischen den tabellen zellen ist.</p>
+
+    <table id="table-5">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        <tr>
+            <td>Max</td>
+            <td>Mustermann</td>
+        </tr>
+        <tr>
+            <td>James</td>
+            <td>Bond</td>
+        </tr>
+    </table>
+
+    <h2>Tabellen spalten zusammenfügen (col-span)</h2>
+
+    <p>Mit dem html attribut colspan="" können wir definieren wie viele spalten eine spalte breit ist.</p>
+
+    <table id="table-6">
+        <tr>
+            <th colspan="2">First Name</th>
+            <th>Last Name</th>
+        </tr>
+        <tr>
+            <td>Max</td>
+            <td>Henry</td>
+            <td>Mustermann</td>
+        </tr>
+        <tr>
+            <td>James</td>
+            <td>Theodore</td>
+            <td>Bond</td>
+        </tr>
+    </table>
+
+    <h2>Tabellen Zeilen zusammenfügen (row-span)</h2>
+
+    <p>Um zellen in zeilen zu kombinieren, könenn wir das attribut row-span="" benutzen.</p>
+
+    <table id="table-7">
+        <tr>
+            <th rowspan="2">Name</th>
+            <td>Max</td>
+        </tr>
+        <tr>
+            <td>Henry</td>
+        </tr>
+        <tr>
+            <th>Last Name</th>
+            <td>Mustermann</td>
+        </tr>
+    </table>
+
+    <h2>Table Styling</h2>
+
+    <table id="table-8">
+        <caption>Name Table</caption>
+        <caption class="bottom">Name Table</caption>
+        <tr>
+            <th class="first-name">First Name</th>
+            <th class="last-name"><i class="fas fa-cogs"></i></th>
+        </tr>
+        <tr>
+            <td>Max</td>
+            <td>Mustermann</td>
+        </tr>
+        <tr>
+            <td>James</td>
+            <td>Bond</td>
+        </tr>
+        <tr>
+            <td>Henry</td>
+            <td>Jones Jr.</td>
+        </tr>
+        <tr>
+            <td>Hannibal</td>
+            <td>Smith</td>
+        </tr>
+    </table>
+
+</body>
+</html>
