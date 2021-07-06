@@ -90,3 +90,55 @@ td
 {
     content: ">"
 }
+#table-9
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+#table-9 tbody
+{
+    background: tomato;
+}
+#table-9 thead th[scope=col]
+{
+    background: blue;
+}
+#table-9 tbody th[scope=row]
+{
+    background: cyan;
+}
+#table-9 tfoot th
+{
+    background: yellow;
+    font-size: 24px;
+}
+#table-10
+{
+    /* <table/> */
+    /* mit calc(); kann man in css rechnen */
+    width: calc(100% - 2px);
+    /* width: 100%; */
+    display: table;
+    border-collapse: separate;
+    border-spacing: 5px;
+    border: 1px solid black;
+}
+#table-10 .table-header,
+#table-10 .table-row
+{
+    /* <tr/> */
+    display: table-row;
+}
+#table-10 .table-header > .table-data,
+#table-10 .table-row > .table-data
+{
+    /* <td/> */
+    display: table-cell;
+    padding: 10px;
+    border: 1px solid black;
+}
+#table-10 .table-header > .table-data
+{
+    font-weight: bold;
+    text-align: center;
+}

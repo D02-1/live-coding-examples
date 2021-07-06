@@ -187,5 +187,63 @@
         </tr>
     </table>
 
+    <h2>Tabellen sektionen</h2>
+
+    <p>Mit den sektionen table-header und table-body können wir inhalte in tabellen besser sortieren</p>
+
+    <p>mit scope="" geben wir an in wiefern ein table-header mit dem folgenden inhalt verknüpft ist</p>
+
+    <table id="table-9">
+        <!-- thead = table header -->
+        <thead>
+            <tr>
+                <th>Fruit</th>
+                <th scope="col">Amount</th>
+            </tr>
+        </thead>
+        <!-- tbody = table body -->
+        <tbody>
+            <tr>
+                <th scope="row">Apple</th>
+                <td>2</td>
+            </tr>
+            <tr>
+                <th scope="row">Banana</th>
+                <td>3</td>
+            </tr>
+            <tr>
+                <th scope="row">Strawberry</th>
+                <td>5</td>
+            </tr>
+        </tbody>
+        <!-- tfoot = table footer -->
+        <tfoot>
+            <tr>
+                <th>Total</th>
+                <td>10</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h2>Semantische Tabellen in css</h2>
+
+    <div id="table-10" class="table-container">
+        <header class="table-header">
+            <div class="table-data">First Name</div>
+            <div class="table-data">Last Name</div>
+            <div class="table-data">Phone Number</div>
+        </header>
+        <section class="table-row">
+            <div class="table-data">Max</div>
+            <div class="table-data">Mustermann</div>
+            <div class="table-data">12345-67890</div>
+        </section>
+        <section class="table-row">
+            <div class="table-data">James</div>
+            <div class="table-data">Bond</div>
+            <div class="table-data">XXXXX-XXXXX</div>
+        </section>
+    </div>
+
 </body>
 </html>
