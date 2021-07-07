@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Formulare</h1>
+
+    <h2>Beispielformular</h2>
+
+    <p>ein formular hat 2 essentielle attribute, action="" gibt den pfad zu unserer validierung/auswertung an und method="" die methode, mit der wir die daten bearbeiten, also GET (daten anfragen) und POST (daten senden)</p>
+
+    <p>Bei wichtigen, nicht öffentlichen daten, wird immer POST benutzt, da man dann, im browser den datenverkehr nicht nachvollziehen kann.</p>
+
+    <p>das element FORM wird benötigt um eine formular zu erstellen</p>
+
+    <p>Ein formular enthält immer zusammengehörige informationen die wir input feldern erhalten wollen</p>
+
+    <form action="#" method="GET">
+        <!-- ein label ist für die beschreibung zuständig, für den benutzer, damit er sieht, was er in das input-feld eingeben soll -->
+        <label for="username">Username</label>
+        
+        <!-- das input-feld beinhaltet mehrere attribute, darunbter unter anderem "type", das angibt welche art von inhalt das inputfeld annimmt, "name", den namen des inhaltes, der an den server geschickt wird, und "value", den wert, der an den server geschickt wird -->
+        <input type="text" name="username" id="username-input" value="test">
+        <!-- username=test -->
+
+        <br>
+
+        <!-- ein gutes beispiel für einen anderen input-type ist "password" -->
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password-input" value="MeinSuperSicheresPasswort">
+
+        <br>
+        <br>
+
+        <!-- Ein button ist ein klickbares element, das eine aktion ausführt -->
+        <input type="submit" value="Abschicken">
+    </form>
+
+    <h2>Google Beispiel</h2>
+
+    <form action="https://www.google.com/search" method="GET" target="_blank">
+        <input type="text" name="q">
+
+        <input type="submit" value="Suchen">
+    </form>
+
+    <h2>Input typen</h2>
+
+    <form action="">
+
+        <h3>Text</h3>
+
+        <label for="inputtext">Text</label>
+        <input
+            type="text"
+            name="inputtext"
+            id="text-input"
+            placeholder="Hier bitte etwas eingeben"
+            maxlength="10"
+        >
+
+        <p>Das attribut placeholder="" definiert, was angezeigt werden soll, wenn das input feld leer ist.</p>
+        <p>Das attribut maxlength gibt an, wieviele zeichen in das input-feld geschrieben werden dürfen</p>
+
+        <h3>Password</h3>
+
+        <label for="inputpassword">Password</label>
+        <input
+            type="password"
+            name="inputpassword"
+            id="password-input"
+            placeholder="Passwort eingeben"
+        >
+
+        <br>
+
+        <h3>E-Mail</h3>
+
+        <label for="inputemail">E-Mail</label>
+        <input
+            type="email"
+            name="inputemail"
+            id="email-input"
+            placeholder="Email eingeben"
+        >
+
+        <br>
+
+        <h3>Number</h3>
+
+        <label for="inputnumber">Number</label>
+        <input
+            type="number"
+            name="inputnumber"
+            id="number-input"
+            max="25"
+            min="8"
+            value="10"
+        >
+
+        <p>
+            mit min und max können wir die kleinste, und größte auswählbare zahl angeben
+        </p>
+
+        <h3>Range</h3>
+
+        <label for="inputrange">Range</label>
+        <input
+            type="range"
+            name="inputrange"
+            id="range-input"
+            value="75"
+            step="25"
+        >
+
+        <p>mit value="" können wir angeben welchen wert der range slider zwischen 0 und 100 hat</p>
+
+        <p>mit step="" können wir die schritte angeben, in der der range-slider geslided werden kann</p>
+
+        <h3>Textarea</h3>
+
+        <label for="inputtextarea">Textarea</label>
+        <textarea
+            name="inputtextarea"
+            id="textarea-input"
+            cols="30"
+            rows="10"
+            placeholder="Hier können wir seeeehr viel text eingeben"
+        >Hallo Welt</textarea>
+
+        <p>ein textarea element unterscheidet sich von input elementen, da man hier den gewünschten text direkt zwischen die element tags eingibt</p>
+
+        <p>mit cols="" geben wir an wie breit das element sein soll und mit rows="" geben wir an, wie hoch das element sein soll (in zeichen und zeilen)</p>
+
+        <h3>Buttons</h3>
+
+        <p>Ein submit button ist dafür da, ein formular abzuschicken</p>
+        <input type="submit" value="Abschicken">
+
+        <p>ein reset button ist dafür da, ein formular zurück zu setzen</p>
+        <input type="reset" value="Reset">
+
+    </form>
+
+    <h3>Nicht-Formular Buttons</h3>
+
+    <p>
+        ein button des types button ist dafür da events in javascript auszuführen
+    </p>
+
+    <input type="button" value="Click" onclick="alert('Hallo');">
+
+    <br>
+
+    <p>Der button über diesem text ist ein equivalent zu dem folgenden button, nur das man hier den text direkt zwischen die elements tags schreibt</p>
+
+    <button onclick="alert('Ich bin da!');">Click</button>
+
+    <h2>Checkbox</h2>
+
+    <p>wir können mehrere checkboxen zur auswahl stellen, der benutzer hat dann die wahl.</p>
+
+    <form action="">
+        <input
+            type="checkbox"
+            name="inputcheckbox1"
+            id="checkbox-input1"
+            value="apfel"
+        >
+        <label for="inputcheckbox1">Apfel</label>
+
+        <br>
+
+        <input
+            type="checkbox"
+            name="inputcheckbox2"
+            id="checkbox-input2"
+            value="zitrone"
+        >
+        <label for="inputcheckbox2">Zitrone</label>
+
+        <br>
+
+        <input
+            type="checkbox"
+            name="inputcheckbox3"
+            id="checkbox-input3"
+            value="erdbeere"
+        >
+        <label for="inputcheckbox3">Erdbeere</label>
+
+        <br>
+        <br>
+
+        <input type="submit" value="Abschicken">
+    </form>
+
+    <h2>Radio</h2>
+
+    <p>Bei radio buttons können wir immer nur ein element pro gruppe auswählen, eine gruppe trägt immer den selben wert bei name=""</p>
+
+    <p>mit dem attribut "checked" können wir definieren, was von anfang an ausgewählt ist, sowohl bei checkboxen, wie auch bei radio buttons</p>
+
+    <form action="">
+        <input
+            type="radio"
+            name="color"
+            id="color-1"
+            value="blue"
+        >
+        <label for="color-1">Blue Car</label>
+
+        <br>
+
+        <input
+            type="radio"
+            name="color"
+            id="color-2"
+            value="yellow"
+        >
+        <label for="color-2">Yellow Car</label>
+
+        <br>
+
+        <input
+            type="radio"
+            name="color"
+            id="color-3"
+            value="red"
+            checked
+        >
+        <label for="color-3">Red Car</label>
+
+        <br>
+
+        <input type="submit" value="Send">
+    </form>
+
+    <h2>Select</h2>
+
+    <form action="">
+        <label for="valuelist">Color List</label>
+        <select
+            name="valuelist"
+            id="valuelist"
+        >
+            <option value="yellow">Yellow Color</option>
+            <option value="blue">Blue Color</option>
+            <option value="orange">Orange Color</option>
+        </select>
+
+        <input type="submit" value="Send">
+    </form>
+
+    <h2>Datalist</h2>
+
+    <p>Um eine autocomplete-datalist zu erstellen brauchen wir ein input-element mit einem list attribut, das die selbe id hat, wie unsere datalist</p>
+    
+    <p>wir können sowohl die value, wie auch einen angezeigten wert eingeben, um 2 zeilen text in die auswahl zu bringen</p>
+
+        <label for="inputlist">List of fruits</label>
+        
+        <input list="fruitlist" id="inputlist" name="inputlist">
+        <datalist id="fruitlist">
+            <option value="banana">Banana</option>
+            <option value="orange">Orange</option>
+            <option value="Strawberry"></option>
+            <option value="Lime"></option>
+            <option value="Coconut"></option>
+            <option value="Peach"></option>
+        </datalist>
+
+        <input type="submit" value="Send">
+    </form>
+
+    <br>
+
+    <h2>Color</h2>
+
+    <form action="">
+        <label for="colorpicker">Farbe</label>
+        <input type="color" name="colorpicker" id="colorpicker">
+    </form>
+
+    <h2>Date</h2>
+
+    <form action="">
+        <label for="datepicker">Date</label>
+        <input type="date" name="datepicker" id="datepicker">
+    </form>
+
+    <h2>Formularattribute</h2>
+
+    <form action="">
+
+        <p>Ein feld mit dem attribut "readonly" kann nur gelesen, kopiert und selektiert werden, der inhalt kann aber nicht verändert werden</p>
+
+        <label for="inputreadonly">Nur Lesbar: </label>
+        <input
+            type="text"
+            id="inputreadonly"
+            value="Hallo Welt"
+            readonly
+        >
+
+        <br>
+
+        <p>Ein feld mit dem attribut "required" MUSS ausgefüllt werden, damit das formular abgeschickt werden kann</p>
+
+        <label for="inputrequired">Nötig zum absenden: </label>
+        <input 
+            type="text"
+            id="inputrequired"
+            required
+        >
+
+        <br>
+
+        <p>Ein feld mit dem attribut "disabled" kann selektiert und gelesen werden, aber es ist keine weitere interaktion möglich, es erscheint grau, weil es "deaktiviert" wurde.</p>
+        <label for="inputdisabled">Deaktiviert: </label>
+        <input
+            type="text"
+            id="inputdisabled"
+            value="HEY :)"
+            disabled
+        >
+
+        <br>
+        <input type="submit" value="Send">
+    </form>
+
+</body>
+</html>
