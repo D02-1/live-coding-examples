@@ -1,0 +1,66 @@
+input[type=text],
+input[type=password]
+{
+    margin-top: 10px;
+    margin-left:10px;
+    background: tomato;
+    border: 2px solid blue;
+    /* outline ist wie border, vergrößert das element aber nicht. */
+    outline: 2px solid black;
+}
+/* mit der pseudo klasse focus können wir definieren, wenn wir ein form element selektiert (also zb angeklickt) haben */
+input[type=password]:focus
+{
+    background: lime;
+}
+/* das pseudoattribut disabled spricht form elemente an, die das attribut "disabled" haben */
+input[type=text]:disabled
+{
+    background: grey;
+}
+input[disabled]
+{
+    color: yellow;
+}
+
+/* das pseudoattribut read-only spricht form elemente an, die nur lesbar sind, also das attribut "readonly" haben */
+input[type=text]:read-only
+{
+    background: lime;
+}
+input[readonly]
+{
+    color: white;
+}
+#normalecheckbox
+{
+    background: red;
+}
+.checkBox
+    {
+        /* background: yellow; */
+        display: block;
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 15px;
+        line-height: 30px;
+    }
+    .checkBox input
+    {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .checkBox .checkMark
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background: tomato;
+    }
+    .checkBox input:checked ~ .checkMark{
+        background: lime;
+    }

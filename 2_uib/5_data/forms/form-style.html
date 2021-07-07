@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <h2>Input felder stylen</h2>
+    
+    <form action="">
+        <input
+            type="text"
+            name="textinput"
+            id="textinput"
+        >
+
+        <br>
+
+        <input
+            type="password"
+            name="passwordinput"
+            id="passwordinput"
+        >
+
+        <br>
+
+        <input
+            type="text"
+            name="disabledinput"
+            id="disabledinput"
+            value="Hallo Welt"
+            disabled
+        >
+
+        <br>
+
+        <input
+            type="text"
+            name="readonlyinput"
+            id="readonlyinput"
+            value="Hallo Welt"
+            readonly
+        >
+    </form>
+
+    <h2>Checkboxen stylen</h2>
+
+    <form action="">
+        <input type="checkbox" name="checkbox" id="normalecheckbox">
+
+        <br>
+        <br>
+
+        <label class="checkBox" for="checkBoxCustomField">One
+            <input 
+                type="checkbox"
+                name="checkBoxCustom"
+                value="IchFunktioniere"
+                id="checkBoxCustomField"
+            >
+            <span class="checkMark"></span>
+        </label>
+
+        <input type="submit">
+    </form>
+
+</body>
+</html>
