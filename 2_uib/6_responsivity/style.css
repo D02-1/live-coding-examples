@@ -1,0 +1,61 @@
+body{
+    background: tomato;
+}
+p
+{
+    font-size: 16px;
+}
+
+#test-box-1
+{
+    border-radius: 5px;
+    display: block;
+    background: black;
+    width: 200px;
+    height: 200px;
+    margin-left: 10px;
+}
+
+/* @media leitet eine media query ein, wir können damit festlegen, ab welcher, oder von welcher bis zu welcher größe des bildschirms, wir bestimmte css attribute ändern wollen */
+@media (min-width: 800px) and (max-width: 1000px)
+{
+    body
+    {
+        background: lime;
+    }
+
+    #test-box-1
+    {
+        border-radius: 25px;
+    }
+}
+
+    /* screen stellt den media typen für die darstellung da, es gibt auch noch speech für screen-reader und print, für zeitungen, drucke usw. */
+@media screen and (min-width: 1001px)
+{
+    #test-box-1
+    {
+        border: 10px solid lime;
+    }
+}
+
+#test-box-2
+{
+    margin-top: 20px;
+    background: black;
+    width: 200px;
+    height: 200px;
+    display: block;
+}
+#test-box-2:hover
+{
+    background: yellow;
+}
+
+@media (min-width: 800px)
+{
+    #test-box-2:hover
+    {
+        background: cyan;
+    }
+}
