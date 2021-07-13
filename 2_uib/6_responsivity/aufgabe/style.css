@@ -43,6 +43,7 @@ body {
 	{
 		width: calc(50% - 7px);
 		display: inline-block;
+        margin-left: 0;
 	}
 	
 	.container .box .title
@@ -62,6 +63,7 @@ body {
 	{
 		width: calc(33% - 4px);
 		display: inline-block;
+        margin-left: 0;
 	}
 	
 	.container .box .title
@@ -81,6 +83,7 @@ body {
 	{
 		width: calc(33% - 4px);
 		display: inline-block;
+        margin-left: 0;
 	}
 	
 	.container .box .title
