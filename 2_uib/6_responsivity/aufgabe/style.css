@@ -43,7 +43,7 @@ body {
 	{
 		width: calc(50% - 7px);
 		display: inline-block;
-        margin-left: 0;
+        margin-left: 0; /* Mit margin-left: 0; und dem box-sizing: border-box; befehl können wir den margin error umgehen */
 	}
 	
 	.container .box .title
