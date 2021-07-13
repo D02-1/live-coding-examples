@@ -1,0 +1,66 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.picture
+{
+    width: 100%; /* 100% breite, damit die bilder die komplette browserbreite einnehmen */
+}
+.container
+{
+    width: 100%;
+    margin: 0 auto; /* Zentrieren des Containers */
+}
+.container .box
+{
+    width: calc(100% - 10px); /* 100% breite - 10 pixel, 5 pixel nach rechts verschoben, ergibt einen rand von 5 pixel pro seite */
+    margin-left: 5px;
+    overflow: hidden;
+}
+.container .box .title
+{
+    background: #CCCCCC;
+    width: 100%;
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+}
+
+@media (min-width: 481px)
+{
+    .container
+    {
+        width: 420px; /* eine definierte maximalbreite des containers */
+    }
+    .container .box
+    {
+        width: calc(50% - 4px);
+        display: inline-block;
+        margin-left: 0;
+    }
+    .container .box .title
+    {
+        margin-bottom: 0;
+    }
+}
+@media (min-width: 769px)
+{
+    .container
+    {
+        width: 720px;
+    }
+    .container .box
+    {
+        width: calc(33% - 4px);
+    }
+}
+@media (min-width: 1025px)
+{
+    .container
+    {
+        width: 920px;
+    }
+}
