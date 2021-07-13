@@ -1,0 +1,135 @@
+body
+{
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+}
+.container
+{
+    position: relative;
+}
+header
+{
+    display: block;
+    height: 50px;
+    background: #000000;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 32px;
+}
+.menu
+{
+    background: grey;
+    min-height: 25px;
+    padding: 5px 10px;
+    line-height: 25px;
+}
+.menu ul
+{
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.menu ul li
+{
+    display: inline;
+}
+.menu ul li a
+{
+    color: white;
+    text-decoration: none;
+    padding: 8px 10px;
+}
+.menu ul li a:hover
+{
+    background: black;
+}
+.page
+{
+    width: 100%;
+    margin: 0 auto;
+}
+.page .box
+{
+    width: calc(100% - 10px);
+    margin-left: 5px;
+    overflow: hidden;
+}
+.page .box .picture
+{
+    width: 100%;
+}
+
+@media (min-width: 481px)
+{
+    .container .box
+    {
+        width: calc(50% - 4px);
+        display: inline-block;
+        margin-left: 0;
+        margin-bottom: -4px;
+    }
+}
+@media (min-width: 769px)
+{
+    .menu
+    {
+        position: absolute;
+        left: 0;
+        width: 200px;
+        background: white;
+    }
+    .menu ul li
+    {
+        display: block;
+        text-align: left;
+    }
+    .menu ul li a
+    {
+        color: grey;
+    }
+    .menu ul li a:hover
+    {
+        color: black;
+        background: transparent;
+    }
+    .content
+    {
+        position: absolute;
+        left: 200px;
+        right: 0;
+    }
+    .page
+    {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}
+
+
+
+/* 
+
+
+.picture
+{
+    width: 100%;
+}
+.container
+{
+    width: 100%;
+    margin: 0 auto; 
+}
+.container .box
+{
+    width: calc(100% - 10px); 
+    margin-left: 5px;
+    overflow: hidden;
+}
+.sidebar
+{
+    background: purple;
+    display: none;
+}
+ */
