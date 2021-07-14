@@ -1,0 +1,38 @@
+.slider {
+	position:relative;
+	display: inline-block;
+	line-height: 0;
+}
+
+.slider > div {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 25px;
+	max-width: 100%;
+	overflow: hidden;
+	resize: horizontal;
+}
+
+.slider > div:before {
+	content: '';
+	position: absolute;
+	right: 0; 
+	bottom: 0;
+	width: 13px;
+	height: 13px;
+	padding: 2px;
+	cursor: ew-resize;
+}
+
+.slider img {
+	user-select: none;
+	max-width: 500px;
+}
+.slider img.before
+{
+	position: absolute;
+	top: -4px;
+    left: -8px;
+}
