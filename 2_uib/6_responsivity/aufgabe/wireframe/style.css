@@ -2,6 +2,7 @@ body
 {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
     font-weight: 300;
+    height: 100vh;
 }
 .container
 {
@@ -52,8 +53,8 @@ header
 }
 .page .box
 {
-    width: calc(100% - 10px);
-    margin-left: 5px;
+    width: calc(100% - 10px); /* -10px */
+    margin-left: 5px; /* 5px links + 5px rechts */
     overflow: hidden;
 }
 .page .box .picture
@@ -65,9 +66,8 @@ header
 {
     .container .box
     {
-        width: calc(50% - 4px);
+        width: calc(50% - 9px);
         display: inline-block;
-        margin-left: 0;
         margin-bottom: -4px;
     }
 }
@@ -103,33 +103,5 @@ header
     .page
     {
         max-width: 960px;
-        margin: 0 auto;
     }
 }
-
-
-
-/* 
-
-
-.picture
-{
-    width: 100%;
-}
-.container
-{
-    width: 100%;
-    margin: 0 auto; 
-}
-.container .box
-{
-    width: calc(100% - 10px); 
-    margin-left: 5px;
-    overflow: hidden;
-}
-.sidebar
-{
-    background: purple;
-    display: none;
-}
- */
