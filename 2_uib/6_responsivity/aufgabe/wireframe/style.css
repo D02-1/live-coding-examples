@@ -24,6 +24,7 @@ header
     min-height: 25px;
     padding: 5px 10px;
     line-height: 25px;
+    display: none;
 }
 .menu ul
 {
@@ -69,6 +70,10 @@ header
         width: calc(50% - 9px);
         display: inline-block;
         margin-bottom: -4px;
+    }
+    .menu
+    {
+        display: block;
     }
 }
 @media (min-width: 769px)

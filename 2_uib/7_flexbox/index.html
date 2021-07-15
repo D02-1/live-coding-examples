@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>FlexBox Intro</h1>
+
+    <p>Eine flex box ist ein eltern element, das flex eigenschaften hat, und somit kind elemente flexibel sortiert und anzeigt</p>
+
+    <h2>justify: horizontale sortierung</h2>
+
+    <h3>justify: flex-start</h3>
+
+    <p>Mit justify-content: flex-start; setzen wir die elemente an den horizontalen anfang der flex-box</p>
+
+    <div class="container justify-flex-start">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <h3>justify: center</h3>
+
+    <p>mit justify-content: center; setzen wir die elemente horizontal in die mitte der flex-box.</p>
+
+    <div class="container justify-center">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <h3>justify: flex-end</h3>
+
+    <p>mit justify-content: flex-end; setzen wir die elemente an das horizontale ende der flexbox</p>
+
+    <div class="container justify-flex-end">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <h3>justify: space-between</h3>
+
+    <p>mit justify-content: space-between; werden die kind elemente den kompletten platz einnehmen den sie haben und sich gleich verteilen, so das immer der selbe abstand zwischen den elementen ist</p>
+
+    <div class="container justify-space-between">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    
+    <h3>justify: space-around</h3>
+
+    <p>mit justify-content: space-around; werden die kind elemente den kompletten platz einnehmen den sie haben um sich gleich zu verteilen, aber haben links und rechts alle den gleichen abstand.</p>
+
+    <div class="container justify-space-around">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <h3>justify: space-evenly</h3>
+
+    <p>mit justify-content: space-evenly; verteilen wir die elemente mit dem gleichen abstand zu allen seiten.</p>
+
+    <div class="container justify-space-evenly">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <h2>align: vertikale sortierung</h2>
+
+    <h3>align: stretch</h3>
+
+    <p>der default wert von align: ; ist stretch, so nehmen die elemente den kompletten vertikalen platz ein.</p>
+
+    <div class="container align-stretch">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <h3>align: flex-start</h3>
+
+    <p>mit align: flex-start; legen wir die elemente nach ganz oben</p>
+
+    <div class="container align-flex-start">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <h3>align: flex-end</h3>
+
+    <p>mit align: flex-end; legen wir die elemente nach ganz unten</p>
+
+    <div class="container align-flex-end">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <h3>align: center</h3>
+
+    <p>mit align: center; setzen wir die kind elemente in die exakte vertikale mitte des elternelements.</p>
+
+    <div class="container align-center">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <h3>komplett zentrierte elemente</h3>
+
+    <p>Wenn wir justify-content: center; und align-items: center; gemeinsam benutzen, zentrieren wir den inhalt KOMPLETT in unserem elternelement.</p>
+
+    <div class="container justify-align-center">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <h2>Wrap</h2>
+
+    <h3>wrap: wrap</h3>
+
+    <p>mit flex-wrap: wrap; sorgen wir dafür, das wenn die kindelemente nicht mehr in das eltern element passen, das sie in die nächste zeile geschoben werden</p>
+
+    <div class="container wrap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box testbox">9</div>
+        <div class="box">0</div>
+    </div>
+
+    <h3>wrap: wrap-reverse</h3>
+
+    <p>mit flex-wrap: wrap-reverse; sorgen wir dafür das die kindelemente umgekehrt gewrapt werden.</p>
+
+    <div class="container wrap-reverse">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box testbox">9</div>
+        <div class="box">0</div>
+    </div>
+
+    <h2>direction</h2>
+
+    <h3>direction: row</h3>
+
+    <p>mit flex-direction: row; legen wir die elemente horizontal nebeneinander, also in einer zeile/reihe</p>
+
+    <div class="container direction-row">
+        <div class="box testbox"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <h3>direction: column</h3>
+
+    <p>mit flex-direction: column; legen wir die elemente vertikal an, also untereinander in eine "column", also einer spalte.</p>
+
+    <div class="container direction-column">
+        <div class="box testbox"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <h3>direction: column-reverse</h3>
+
+    <p>mit flex-direction: column-reverse; legen wir die elemente vertikal, also untereiander an, aber auf dem kopf (umgekehrt)</p>
+
+    <div class="container direction-column-reverse">
+        <div class="box testbox"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <h3>direction: row-reverse</h3>
+
+    <p>mit flex-direction: row-reverse; legen wir die elemente horizonal umgekehrt nebeneinander, fangen also rechts an.</p>
+
+    <div class="container direction-row-reverse">
+        <div class="box testbox"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <h3>shortcode für flex-flow befehle</h3>
+
+    <p>mit flex-flow: ; können wir die befehle flex-direction und flex-wrap miteinander nutzen.</p>
+
+    <div class="container flex-flow"> 
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box testbox">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+    </div>
+
+</body>
+</html>
