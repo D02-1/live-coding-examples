@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <link rel="stylesheet" href="flex-grow.css">
+
+</head>
+<body>
+    <h1>Flexbox Advanced</h1>
+
+    <h2>flex-grow</h2>
+
+    <p>mit flex-grow: ; können wir definieren, wieviel platz ein element innerhalb des elternelementes einnimmt, ohne pixelangaben oder ähnliches</p>
+
+    <p>der default wert von flex-grow: ; ist 0, das bedeutet das die elemente nur so viel platz weg nehmen, wie sie brauchen um ihren inhalt anzuzeigen.</p>
+
+    <h3>flex-grow: 0;</h3>
+
+    <div class="container">
+        <div class="box flex-grow-0">1</div>
+        <div class="box flex-grow-0">0</div>
+        <div class="box flex-grow-0">0</div>
+        <div class="box flex-grow-0">0</div>
+    </div>
+
+    <h3>flex-grow: 1;</h3>
+
+    <div class="container">
+        <div class="box flex-grow-1">1</div>
+        <div class="box flex-grow-1">1</div>
+        <div class="box flex-grow-1">1</div>
+        <div class="box flex-grow-1">1</div>
+    </div>
+
+    <h3>beispiele</h3>
+
+    <div class="container">
+        <div class="box flex-grow-0">0</div>
+        <div class="box flex-grow-0">0</div>
+        <div class="box flex-grow-1">1</div>
+        <div class="box flex-grow-0">0</div>
+    </div>
+
+    <div class="container">
+        <div class="box flex-grow-1">1</div>
+        <div class="box flex-grow-1">1</div>
+        <div class="box flex-grow-1">1</div>
+    </div>
+
+    <div class="container">
+        <div class="box flex-grow-1">1</div>
+        <div class="box flex-grow-1">1</div>
+        <div class="box flex-grow-2">2</div>
+        <div class="box flex-grow-1">1</div>
+    </div>
+
+    <div class="container">
+        <div class="box flex-grow-1">1</div>
+        <div class="box flex-grow-2">2</div>
+        <div class="box flex-grow-2">2</div>
+        <div class="box flex-grow-1">1</div>
+    </div>
+
+    <div class="container">
+        <div class="box flex-grow-1">1</div>
+        <div class="box flex-grow-1">1</div>
+        <div class="box flex-grow-1">1</div>
+        <div class="box flex-grow-1">1</div>
+        <div class="box flex-grow-1">1</div>
+        <div class="box flex-grow-1">1</div>
+    </div>
+
+    <div class="container">
+        <div class="box flex-grow-1">1</div>
+        <div class="box flex-grow-1">1</div>
+        <div class="box flex-grow-3">3</div>
+        <div class="box flex-grow-1">1</div>
+    </div>
+
+    <div class="container">
+        <div class="box flex-grow-1">1</div>
+        <div class="box flex-grow-8">8</div>
+        <div class="box flex-grow-3">3</div>
+        <div class="box flex-grow-2">2</div>
+    </div>
+
+    <div class="container">
+        <div class="box flex-grow-0 box-width">100px</div>
+        <div class="box flex-grow-1">1</div>
+        <div class="box flex-grow-3">3</div>
+        <div class="box flex-grow-0 box-width">100px</div>
+    </div>
+
+    <h3>Webseiten beispiel</h3>
+
+    <!-- header -->
+    <div class="container">
+        <div class="box flex-grow-1">Logo</div>
+        <div class="box flex-grow-8">Menu</div>
+    </div>
+    <!-- inhalt -->
+    <div class="container">
+        <div class="box flex-grow-1">NICHTS</div>
+        <div class="box flex-grow-1">Sidebar</div>
+        <div class="box flex-grow-3">Inhalt</div>
+        <div class="box flex-grow-1">NICHTS</div>
+    </div>
+    <!-- footer -->
+    <div class="container">
+        <div class="box flex-grow-2">Copyright</div>
+        <div class="box flex-grow-1">Social</div>
+    </div>
+
+
+    
+</body>
+</html>

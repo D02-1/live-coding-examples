@@ -1,0 +1,40 @@
+*
+{
+    box-sizing: border-box;
+}
+
+.container
+{
+    border: 5px solid tomato;
+    display: flex;
+    min-height: 200px;
+}
+.box
+{
+    background: lime;
+    border: 5px solid black;
+}
+.flex-grow-0
+{
+    flex-grow: 0;
+}
+.flex-grow-1
+{
+    flex-grow: 1;
+}
+.flex-grow-2
+{
+    flex-grow: 2;
+}
+.flex-grow-3
+{
+    flex-grow: 3;
+}
+.flex-grow-8
+{
+    flex-grow: 8;
+}
+.box-width
+{
+    width: 100px;
+}
