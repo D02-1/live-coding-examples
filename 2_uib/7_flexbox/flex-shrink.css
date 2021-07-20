@@ -1,0 +1,49 @@
+*
+        {
+            box-sizing: border-box;
+        }
+
+        .container
+        {
+            border: 5px solid tomato;
+            display: flex;
+            width: 600px;
+            height: 100px;
+        }
+
+        .box
+        {
+            background: lime;
+            border: 5px solid black;
+            flex-grow: 0;
+            flex-shrink: 0;
+            /* flex-basis: ; definiert die ausgangsgröße des elements */
+            flex-basis: 150px;
+            
+            /* 
+                shorthand: flex: { flex-grow } { flex-shrink } { flex-basis } 
+                Standardwert ist flex: 0 1 auto;
+                flex: 0 0 150px;
+            */
+
+        }
+
+        .shrink-box-1
+        {
+            flex-shrink: 1;
+        }
+
+        .shrink-box-2
+        {
+            flex-shrink: 2;
+        }
+
+        .shrink-box-6
+        {
+            flex-shrink: 6;
+        }
+
+        .shrink-box-10
+        {
+            flex-shrink: 10;
+        }

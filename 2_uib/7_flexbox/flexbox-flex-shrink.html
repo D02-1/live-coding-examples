@@ -5,10 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <link rel="stylesheet" href="flex-shrink.css">
 </head>
 <body>
 
-    
+    <h1>Flexbox advanced</h1>
+
+    <h2>flex-shrink</h2>
+
+    <p>mit flex-shrink: ; können wir definieren wie sich ein element verhält wenn es den container von der größe der verlassen würde.</p>
+
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box shrink-box-1"></div>
+        <div class="box shrink-box-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis cupiditate dolores enim adipisci molestias reiciendis, amet explicabo facere reprehenderit quisquam, necessitatibus eligendi ad corrupti? Excepturi odit optio exercitationem expedita nobis?</div>
+        <div class="box"></div>
+    </div>
+
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis cupiditate dolores enim adipisci molestias reiciendis, amet explicabo facere reprehenderit quisquam, necessitatibus eligendi ad corrupti? Excepturi odit optio exercitationem expedita nobis?</div>
+        <div class="box"></div>
+    </div>
+
+    <div class="container">
+        <div class="box shrink-box-1"></div>
+        <div class="box shrink-box-1"></div>
+        <div class="box shrink-box-1"></div>
+        <div class="box shrink-box-2"></div>
+        <div class="box shrink-box-1"></div>
+    </div>
+
+    <div class="container">
+        <div class="box shrink-box-1"></div>
+        <div class="box shrink-box-1"></div>
+        <div class="box shrink-box-1"></div>
+        <div class="box shrink-box-6"></div>
+        <div class="box shrink-box-1"></div>
+    </div>
+
+    <div class="container">
+        <div class="box shrink-box-1"></div>
+        <div class="box shrink-box-1"></div>
+        <div class="box shrink-box-6"></div>
+        <div class="box shrink-box-10"></div>
+        <div class="box shrink-box-1"></div>
+    </div>
     
 </body>
 </html>
