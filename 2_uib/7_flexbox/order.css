@@ -1,0 +1,45 @@
+*
+{
+    box-sizing: border-box;
+}
+
+.container
+{
+    border: 5px solid tomato;
+    display: inline-flex;
+    width: 500px;
+    height: 100px;
+}
+
+.box
+{
+    flex-grow: 1;
+    background: lime;
+    border: 5px solid black;
+    font-size: 16px;
+    text-align: center;
+}
+.box-one
+{
+    order: 0;
+}
+.box-two
+{
+    order: -1;
+}
+.box-three
+{
+    order: 3;
+}
+.box-four
+{
+    order: 2;
+}
+.box-five
+{
+    order: -2;
+}
+.box-six
+{
+    order: -1;
+}
