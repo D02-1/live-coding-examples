@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Flex Advanced</h1>
+
+    <h2>Flexbox mit @media</h2>
+
+    <p>flex-basis: ; definiert die initiale breite eines elements, und ist damit etwa das gleiche wie width: ; hat aber höhere priorität. der default wert ist "auto", was bedeutet, das element ist so breit wie sein inhalt.</p>
+
+    <h3>Beispiel 1</h3>
+
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box shrink-box">
+            <div class="box">2</div>
+        </div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+
+    <h3>Beispiel 2</h3>
+
+    <main class="site-container">
+        <header>Header</header>
+        <div id="page">
+
+           <!-- Inhalt -->
+            <section>Content</section>
+
+            <!-- Seitenleiste -->
+            <nav>Navigation</nav>
+            <aside>Sidebar</aside>
+ 
+        </div>
+        <!-- Footer -->
+        <footer>Footer</footer>
+    </main>
+    
+</body>
+</html>

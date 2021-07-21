@@ -1,0 +1,114 @@
+*
+{
+    box-sizing: border-box;
+}
+
+html,
+body
+{
+    height: 100vh;
+}
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.box
+{
+    border: 5px solid black;
+    background: tomato;
+    padding: 10px;
+    font-size: 24px;
+}
+
+/* Tablet */
+@media (min-width: 768px)
+{
+    .container
+    {
+        flex-direction: row;
+    }
+    .box
+    {
+        flex-basis: 50%;
+    }
+}
+/* Desktop */
+@media (min-width: 1200px)
+{
+    .box
+    {
+        flex-basis: 15%;
+    }
+    .shrink-box
+    {
+        flex-grow: 1;
+    }
+}
+
+/* Beispiel 2 */
+
+.site-container 
+{
+    height: 500px;
+    flex-direction: column;
+    display: flex;
+}
+.site-container header,
+.site-container footer
+{
+    background: tomato;
+    height: 50px;
+}
+
+.site-container #page
+{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+.site-container #page section
+{
+    flex-grow: 1;
+}
+.site-container #page nav
+{
+    background: lime;
+    flex-basis: 50px;
+    order: -1;
+}
+.site-container #page aside
+{
+    display: none;
+}
+header,
+footer,
+section,
+nav,
+aside
+{
+    padding: 10px;
+}
+
+@media (min-width: 768px)
+{
+    .site-container #page
+    {
+        flex-direction: row;
+    }
+    .site-container #page aside,
+    .site-container #page nav
+    {
+        background: lime;
+        flex-grow: 0; /* nicht größer werden */
+        flex-shrink: 0;/* nicht kleiner werden */
+        flex-basis: 150px;
+    }
+    .site-container #page aside
+    {
+        display: inline-block;
+    }
+}
