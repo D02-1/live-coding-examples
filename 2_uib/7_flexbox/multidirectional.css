@@ -1,0 +1,110 @@
+main
+{
+    height: 100vh;
+    font-size: 32px;
+}
+.container
+{
+    display: flex;
+}
+.horizontal
+{
+    flex-direction: column;
+}
+.vertical
+{
+    flex-direction: row;
+}
+
+.small
+{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100px;
+}
+.big
+{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 500px;
+}
+
+.small
+{
+    background: plum;
+}
+.container.vertical
+{
+    background: tomato;
+}
+.container.vertical .small
+{
+    background: lime;
+}
+
+@media (min-width: 600px)
+{
+    .horizontal
+    {
+        flex-direction: row;
+    }
+    .vertical
+    {
+        flex-direction: column;
+    }
+}
+@media (min-width: 610px)
+{
+    .horizontal
+    {
+        flex-direction: column;
+    }
+    .vertical
+    {
+       flex-direction: row;
+    }
+}
+@media (min-width: 620px)
+{
+    .horizontal
+    {
+        flex-direction: row;
+    }
+    .vertical
+    {
+        flex-direction: column;
+    }
+}
+@media (min-width: 630px)
+{
+    .horizontal
+    {
+        flex-direction: column;
+    }
+    .vertical
+    {
+       flex-direction: row;
+    }
+}
+@media (min-width: 640px)
+{
+    .horizontal
+    {
+        flex-direction: row;
+    }
+    .vertical
+    {
+        flex-direction: column;
+    }
+}
+@media (min-width: 650px)
+{
+    .horizontal
+    {
+        flex-direction: column;
+    }
+    .vertical
+    {
+       flex-direction: row;
+    }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *
+        {
+            box-sizing: border-box;
+        }
+
+        .container
+        {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        .box
+        {
+            flex-basis: 250px;
+            flex-grow: 1;
+            background:tomato;
+            border: 2px solid black;
+            padding: 10px;
+        }
+        #sidebar
+        {
+            background: lime;
+        }
+        .fill
+        {
+            display: none;
+        }
+
+        @media (min-width: 720px)
+        {
+            #header
+            {
+                flex-basis: 100%;
+            }
+            #sidebar
+            {
+                flex-basis: 200px;
+            }
+            #content
+            {
+                flex-grow: 1;
+                flex-basis: 50%;
+            }
+            .fill
+            {
+                display: inline-flex;
+                background: white;
+                flex-basis: 10vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="header">1</div>
+        <div class="box fill"></div>
+        <div class="box" id="sidebar">2</div>
+        <div class="box" id="content">3</div>
+        <div class="box fill"></div>
+    </div>
+</body>
+</html>
