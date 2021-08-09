@@ -1,0 +1,22 @@
+*
+{
+    box-sizing: border-box;
+}
+
+.container
+{
+    padding: 10px;
+    background: lime;
+    display: grid;
+    grid-gap: 10px;
+
+    /*                            "nimm dir was du brauchst, sonst wrappe" */
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-template-rows: 100px 200px 150px;
+}
+.box
+{
+    background: tomato;
+    padding: 10px;
+    border: 5px solid black;
+}

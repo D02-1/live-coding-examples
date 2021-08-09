@@ -1,0 +1,25 @@
+*
+{
+    box-sizing: border-box;
+}
+
+.container
+{
+    display: grid;
+    grid-gap: 10px;
+    /* grid-template-columns: ; */
+    grid-template-rows: 100px auto 200px;
+    height: 100vh;
+    padding: 10px;
+    background: lime;
+}
+.box
+{
+    background: tomato;
+    padding: 10px;
+    border: 5px solid black;
+}
+.content
+{
+    overflow-y: scroll;
+}
