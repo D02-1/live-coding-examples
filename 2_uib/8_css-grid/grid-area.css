@@ -31,4 +31,20 @@
     /*            row / column / row / column */
     /* grid-area: 2 / 3 / 4 / 5; */
     grid-area: 2 / 2 / span 2 / span 3;
+
+    /* 
+    grid-row-start: ;
+    grid-row-end: ;
+    = 
+    grid-row: ;
+
+    grid-column-start: ;
+    grid-column-end: ;
+    =
+    grid-column: ;
+
+    =
+
+    grid-area: ;
+    */
 }
