@@ -1,0 +1,110 @@
+img
+{
+    display: block;
+    margin: 10px auto;
+}
+
+.circle
+{
+    /*         form   radius*/
+    clip-path: circle(100px);
+}
+.circle2
+{
+    /*                         horizontal vertikal */
+    clip-path: circle(100px at 50px        50px);
+}
+
+.ellipse
+{
+    /*                 horizontal vertikal radius */
+    clip-path: ellipse(100px      50px)
+}
+
+.polygon
+{
+    clip-path: polygon(
+/*      horizontal vertikal*/
+        50%        0%,
+        0%         100%,
+        100%       100%
+    );
+}
+.polygon2
+{
+    clip-path: polygon(
+/*      horizontal vertikal*/
+        50%        0%,
+        0%         50%,
+        50%       50%,
+        100%       30%
+    );
+}
+
+.clippy
+{
+    clip-path: polygon(
+        25% 84%, 
+        12% 73%, 
+        14% 48%, 
+        22% 15%, 
+        36% 27%, 
+        54% 17%, 
+        67% 8%, 
+        78% 19%, 
+        90% 18%, 
+        91% 35%, 
+        79% 45%, 
+        56% 43%, 
+        47% 36%, 
+        27% 41%, 
+        29% 49%, 
+        48% 57%, 
+        66% 62%, 
+        87% 62%, 
+        86% 73%, 
+        80% 81%, 
+        58% 86%
+    );
+}
+.clippy2
+{
+    clip-path: polygon(
+        20% 0%, 
+        0% 20%, 
+        30% 50%, 
+        0% 80%, 
+        20% 100%, 
+        50% 70%, 
+        80% 100%, 
+        100% 80%, 
+        70% 50%, 
+        100% 20%, 
+        80% 0%, 
+        50% 30%
+    );
+}
+
+.animated
+{
+    clip-path: polygon(
+        50% 0%,
+        0% 100%,
+        100% 100%
+    );
+    opacity: 1;
+    -webkit-transition: 0.5s linear;
+    -moz-transition: 0.5s linear;
+    -ms-transition: 0.5s linear;
+    -o-transition: 0.5s linear;
+    transition: 0.5s linear;
+}
+.animated:hover
+{
+    clip-path: polygon(
+        50% 25%, 
+        0% 75%,
+        100% 75%
+    );
+    opacity: 0.4;
+}
