@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <style>
+        div
+        {
+            margin: 0 auto 25px;
+        }
+
+        .caro
+        {
+            background: tomato;
+            width: 100px;
+            height: 100px;
+            transform: rotate(-45deg);
+        }
+
+        .heart
+        {
+            margin-top: 100px;
+            background: tomato;
+            width: 100px;
+            height: 100px;
+            transform: rotate(-45deg);
+        }
+        .heart::before,
+        .heart::after
+        {
+            content: '';
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            border-radius: 50%;
+        }
+        .heart::before
+        {
+            top: -50px;
+            background: purple;
+        }
+        .heart::after
+        {
+            left: 50px;
+            background: cyan;
+        }
+
+        .diamond
+        {
+            margin-top: 50px;
+            width: 100px;
+            height: 0;
+            border-right: 50px solid transparent;
+            border-bottom: 50px solid tomato;
+            border-left: 50px solid transparent;
+        }
+        .diamond::after
+        {
+            content: '';
+            position: absolute;
+            border-top: 150px solid cyan;
+            border-right: 100px solid transparent;
+            border-left: 100px solid transparent;
+            transform: translateX(-50px) translateY(50px);
+        }
+
+        .letterA
+        {
+            width: 60px;
+            height: 90px;
+            transform: scale(0.7);
+            border-bottom: solid 14px tomato;
+            position: relative;
+        }
+        .letterA::before,
+        .letterA::after
+        {
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 120px;
+            top: 10px;
+        }
+        .letterA::before
+        {
+            background: purple;
+            transform: skew(-20deg);
+        }
+        .letterA::after
+        {
+            background: cyan;
+            transform: skew(20deg);
+            left: 45px;
+        }
+        
+        .hexagon
+        {
+            width: 100px;
+            height: 65px;
+            background: tomato;
+            position: relative;
+        }
+        .hexagon::before,
+        .hexagon::after
+        {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            background: transparent;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+        }
+        .hexagon::before
+        {
+            border-bottom: 25px solid purple;
+            top: -25px;
+        }
+        .hexagon::after
+        {
+            border-top: 25px solid cyan;
+            bottom: -25px;
+        }
+
+        .mail
+        {
+            width: 100px;
+            height: 65px;
+            background: tomato;
+            position: relative;
+            border-radius: 5px;
+        }
+        .mail::before,
+        .mail::after
+        {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            background: transparent;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-radius: 5px;
+        }
+        .mail::before
+        {
+            border-top: 30px solid white;
+        }
+        .mail::after
+        {
+            border-top: 25px solid tomato;
+        }
+
+    </style>
+</head>
+<body>
+   
+    <h1>Shapes</h1>
+
+    <h2>Pseudo elemente</h2>
+
+    <h3>Karo</h3>
+
+    <div class="caro"></div>
+
+    <h3>Herz</h3>
+
+    <div class="heart"></div>
+
+    <h3>Diamant</h3>
+
+    <div class="diamond"></div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3>Buchstabe A</h3>
+
+    <div class="letterA"></div>
+
+    <h3>Hexagon</h3>
+
+    <div class="hexagon"></div>
+
+    <h3>Briefumschlag</h3>
+
+    <div class="mail"></div>
+
+</body>
+</html>

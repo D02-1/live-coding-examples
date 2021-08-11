@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <style>
+        *
+        {
+            box-sizing: border-box;
+        }
+        div
+        {
+            margin: 0 auto 25px;
+            background: tomato;
+        }
+
+        .square
+        {
+            width: 200px;
+            height: 100px;
+        }
+
+        .circle
+        {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .parallelogram
+        {
+            width: 200px;
+            height: 100px;
+            transform: skew(-25deg);
+        }
+
+        .ring
+        {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: transparent;
+            border: 25px solid tomato;
+        }
+
+        .trapezoid
+        {
+            width: 100px;
+            height: 0;
+            background: transparent;
+            border-bottom: 75px solid tomato;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+        }
+
+        .corner
+        {
+            width: 0;
+            height: 0;
+            background: transparent;
+            border-bottom: 100px solid tomato;
+            border-right: 0 solid yellow;
+            border-top: 0 solid purple;
+            border-left: 100px solid transparent;
+        }
+
+        .quad
+        {
+            width: 0;
+            height: 0;
+            border-top: 50px solid tomato;
+            border-right: 50px solid lime;
+            border-bottom: 50px solid plum;
+            border-left: 50px solid orange;
+        }
+
+        .up,
+        .down,
+        .left,
+        .right
+        {
+            width: 0;
+            height: 0;
+            background: transparent;
+        }
+
+        .up
+        {
+            border-left: 75px solid transparent;
+            border-right: 75px solid transparent;
+            border-bottom: 100px solid tomato;;
+        }
+        .down
+        {
+            border-left: 75px solid transparent;
+            border-right: 75px solid transparent;
+            border-top: 100px solid tomato;
+        }
+        .left
+        {
+            border-top: 75px solid transparent;
+            border-bottom: 75px solid transparent;
+            border-right: 100px solid tomato;
+        }
+        .right
+        {
+            border-top: 75px solid transparent;
+            border-bottom: 75px solid transparent;
+            border-left: 100px solid tomato;
+        }
+
+        .pacman
+        {
+            width: 0;
+            height: 0;
+            background: transparent;
+            border-right: 50px solid transparent;
+            border-left: 50px solid tomato;
+            border-top: 50px solid tomato;
+            border-bottom: 50px solid tomato;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+   
+    <h1>Shapes</h1>
+
+    <h2>Leere DIVs</h2>
+
+    <h3>Rechteck</h3>
+
+    <div class="square"></div>
+
+    <h3>Kreis</h3>
+
+    <div class="circle"></div>
+
+    <h3>Parallelogram</h3>
+
+    <p>mit dem befehl transform: skew(); können wir ein element kippen, und somit ein parralelogram erstellen.</p>
+
+    <div class="parallelogram"></div>
+
+    <h3>Ring</h3>
+
+    <p>mit einem transparenten hintergrund, und einem border, können wir, mithilfe des box-sizing: ; befehles, dafür sorgen, das ein ring erstellt wird, und wir kontrollieren können wie dick er ist.</p>
+
+    <div class="ring"></div>
+
+    <h3>Trapez</h3>
+
+    <p>mithilfe von bordern können wir ein trapez erstellen, wichtig ist, das wir dafür die höhe des elementes auf 0 setzen und den beiden seitlichen bordern die selben werte geben. Mithilfe des border-bottom: ; befehls, definieren wir die höhe des trapez.</p>
+
+    <div class="trapezoid"></div>
+
+    <h3>Ecken</h3>
+
+    <p>Durch das nutzen von bordern mit der größe von 0, und einem border mit dem gleichen größenwert wie unseres sichtbaren borders, aber transparenter hintergrundfarbe, können wir eine ECKE erstellen.</p>
+
+    <div class="corner"></div>
+
+    <h3>Quadrat</h3>
+
+    <p>Durch das zusammenfügen von bordern, die jeweils halb so groß sind wie das ziel element sein sollte, erstellen wir ein 4 farbiges quadrat.</p>
+
+    <div class="quad"></div>
+
+    <h3>Richtungspfeile</h3>
+
+    <div class="up"></div>
+    <div class="down"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+
+    <h3>Pacman</h3>
+
+    <div class="pacman"></div>
+
+</body>
+</html>
