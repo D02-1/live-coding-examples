@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <style>
+        div
+        {
+            background: tomato;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 40px;
+        }
+
+        .scale-1
+        {
+            /*               horizonal und vertikal in einem */
+            transform: scale(1.5);
+        }
+        .scale-2
+        {
+            /*               horizonal, vertikal */
+            transform: scale(1.5, 0.5);
+        }
+        .scale-3
+        {
+            /* es ist möglich bei transform mehrere befehle aneinanderzureihen */
+            transform: 
+                scaleX(2) 
+                scaleY(1.2);
+            transition: 0.5s linear;
+        }
+        .scale-3:hover
+        {
+            transform: scaleY(1);
+        }
+
+        .translate-1
+        {
+            /*                   horizonal, vertikal */
+            transform: translate(50px,      20px);
+        }
+        .translate-2
+        {
+            transform: translateX(-20%);
+        }
+        .translate-3
+        {
+            transform: 
+                translateY(-10px) 
+                scaleX(2);
+        }
+
+        .rotate-1
+        {
+            transform: rotate(175deg);
+        }
+        .rotate-2
+        {
+            transform: rotate(0.75turn);
+        }
+        .rotate-3
+        {
+            transform: 
+                rotate(25deg)
+                scale(0.9)
+                translateY(-20px)
+            ;
+        }
+
+        .skew-1
+        {
+            /*              horizontal, vertikal */
+            transform: skew(30deg,      10deg);
+        }
+        .skew-2
+        {
+            transform: skewX(-20deg);
+        }
+        .skew-3
+        {
+            transform: 
+                skewX(20deg)
+                scale(1.2)
+                translateY(5px)
+                rotate(20deg);
+        }
+
+        .perspective-1
+        {
+            transform:
+                perspective(500px) 
+                rotateY(30deg)
+                rotateX(20deg)
+            ;
+        }
+    </style>
+</head>
+<body>
+   
+    <h1>Shapes</h1>
+
+    <h2>Transformierung</h2>
+
+    <p>Um elemente zu transformieren, nutzen wir den transform: ; befehl, dieser hat einige interessante funktionen.</p>
+
+    <h3>Scale</h3>
+
+    <div class="scale-1">scale 1</div>
+    <div class="scale-2">scale 2</div>
+    <div class="scale-3">scale 3</div>
+
+    <h3>Translate</h3>
+
+    <div class="translate-1">translate 1</div>
+    <div class="translate-2">translate 2</div>
+    <div class="translate-3">translate 3</div>
+
+    <h3>Rotate</h3>
+
+    <div class="rotate-1">rotate 1</div>
+    <div class="rotate-2">rotate 2</div>
+    <div class="rotate-3"><div style="padding-top: 10px; background: blue">test</div></div>
+
+
+    <h3>Skew</h3>
+
+    <div class="skew-1">skew 1</div>
+    <div class="skew-2">skew 2</div>
+    <div class="skew-3">skew 3</div>
+
+    <h3>Perspective</h3>
+
+    <div class="perspective-1">perspective 1</div>
+</body>
+</html>
