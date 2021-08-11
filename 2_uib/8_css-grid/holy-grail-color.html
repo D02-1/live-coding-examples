@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    
+    <style>
+        /*
+            #F5C900
+            #665300
+            #E6BB00
+            #F2C600
+            #CCA700
+        */
+        *
+        {
+            box-sizing: border-box;
+        }
+        
+        html,
+        body
+        {
+            height: 100vh;
+        }
+
+        .container
+        {
+            display: grid;
+            grid-template-areas: 
+                "header header  header  header  header"
+                ".      content content content ."
+                ".      content content content ."
+                "pre    pre     pre     pre     pre"
+                "footer footer  footer  footer  footer"
+            ;
+            grid-template-rows:
+                200px /* header */
+                auto  /* nav content sidebar */
+                100px /* nav content advertisement */
+                100px
+                50px; /* footer */
+            ;
+            grid-template-columns: 
+            /*  nav     content content content sidebar */
+                200px   1fr     2fr     1fr     200px
+            ;
+
+            height: 100vh;
+            width: 100vw;
+            background: #000000;
+            margin: 0 auto;
+        }
+        .box
+        {
+            background: tomato;
+            padding: 10px;
+        }
+        .box-header
+        {
+            grid-area: header;
+            background: #F5C900;
+        }
+        .box-content
+        {
+            grid-area: content;
+            background: #665300;
+        }
+        .box-footer
+        {
+            grid-area: footer;
+            background: #665300;
+        }
+        .box-footer a
+        {
+            color: #E6BB00;
+        }
+        .box-footer a:hover
+        {
+            color: #F5C900;
+        }
+        .box-pre
+        {
+            grid-area: pre;
+            background: #F5C900;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box box-header">Header</div>
+        <div class="box box-content">Content</div>
+        <div class="box box-pre"></div>
+        <div class="box box-footer"><a href="#">Footer inhalt...</a></div>
+    </div>
+   
+</body>
+</html>
