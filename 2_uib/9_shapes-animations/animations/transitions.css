@@ -1,0 +1,50 @@
+.box
+{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    margin: 0 auto 25px;
+}
+.box:hover
+{
+    width: 300px;
+}
+
+.transbox-1
+{
+    transition-property: width;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+.box-linear
+{
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+.box-ease
+{
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+.box-ease-in
+{
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
+}
+.box-ease-out
+{
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: ease-out;
+}
+.box-ease-in-out
+{
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+}
