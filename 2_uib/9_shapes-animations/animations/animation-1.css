@@ -1,0 +1,172 @@
+.box
+{
+    background: tomato;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 25px;
+}
+
+.box-beispiel-1
+{
+    animation-name: beispiel; /* name der animation */
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+}
+.box-beispiel-2
+{
+    animation-name: beispiel;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 2; /* animationsdurchläufe */
+    animation-direction: reverse; /* animationsrichtung */
+}
+.box-beispiel-3
+{
+    animation-name: beispiel;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 2; /* animationsdurchläufe */
+    animation-direction: alternate; /* animationsrichtung */
+}
+.box-beispiel-4
+{
+    animation-name: beispiel;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite; /* animationsdurchläufe */
+    animation-direction: alternate; /* animationsrichtung */
+}
+.box-beispiel-5:hover
+{
+    animation-name: beispiel;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 4; /* animationsdurchläufe */
+}
+.box-beispiel-6
+{
+    animation-name: bewegung;
+    animation-duration: 5s;
+    animation-delay: -1s;
+    animation-play-state: paused; /* animation pausiert */
+}
+.box-beispiel-6:hover
+{
+    animation-play-state: running; /* animation fortsetzen */
+}
+
+.box-beispiel-shortcode
+{
+    /*         name     zeit        funktion            richtung    anzahl-wiederholungen */
+    /*         -name    -duration   -timing-function    -direction  - iteration-count */
+    animation: beispiel 5s          ease-in             alternate   infinite;
+}
+.box-beispiel-erweitert
+{
+    animation: erweitert 10s ease-in-out alternate infinite
+}
+.box-animista
+{
+    animation: shake-horizontal 0.8s ease-in infinite both;
+}
+
+/*         name der keyframe animation */
+@keyframes beispiel {
+    /* animiere von... */
+    from
+    {
+        background: tomato;
+        width: 100px;
+    }
+    /* zu... */
+    to
+    {
+        background: lime;
+        width: 200px;
+    }
+}
+
+@keyframes bewegung {
+    from
+    {
+        width: 100px;
+    }
+    to
+    {
+        width: 400px;
+    }
+}
+
+@keyframes erweitert {
+    0%
+    {
+        background: tomato;
+        width: 100px;
+        color: white;
+        padding: 10px;
+    }
+    25%
+    {
+        background: lime;
+        width: 200px;
+        color: blue;
+        padding: 20px;
+    }
+    50%
+    {
+        background: plum;
+        width: 150px;
+        color: red;
+        padding: 30px;
+    }
+    71%
+    {
+        background: orange;
+        width: 300px;
+        color: black;
+        padding: 20px;
+    }
+    93%
+    {
+        background: #3cafe2;
+        width: 100px;
+        color: red;
+        padding: 10px;
+    }
+    100%
+    {
+        background: tomato;
+        width: 150px;
+        color: lime;
+        padding: 0;
+    }
+}
+
+@keyframes shake-horizontal {
+    0%,
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+      -webkit-transform: translateX(-10px);
+              transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
+    }
+    80% {
+      -webkit-transform: translateX(8px);
+              transform: translateX(8px);
+    }
+    90% {
+      -webkit-transform: translateX(-8px);
+              transform: translateX(-8px);
+    }
+  }

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <style>
+        
+        *
+        {
+            box-sizing: border-box;
+        }
+        
+        .ampel
+        {
+            border: 5px solid black;
+            border-radius: 50%;
+            margin: 100px auto;
+            display: block;
+            height: 200px;
+            width: 200px;
+            background: #3cafe2;
+            position: relative;
+            animation: farbwechsel 5s linear infinite alternate;
+        }
+
+        @keyframes farbwechsel {
+            0%
+            {
+                background: red;
+            }
+            32%
+            {
+                background: red;
+            }
+            33%
+            {
+                background: yellow;
+            }
+            65%
+            {
+                background: yellow;
+            }
+            66%
+            {
+                background: green;
+            }
+            100%
+            {
+                background: green;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="ampel"></div>
+
+</body>
+</html>
