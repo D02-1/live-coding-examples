@@ -19,19 +19,52 @@
 
     <ul>
         <li>transition-property: Die eigentschaft in css, die wir animieren lassen wollen</li>
-        <li>transition-duraction: Die zeit, die die animation in sekunden oder milisekunden benötigt um durchzulaufen</li>
+        <li>transition-duration: Die zeit, die die animation in sekunden oder milisekunden benötigt um durchzulaufen</li>
         <li>transition-timing-function: Die easing-funktion, der die animation folgen soll.</li>
     </ul>
 
     <div class="box transbox-1"></div>
 
-    <h3>Easing funktionen</h3>
+    <h3>Easing/timing funktionen</h3>
+
+    <p>Es gibt verschiedene easing-funktionen, die dafür sorgen das die animation sich verschieden verhält:</p>
+
+    <ul>
+        <li>linear: Die animation bewegt sich konstant von anfang zu ende</li>
+        <li>ease: Die animation startet langsam und wird zum ende hin schneller</li>
+        <li>ease-in: Ähnliche wie ease</li>
+        <li>ease-out: Umgekehrt zu ease, startet die animation schnell, und wird dann langsamer</li>
+        <li>ease-in-out; Die animation startet schnell, wird zur mitte hin langsamer und ist am ende wieder schnell</li>
+    </ul>
 
     <div class="box box-linear"></div>
     <div class="box box-ease"></div>
     <div class="box box-ease-in"></div>
     <div class="box box-ease-out"></div>
     <div class="box box-ease-in-out"></div>
-   
+
+    <h3>Delay</h3>
+
+    <p>mit dem befehl transistion-delay: ; können wir eine verzögerung erstellen, nach der die animation gestartet wird. wie auch bei transition-duration: ; können wir diese zeit in sekunden und milisekunden definieren.</p>
+
+    <div class="box box-instant"></div>
+    <div class="box box-delay-1"></div>
+    <div class="box box-delay-2"></div>
+
+    <h3>Transition mixing</h3>
+
+    <p>Wenn wir mehrere eigenschaften animieren wollen, können wir sie per komma trennen. Auch die animationslänge können wir pro eigenschaft mit dem komma getrennt aufzählen.</p>
+
+    <p>mit transition-property: all; animieren wir ALLE eigenschaften die verändert wurden</p>
+
+    <div class="box box-mix-1"></div>
+    <div class="box box-mix-2"></div>
+    <div class="box box-all"></div>
+
+    <h3>Shortcode</h3>
+
+    <div class="box box-short-1"></div>
+    <div class="box box-short-multi"></div>
+
 </body>
 </html>

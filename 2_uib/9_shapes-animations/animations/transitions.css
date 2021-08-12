@@ -48,3 +48,67 @@
     transition-duration: 2s;
     transition-timing-function: ease-in-out;
 }
+
+.box-instant
+{
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+.box-delay-1
+{
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition-delay: 2s;
+}
+.box-delay-2
+{
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition-delay: 0.5s;
+}
+
+.box-mix-1
+{
+    transition-property: width, background;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+.box-mix-2
+{
+    transition-property: width, background;
+    transition-duration: 1s,    5s;
+    transition-timing-function: linear;
+}
+.box-mix-1:hover,
+.box-mix-2:hover,
+.box-all:hover
+{
+    background: lime;
+}
+.box-all
+{
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+
+.box-short-1
+{
+    /*          property duration function */
+    transition: all      1s       linear;
+}
+.box-short-multi
+{
+    transition: 
+        width 1s linear, 
+        background 2s ease-in,
+        border-radius 0.5s linear;
+}
+.box-short-multi:hover
+{
+    background: lime;
+    border-radius: 50%;
+}
