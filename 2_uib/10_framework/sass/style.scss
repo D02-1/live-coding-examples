@@ -1,0 +1,76 @@
+$baseSize: 20px;
+$ourColor: red;
+$newMargin: 35px * 2 - $baseSize;
+$breakpointTablet: 768px;
+$breakpointDesktop: 1000px + $baseSize;
+
+$primaryColor: lime;
+$textColor: black;
+
+.container
+{
+    background: $ourColor;
+
+    /* wir können zusammenhängende elemente und klassen miteinander verschachteln */
+    .box
+    {
+        background: $ourColor;
+
+        span
+        {
+            color: $textColor;
+        }
+
+        /* wir können klassen und pseudo befehle die zu einem element gehören, mit & hinzufügen */
+        &.test-box
+        {
+            background: cyan;
+            margin: $newMargin;
+        }
+
+        // Auch hover und andere pseudo befehle funktionieren hier
+        &:hover
+        {
+            cursor: pointer;
+            font-weight: bold;
+            background: #3cafe2;
+        }
+        
+        &:nth-child(2)
+        {
+            background: orange;
+            padding: $baseSize;
+        }
+    }
+}
+
+table
+{
+    background: tomato;
+
+    thead
+    {
+        background: lime;
+    }
+
+    tbody
+    {
+        color: cyan;
+    }
+}
+
+@media (min-width: $breakpointTablet)
+{
+    body
+    {
+        background: lime;
+    }
+}
+
+@media (min-width: $breakpointDesktop)
+{
+    body
+    {
+        background: orange;
+    }
+}

@@ -1,0 +1,48 @@
+@charset "UTF-8";
+.container {
+  background: red;
+  /* wir können zusammenhängende elemente und klassen miteinander verschachteln */
+}
+.container .box {
+  background: red;
+  /* wir können klassen und pseudo befehle die zu einem element gehören, mit & hinzufügen */
+}
+.container .box span {
+  color: black;
+}
+.container .box.test-box {
+  background: cyan;
+  margin: 50px;
+}
+.container .box:hover {
+  cursor: pointer;
+  font-weight: bold;
+  background: #3cafe2;
+}
+.container .box:nth-child(2) {
+  background: orange;
+  padding: 20px;
+}
+
+table {
+  background: tomato;
+}
+table thead {
+  background: lime;
+}
+table tbody {
+  color: cyan;
+}
+
+@media (min-width: 768px) {
+  body {
+    background: lime;
+  }
+}
+@media (min-width: 1020px) {
+  body {
+    background: orange;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
