@@ -1,0 +1,108 @@
+// Wir können auch werte aus anderen dateien einfügen, und als sogenannte namespaces verwenden, dieser ist automatisch der name der datei. mit "as" können wir diesen namen ändern.
+@use 'template' as hello;
+
+// Um eine namespace variable zu nutzen, geben wir diesen an, und schreiben .$variablenname, mit dem namen aus dem namespace.
+$boxColor: hello.$primaryColor;
+$containerColor: tomato;
+$boxPadding: 10px;
+$breakpoint: 1000px;
+
+// // Mit mixins kann man ganze blöcke mit css befehlen an stellen einfügen, wo wir sie brauchen, dies geschiet mit dem @include befehl
+@mixin alternateBox
+{
+    border: 5px solid cyan;
+    padding: 20px;
+    background: purple;
+}
+
+@mixin menu($direction: left, $background: grey, $c1: 100px)
+{
+    text-align: $direction;
+    color: red;
+    background: $background;
+    padding: $c1;
+}
+
+.container
+{
+    background: $containerColor;
+    padding: 10px;
+    font-size: hello.$textSize;
+
+    .box
+    {
+        border: 5px solid black;
+        padding: $boxPadding;
+        background: $boxColor;
+        
+        &:first-child
+        {
+            // Hier wurde unser @mixin eingefügt
+            @include alternateBox;
+        }
+
+        // While Loop: so lange die ziel zahl nicht erreicht ist, iteriere durch den loop.
+        $count: 1;
+        @while $count < 4
+        {
+            // Um die zahl aus dem counter zu übernehmen müssen wir in unser nth-child() ein #{} schreiben, und dort die variable eingeben
+            &:nth-child(#{$count})
+            {
+                border: 10px solid yellow;
+            }
+
+            // Wir zählen den counter hoch, mit einer 1 würden wir immer +1 nach oben gehen, und mit einer 2 würden wir immer ein kind überspringen
+            $count: $count + 2;
+        }
+    }
+}
+
+nav
+{
+    // wir können auch attribute an ein @mixin übergeben, wenn wir ein attribut nicht ausfüllen wir der standardwert benutzt, den wir in dem @mixin angegeben haben.
+    @include menu(right, yellow);
+
+    // Wir können @media-queries auch direkt in elementblöcke schreiben, so ist die query viel übersichtlicher und präziser, und wir müssen keine ganzen selektoren-bäume neu schreiben
+    @media (min-width: 1050px)
+    {
+        font-size: 64px;
+
+        ul
+        {
+            background: blue;
+        }
+    }
+
+    ul
+    {
+        li
+        {
+            // Ein for loop ist eine andere art von loop, in der der durchlauf iteriert wird, bis die menge erreicht wurde, die durch i definiert ist. Bei einem for-loop müssen wir nicht manuell iterieren, können aber auch nicht so einfach überspringen.
+            @for $i from 1 through 3
+            {
+                // Auch "wenn abfragen" sind möglich, mit @if. mehr dazu: https://sass-lang.com/documentation/at-rules/control/if
+                @if $i == 2
+                {
+                    &:nth-child(#{$i})
+                    {
+                        border: 1px solid red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer
+{
+    // Wir können auch mehrere attribute angeben, wenn wir mehrere werte haben, können wir sie nicht überspringen, aber wir können den standardwert einfügen.
+    @include menu(center, grey, 10px);
+}
+
+@media (min-width: $breakpoint)
+{
+    footer
+    {
+        background: pink;
+    }
+}
