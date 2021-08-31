@@ -90,3 +90,43 @@ console.log("===================================================================
 
     console.log('Ab der 5. stelle:', substringExample.substring(5));
     console.log('Von der 0-4 stelle:', substringExample.substring(0, 4));
+
+    console.log("===============================================================================");
+
+// Template literals
+    /**
+     * @see https://css-tricks.com/template-literals/
+     */
+
+    // Mit template literals können wir werte berechnen oder ganze code strukturen in einen string einfügen.
+
+    const templateLiteralExample1 = `Ich hätte gerne einen tisch für ${ 3 * 2 } Personen`;
+    console.log(templateLiteralExample1);
+
+    let personName = "Mahmut";
+    console.log(`Hallo, mein name ist ${ personName.toUpperCase() }`);
+
+    // Multiline und zusammenfügungs beispiele:
+    const testString1 = "Dies\nsind\nmehrere\nzeilen";
+    console.log(testString1);
+    const testString2 = "Dies \
+    sind \
+    mehrere \
+    zeilen \
+    die \
+    zu \
+    einer \
+    werden";
+    console.log(testString2);
+    const testString3 = "Dies " +
+    "ist " +
+    "etwas " +
+    "text ";
+    console.log(testString3);
+    const testString4 = `Dies
+ist
+etwas
+${ "Käse" }
+${ 8 - 2 }
+text`;
+    console.log(testString4);
