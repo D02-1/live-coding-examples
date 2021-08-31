@@ -33,7 +33,7 @@ const bla = 5;
 
 /**
  * @function testFunktion
- * @see http://google.de
+ * @see https://jsdoc.app/index.html
  * @description Dies ist eine testfunktion
  * @param { string } testWert1 ist ein testparameter
  * @returns { string }
