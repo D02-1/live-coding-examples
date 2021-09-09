@@ -63,13 +63,13 @@ switch (today)
         break;
     case 'Wednesday':
         console.log(3);
-        console.log('Today is Wednesday');
+        console.log('Today is Wednesday'); 
         break;
     case 'Thursday':
         console.log(4);
         console.log('Today is Thursday');
         break;
-    case 'Friday':
+    case 'Friday': // 'Friday' === 'Friday';
         console.log(5);
         console.log('Today is Friday');
         break;
@@ -84,6 +84,18 @@ switch (today)
         console.log(8);
         console.log('Invalid day of week');
 }
+
+/**
+ * today = Friday
+ * 
+ * | frage                  | antwort    | ergebnis | aktion                     |
+ * |------------------------|------------|----------|----------------------------|
+ * | ist today welcher tag? | Monday     | nein     | zum nächsten case springen |
+ * | ist today welcher tag? | Tuesday    | nein     | zum nächsten case springen |
+ * | ist today welcher tag? | Wednesday  | nein     | zum nächsten case springen |
+ * | ist today welcher tag? | Thursday   | nein     | zum nächsten case springen |
+ * | ist today welcher tag? | Friday     | ja       | ausführen und abbruch      |
+ */
 
 console.log('Prüfung zuende');
 
@@ -103,7 +115,7 @@ switch (dayOfWeek.toLowerCase())
     case 'wednesday':
     case 'thursday':
     case 'friday':
-    default:
+    // default:
         console.log('Wir müssen leider arbeiten...', dayOfWeek);
         break;
     case 'saturday':
@@ -156,4 +168,50 @@ else if(currentDay > 5 && currentDay <= 7)
 else
 {
     console.log('...');
+}
+
+const speed = 33;
+
+for (let i = 0; i < speed; i++)
+{
+    // switch (true)
+    // {
+    //     case i:
+            
+    //         if(speed === 33)
+    //         {
+    //             console.log('33 km/h');
+    //         }
+    //         break;
+    // }
+
+    speed === 33 && console.log(`${ speed } km/h`);
+    // speed === 33 ? console.log(`${ speed } km/h`) : null;
+
+    if(speed === 33)
+    {
+        console.log(`${ speed } km/h`);
+    }
+}
+
+switch(speed)
+{
+    case 30:
+    case 31:
+    case 32:
+    case 33:
+    case 34:
+
+        if(speed === 33)
+        {
+            console.log('33 km/h');
+        }
+
+        break;
+    case speed > 30 && speed <= 80:
+        console.log('ziemlich true');
+        break;
+    case speed > 80 && speed <= 120:
+        console.log('brumm brumm');
+        break;
 }

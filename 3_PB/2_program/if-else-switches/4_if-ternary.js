@@ -45,22 +45,38 @@ console.log(ternaryCheck2);
 console.log('='.repeat(50));
 
 
-const testValue = 1;
 
+const testValue = 1;
+let isTrue; 
 // ist es wahr das testvalue 1 ist ? ja : nein;
 
 /*
 if(testValue === 1)
 {
-    console.log(true);
+    isTrue = true;
+    console.log(isTrue);
 }
 else
 {
-    console.log(false);
+    isTrue = false;
+    console.log(isTrue);
 }
 */
 
-const isTrue = testValue === 1     ? true : false;
+// ist es wahr, das testvalue 1 ist? ja   : nein;
+      isTrue = testValue === 1     ? true : false;
 // const isTrue = testValue === 1;
 
 console.log(isTrue);
+
+// Beispiel aus wiederholung mit kürzerem ternary
+const speed = 33;
+
+speed === 33 && console.log(`${ speed } km/h`);
+// speed === 33 ? console.log(`${ speed } km/h`) : null;
+
+// als if ohne else:
+if(speed === 33)
+{
+    console.log(`${ speed } km/h`);
+}

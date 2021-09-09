@@ -92,7 +92,7 @@ for (let i = 0; i < rows; i++)
 
 // Ein unendlicher loop wird so lange laufen, bis der speicher voll ist und sollte deswegen niemals ausgeführt werden!!!
 
-// for(let i = 1; i > 0; i++)
-// {
-//     console.log('Bis zur unendlichkeit und noch viel weiter!');
-// }
+for(let i = 1; i > 0; i++)
+{
+    console.log('Bis zur unendlichkeit und noch viel weiter!');
+}
