@@ -3,7 +3,7 @@
 const user =
 {
     firstName: "Max",
-    lastName: "Mustermann"
+    lastName: "Mustermann",
 }
 
 console.log(user);
