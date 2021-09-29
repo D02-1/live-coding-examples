@@ -220,7 +220,7 @@ console.log("=".repeat(50));
 
 /**
  * @method Object.defineProperty();
- * @see https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
+ * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
  * @description Die Methode Object.defineProperty(); erstellt oder verändert eine property in einem Objekt.
  * @param { object } obj - Das Objekt das wir verändern wollen
  * @param { string } name - Name der property
