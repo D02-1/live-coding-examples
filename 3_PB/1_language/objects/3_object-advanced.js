@@ -23,3 +23,5 @@ const gesuchterEintrag = "isAdmin";
 
 console.log(testObject[ gesuchterEintrag ]);
 console.log(testObject.isAdmin);
+
+
