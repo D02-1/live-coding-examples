@@ -256,3 +256,81 @@ console.log("=".repeat(50));
  */
 const someCheck = numbersList.some(number => number > 0);
 console.log("Ein oder mehrere werte in numbersList[]; sind größer als 0:", someCheck);
+
+console.log("=".repeat(50));
+
+/**
+ * @method .sort();
+ * @description
+ * Die methode .sort(); sortiert elemente eines arrays aufsteigend, was darauf basiert, die elemente in strings zu verwandeln und dann in einer logischen sequenz zu vergleichen. Es nutzt dabei die UTF-16 code werte.
+ * Es gibt ein neues, sortieres array zurück.
+ * @example
+ * [ array ].sort();
+ * @example
+ * [ array ].sort((a, b) => {});
+ */
+const monthsArray = [ 'March', 'Jan', 'Feb', 'Dec' ];
+monthsArray.sort();
+console.log(monthsArray);
+
+const numbersArray = [ 1, 30, 4, 21, 10000 ];
+numbersArray.sort();
+console.log(numbersArray);
+
+const newNumberArray = [ 4, 2, 5, 1, 3 ];
+/*
+    newNumberArray.sort(function(a, b)
+    {
+        return a - b;
+    });
+*/
+
+newNumberArray.sort((a, b) => b - a);
+console.log(newNumberArray);
+
+const sortableObjectArray =
+[
+    {
+        name: 'Max',
+        age: 25
+    },
+    {
+        name: 'James',
+        age: 49
+    },
+    {
+        name: 'Jonas',
+        age: 21
+    },
+    {
+        name: 'Henry',
+        age: 56
+    },
+    {
+        name: 'Bob',
+        age: 16
+    }
+];
+
+const newSortableArray = sortableObjectArray.sort((a, b) => a.age - b.age);
+console.log(sortableObjectArray);
+console.log(newSortableArray);
+
+newSortableArray.sort((a, b) =>
+{
+    const nameA = a.name.toUpperCase();
+    const nameB = b.name.toUpperCase();
+
+    if(nameA < nameB)
+    {
+        return 1;
+    }
+
+    if(nameA > nameB)
+    {
+        return -1;
+    }
+
+    return 0;
+});
+console.log(newSortableArray);
