@@ -12,7 +12,7 @@ class Animal
         return this.name;
     }
 
-    eat(meal = "Cheesecake")
+    eat(meal = 'Cheesecake')
     {
         console.log(`${ this.name } is a ${ this.species } and is eating a ${ meal }`);
     }
@@ -24,12 +24,12 @@ class Animal
 }
 
 
-const testAnimal = new Animal("Happy", "Fish");
+const testAnimal = new Animal('Happy', 'Fish');
 testAnimal.sleep();
-testAnimal.eat("Pizza");
+testAnimal.eat('Pizza');
 console.log(testAnimal);
 
-console.log("=".repeat(50));
+console.log('='.repeat(50));
 
 // Die klasse Bird erweitert sich durch die klasse Animal
 class Bird extends Animal
@@ -55,13 +55,13 @@ class Bird extends Animal
     }
 }
 
-const rudy = new Bird("Rudy", "Parrot", true);
+const rudy = new Bird('Rudy', 'Parrot', true);
 console.log(rudy);
 rudy.fly();
-rudy.eat("Donut");
+rudy.eat('Donut');
 rudy.sleep();
 
-console.log("=".repeat(50));
+console.log('='.repeat(50));
 
 class Dog extends Animal
 {
@@ -76,25 +76,25 @@ class Dog extends Animal
     }
 }
 
-const chico = new Dog("Chico", "Dalmatiner");
+const chico = new Dog('Chico', 'Dalmatiner');
 console.log(chico);
 chico.bark();
 
-console.log("=".repeat(50));
+console.log('='.repeat(50));
 
-const ingrid = new Bird("Ingrid", "Ostrich", false);
+const ingrid = new Bird('Ingrid', 'Ostrich', false);
 console.log(ingrid);
 ingrid.fly();
-ingrid.eat("Broccoli");
+ingrid.eat('Broccoli');
 
 const party = (animal1, animal2) =>
 {
-    console.log(animal1.animalName + " and " + animal2.animalName + " are having a party");
+    console.log(animal1.animalName + ' and ' + animal2.animalName + ' are having a party');
 }
 
 party(chico, ingrid);
 
-console.log("=".repeat(50));
+console.log('='.repeat(50));
 
 class Vehicle
 {
@@ -121,7 +121,7 @@ class Vehicle
     }
 }
 
-const testVehicle = new Vehicle("Bicycle", "Red");
+const testVehicle = new Vehicle('Bicycle', 'Red');
 console.log(testVehicle);
 console.log(testVehicle.drive());
 console.log(testVehicle.brake());
@@ -149,7 +149,7 @@ class Car extends Vehicle
     }
 }
 
-const mustang = new Car("Mustang", "TomatoRed", 280, 2, false);
+const mustang = new Car('Mustang', 'TomatoRed', 280, 2, false);
 console.log(mustang);
 
 mustang.setWheels(6);
@@ -158,7 +158,7 @@ console.log(mustang.drive());
 console.log(mustang.brake());
 console.log(mustang.open());
 
-console.log("=".repeat(50));
+console.log('='.repeat(50));
 
 class Bicycle extends Vehicle
 {
@@ -174,15 +174,15 @@ class Bicycle extends Vehicle
     }
 }
 
-const saeedsBike = new Bicycle("Bike", "Lime", true);
+const saeedsBike = new Bicycle('Bike', 'Lime', true);
 console.log(saeedsBike);
 console.log(saeedsBike.drive());
 console.log(saeedsBike.brake());
 
-const mustaphasBike = new Bicycle("Mountainbike", "Red", false);
+const mustaphasBike = new Bicycle('Mountainbike', 'Red', false);
 console.log(mustaphasBike);
 console.log(mustaphasBike.drive());
 
-const farihasBike = new Bicycle("Unicycle", "Black", true);
+const farihasBike = new Bicycle('Unicycle', 'Black', true);
 farihasBike.setWheels(1);
 console.log(farihasBike);
