@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Hallo Welt!</p>
+
+    <script>
+        /**
+         * window;
+         * Das window Objekt repräsentiert das BrowserFenster, dass das DOM enthält.
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/Window
+         */
+        console.log('window:', window);
+
+        /**
+         * window.innerWidth; & window.innerHeight;
+         * Die properties .innerWidth; und .innerHeight; geben die höhe und breite des BrowserFensters, inklusive der scrollbar in pixeln zurück.
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/Window/innerWidth
+         * @returns { number }
+         */
+        console.log('Browserfenster breite:', window.innerWidth);
+        console.log('Browserfenster höhe:', window.innerHeight);
+
+        /**
+         * window.location;
+         * Die property .location; gibt uns ein objekt zurück, in dem wir daten zum aktuellen pfad im browser bekommen.
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/Window/location
+         * @retuns { object }
+         */
+        console.log('window.location:', window.location);
+        console.log('window.location.host:', window.location.host);
+        console.log('window.location.pathname:', window.location.pathname);
+        
+    </script>
+
+</body>
+</html>

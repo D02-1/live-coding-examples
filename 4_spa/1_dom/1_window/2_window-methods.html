@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos libero necessitatibus cum impedit rerum hic ipsa quam! Dolorum distinctio ratione eligendi fugiat accusamus! Magni, ipsa.</p>
+
+    <script>
+        /**
+         * window.alert();
+         * Die methode window.alert(); zeigt ein dialogfenster mit einem OK button im browser an.
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/Window/alert
+         * @param { string } message - Die angezeigte nachricht
+         */
+        window.alert('Hallo Welt!');
+        // auch: alert('Hallo Welt!');
+
+        /**
+         * window.confirm();
+         * window.confirm(); zeigt ein dialogfenster mit einem ok und einem cancel button im browser an.
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm
+         * @param { string } message - Der text der im dialogfenster angezeigt wird
+         * @returns { boolean } true für ok, und false für cancel.
+         */
+        const resultat = window.confirm("Wollen sie dieses dialogfenster sehen?");
+        console.log(resultat);
+
+        /**
+         * window.prompt();
+         * Diese methode zeigt ein dialogfenster an, mit einem vom benutzer angegebenen return string.
+         * @param { string } message - Der text, der im Dialogfenster angezeigt wird.
+         * @param { string } default - ein text der in der texteingabe eingegeben wird. (optional)
+         * @returns { string } der eingegebene text
+         */
+        // const eingabe = window.prompt("Hallo, wie geht es dir?");
+        const eingabe = window.prompt("Hallo, wie geht es dir?", "Mir geht es gut");
+        console.log(eingabe);
+
+        /**
+         * window.print();
+         * Die methode window.print(); öffnet das druckerfenster des browsers.
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/Window/print
+         */
+        window.print();
+
+    </script>
+
+</body>
+</html>
