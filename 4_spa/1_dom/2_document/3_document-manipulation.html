@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .active
+        {
+            color: tomato;
+        }
+
+        #page
+        {
+            background: cyan;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h2 id="title">Seitentitel</h2>
+
+        <h3 id="subtitle">Untertitel <span>Test</span></h3>
+
+        <p class="lorem">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, quaerat!
+        </p>
+
+        <p class="lorem">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis tempore debitis non voluptatibus commodi a tempora adipisci inventore natus magni.
+        </p>
+
+        <ul id="list">
+           <li class = "item">1. Eintrag</li>
+           <li class = "item">2. Eintrag</li> 
+           <li class = "item">3. Eintrag</li> 
+        </ul >
+    </div>
+
+    <script>
+        const containerElement = document.querySelector('.container');
+        const titleElement = document.getElementById('title');
+        const loremElements = document.getElementsByClassName('lorem');
+        const subTitleElement = document.querySelector('#subtitle > span');
+        const allListItems = document.querySelectorAll('#list > li.item');
+
+        /**
+         * Element.style;
+         * @description Das style objekt bietet uns die möglichkeit den CSS-Style von elementen auszugeben, oder abzuändern
+         * WICHTIG: in JavaScript schreiben wir css-regeln, die wir mit bindestrichen kennen (zb. text-align) in camelCase (textAlign).
+         * @returns { object }
+         */
+
+        // styles werden in JS anders geschrieben:
+        // zum beispiel: border-radius wird zu borderRadius
+
+        const paddingSize = 100;
+
+        console.log(titleElement.style);
+        titleElement.style.textAlign = "center";
+        // oder titleElement.style["text-align"] = "center";
+        titleElement.style.background = "tomato";
+        titleElement.style.padding = `${ paddingSize }px`;
+        titleElement.style.color = "#ffffff";
+
+        /**
+         * Element.innerText;
+         * @description Mit der property Element.innerText; können wir den text innerhalb eines HTML elementes zurückgeben oder ändern.
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText
+         * @returns { string }
+         */
+        console.log('text des ersten lorem elements:', loremElements[0].innerText);
+        loremElements[1].innerText = "<h1>Dies ist ein neuer Inhalt</h1>";
+
+        /**
+         * Element.innerHTML;
+         * @description Mit der property Element.innerHTML; können wir den html-inhalt eines elements zurückgeben oder ändern.
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML
+         * @params { stgring } text
+         * @returns { object }
+         */
+        subTitleElement.innerHTML = "<i>Hallo Welt</i>";
+
+        /**
+         * Element.classList;
+         * @description Mit Element.classList; können wir uns alle klassen eines elementes ausgeben lassen, weitere klassen hinzufügen, oder entfernen.
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+         */
+
+         // Eine liste aller klassen, die das element besitzt:
+         console.log(allListItems[0].classList);
+
+         // Unser element: <li class="item"></li>
+
+         // Wir fügen eine klasse hinzu:
+         allListItems[0].classList.add("active");
+
+         console.log(allListItems[0].classList);
+
+        allListItems[0].classList.remove("item");
+
+        // Wir löschen eine klasse aus der liste
+        console.log(allListItems[0].classList);
+
+        /**
+         * Element.id
+         * @description mit Element.id; können wir die id eines elementes ausgeben oder ändern
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/Element/id
+         */
+        containerElement.id = "page";
+        console.log(containerElement.id);
+
+    </script>
+
+</body>
+</html>

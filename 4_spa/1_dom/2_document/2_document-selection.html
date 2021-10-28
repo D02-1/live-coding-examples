@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h2 id="title">Seitentitel</h2>
+
+        <h3 id="subtitle">Untertitel <span>Test</span> <span>Test2</span></h3>
+
+        <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, voluptate vel. Qui quo quos dolore voluptate quasi non quia ipsa.</p>
+
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, recusandae?</p>
+
+        <ul id="list">
+            <li class="item">1. Eintrag</li>
+            <li class="item">2. Eintrag</li>
+            <li class="item">3. Eintrag</li>
+        </ul>
+    </div>
+
+    <script>
+        /**
+         * document.getElementById();
+         * @description Selektiert ein element per html/css id.
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
+         * @param { string } selector - die css id des gesuchten elementes
+         * returns { object }
+         */
+        const titleElement = document.getElementById('title');
+        console.log(titleElement.innerText);
+
+        /**
+         * document.getElementsByClassName();
+         * @description Selektiert alle elemente einer klasse
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName
+         * @param { string } className - name der klasse
+         * @returns { array }
+         */
+        const loremElements = document.getElementsByClassName('lorem');
+        console.log(loremElements);
+
+        loremElements[0].innerText = "Käsesauce";
+        loremElements[1].innerHTML = '<h1 class="test">Hallo Welt</h1>';
+
+        /**
+         * document.querySelector();
+         * @description gibt das erste element zurück, das auf die gesuchte eingabe zutrifft.
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
+         * @param { string } selector - der gesuchte selector kann elementtypen, klassen oder id's beinhalten
+         * @returns { object }
+         */
+        const subtitleElement = document.querySelector('#subtitle > span');
+        console.log(subtitleElement.innerHTML);
+
+        /**
+         * document.querySelectorAll();
+         * @description gibt eine liste mit allen elementen zurück, die auf den gesuchten selektor zutreffen.
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
+         * @param { string } selector - der gesuchte selector kann aus elementtypen, klassen oder id's bestehen.
+         * @returns { array }
+         */
+        const allListItems = document.querySelectorAll('#list li.item');
+        console.log(allListItems);
+
+        console.log(allListItems[1].innerText);
+    </script>
+
+</body>
+</html>
