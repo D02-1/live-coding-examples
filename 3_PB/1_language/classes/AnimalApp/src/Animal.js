@@ -11,7 +11,7 @@ class Animal
         return this.name;
     }
 
-    eat(meal = 'Cheesecake')
+    eat(meal = "Cheesecake")
     {
         console.log(`${ this.name } is a ${ this.species } and is eating a ${ meal }`);
     }
