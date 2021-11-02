@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Traversing</h1>
+
+    <h2>Traversing: Nach unten</h2>
+
+    <p>Nach unten bewegen wir uns mit Element.querySelector();, Element.querySelectorAll(); und .children;</p>
+
+    <section>
+        <h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector">
+                Element.QuerySelector();
+            </a>
+        </h3>
+
+        <div class="nachbarschaft">
+            <b>Unser Haus</b>
+            <ul id="unserHaus">
+                <li class="wohnzimmer">Unser Wohnzimmer</li>
+                <li class="badezimmer">Unser Badezimmer</li>
+                <li class="schlafzimmer">Unser Schlafzimmer</li>
+                <li class="kueche">Küche</li>
+            </ul>
+
+            <hr>
+
+            <b>Nachbar Haus</b>
+            <ul id="nachbarHaus">
+                <li class="wohnzimmer">Nachbars Wohnzimmer</li>
+                <li class="badezimmer">Nachbars Badezimmer</li>
+                <li class="schlafzimmer">Nachbars Schlafzimmer</li>
+                <li class="kueche">Nachbars Kueche</li>
+            </ul>
+        </div>
+
+        <script>
+            const unserHaus = document.querySelector("#unserHaus");
+            const nachbarHaus = document.querySelector('#nachbarHaus');
+
+            const unserWohnzimmer = unserHaus.querySelector('.wohnzimmer');
+            const nachbarsWohnzimmer = nachbarHaus.querySelector('.wohnzimmer');
+
+            console.log(unserWohnzimmer);
+            console.log(nachbarsWohnzimmer);
+        </script>
+    </section>
+
+    <section>
+        <h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children">
+                ParentNode.children;
+            </a>
+        </h3>
+
+        <p>mit dieser methode bekommen wir direkt die kinder eines elementes, also elemente die sich innerhalb eines anderen elementes befinden. Wir kriegen eine Array des types HTMLCollection zurück, die automatisch geupdated wird, wenn sich in einem der elemente etwas verändert.</p>
+
+        <ul id="liste">
+            <li>Eintrag 1</li>
+            <li>Eintrag 2</li>
+            <li>Eintrag 3</li>
+            <li>Eintrag 4</li>
+            <li>Eintrag 5</li>
+        </ul>
+
+        <script>
+            const listenElement = document.querySelector('#liste');
+            const listenEintraege = listenElement.children;
+
+            console.log(listenEintraege);
+            console.log(listenEintraege[1]);
+
+            listenEintraege[1].innerText = "Veränderter Eintrag";
+        </script>
+    </section>
+
+    <h2>Traversing: Nach oben</h2>
+
+    <section>
+        <h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement">
+                Node.parentElement;
+            </a>    
+        </h3>
+
+        <p>
+            Mit diser methode können wir direkt vom kindelement aus das elternelement selektieren.
+        </p>
+
+        <ul id="buecherregal">
+            <li id="erstesBuch">Buch 1</li>
+            <li id="zweitesBuch">Buch 2</li>
+            <li>Buch 3</li>
+            <li>Buch 4</li>
+            <li>Buch 5</li>
+        </ul>
+
+        <script>
+            const erstesBuchElement = document.querySelector('#erstesBuch');
+            const zweitesBuchElement = document.querySelector('#zweitesBuch');
+
+            const regalElement = zweitesBuchElement.parentElement;
+            console.log(regalElement);
+        </script>
+    </section>
+
+    <section>
+        <h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/closest">
+                Element.closest();
+            </a>
+        </h3>
+
+        <p>
+            Element.parentElement; ist eine sehr gute methode um eine einzelne ebene nach oben zu kommen, um aber ein element ein paar ebenen höher zu bekommen, gibt es die methode Element.closest();, da wir mit dieser methode den nächstgelegenen selektor bekommen, der zu unserer prüfung passt.
+        </p>
+
+        <i>
+            Element.closest(); ist ziemlich neu, und wird bisher nicht von jedem browser unterstützt.
+        </i>
+
+        <div id="ganzWeitAussen">
+            <div id="ziemlichWeitAussen">
+                <div id="aussen">
+                    <div id="innen">
+                        Das innerste element
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="elternBox" class="box">
+            <div id="auessereBox">
+                <div id="mittlereBox">
+                    <div id="innersteBox" class="box">
+                        Dies ist eine Box
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const inneresElement = document.querySelector('#innen');
+            const auesseresElement = inneresElement.closest('#ganzWeitAussen');
+
+            console.log(auesseresElement);
+
+            const innersteBox = document.querySelector('#mittlereBox');
+            const naechsteBox = innersteBox.closest('.box');
+
+            console.log(naechsteBox);
+        </script>
+    </section>
+
+    <h2>Traversing: Seitwärts</h2>
+
+    <p>
+        Um uns seitwärts im elementbaum zu bewegen gibt es verschiedene möglichkeiten, zum beispiel Element.nextElementSibling(); und element.previousElementSibling();
+    </p>
+
+    <section>
+        <h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/nextElementSibling">
+                element.nextElementSibling;
+            </a>
+        </h3>
+
+        <p>
+            Mit dieser methode können wir das nächstegelegene element selektieren.
+        </p>
+
+        <ul id="eineKleineListe">
+            <li>Eintrag 1</li><li>Eintrag 2</li><li>Eintrag 3</li>
+        </ul>
+
+        <script>
+            const erstesElement = document.querySelector('#eineKleineListe li');
+            const zweitesElement = erstesElement.nextElementSibling;
+
+            console.log(erstesElement);
+            console.log(zweitesElement);
+        </script>
+    </section>
+
+    <section>
+        <h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/previousElementSibling">
+                element.previousElementSibling;
+            </a>
+        </h3>
+
+        <p>
+            Mit dieser methode können wir das vorherige element selektieren.
+        </p>
+
+        <ul id="nochEineKleineListe">
+            <li>Eintrag 1</li><li>Eintrag 2</li><li>Eintrag 3</li>
+        </ul>
+
+        <script>
+            const zweitesListenElement = document.querySelectorAll('#nochEineKleineListe li')[1];
+            const erstesListenElement = zweitesListenElement.previousElementSibling;
+
+            console.log(zweitesListenElement);
+            console.log(erstesListenElement);
+        </script>
+    </section>
+
+    <section>
+        <h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/matches">
+                Element.matches();
+            </a>
+        </h3>
+
+        <p>
+            Diese methode überprüft ob ein element anhand einer selektion das richtige ist und gibt anhand der entscheidung einen boolean zurück.
+        </p>
+
+        <ul id="benutzerListe">
+            <li>Max</li><li class="admin">James</li><li>Bruce</li><li>Henry</li>
+        </ul>
+
+        <script>
+            const benutzerListe = document.querySelectorAll('#benutzerListe > li');
+            console.log(benutzerListe);
+
+            for (let i = 0; i < benutzerListe.length; i++)
+            {
+                if(benutzerListe[i].matches('.admin'))
+                {
+                    console.log("Unser admin heisst " + benutzerListe[i].innerText);
+                }    
+            }
+        </script>
+    </section>
+
+    <section>
+        <h3>Kombination aus element.parentElement();, children und index</h3>
+
+        <ul id="rezepteListe">
+            <li>Rezept 1</li>
+            <li>Rezept 2</li>
+            <li>Rezept 3</li>
+            <li>Rezept 4</li>
+            <li>Rezept 5</li>
+        </ul>
+
+        <script>
+            // Wir selektieren das erste element in der Liste
+            /*
+            <ul id="rezepteListe">
+                <li>Rezept 1</li> <-------- SELEKTIERT
+                <li>Rezept 2</li>
+                <li>Rezept 3</li>
+                <li>Rezept 4</li>
+                <li>Rezept 5</li>
+            </ul>
+            */
+           const erstesRezept = document.querySelector('#rezepteListe li');
+
+           // Wir holen das elternElement (Die Liste)
+           /*
+           <ul id="rezepteListe"> <---------- SELEKTIERT
+                ...
+            </ul>
+           */
+            const rezepteListe = erstesRezept.parentElement;
+
+            // Wir holen uns die einträge der liste
+            /*
+            ...
+                <li>Rezept 1</li>
+                <li>Rezept 2</li>
+                <li>Rezept 3</li>
+                <li>Rezept 4</li>
+                <li>Rezept 5</li>
+            ...
+            */
+           const alleRezepte = rezepteListe.children;
+
+            // Wir holen uns das vierte element der liste
+            /*
+            ...
+                <li>Rezept 1</li>
+                <li>Rezept 2</li>
+                <li>Rezept 3</li>
+                <li>Rezept 4</li><-------- SELEKTIERT
+                <li>Rezept 5</li>
+            ...
+            */
+            const viertesRezept = alleRezepte[3];
+
+            // jetzt geben wir das vierte element aus:
+            console.log(viertesRezept);
+
+            // Das ganze als "chained method" ... oder kette:
+            const viertesRezeptAlskette = erstesRezept.parentElement.children[3];
+            console.log(viertesRezeptAlskette);
+
+        </script>
+    </section>
+</body>
+</html>
