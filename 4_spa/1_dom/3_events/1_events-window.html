@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Events</h1>
+
+    <p>
+        Es gibt zwei wege für den eventListener: .addEventListener();, und den parameter .on...;
+    </p>
+
+    <script>
+        // Weg 1:
+        // document.addEventListener('click', function(event));
+        // Weg 2:
+        // document.onclick = function(event);
+        // Weg 2 - als arrow function:
+        // document.onclick = (event) => {};
+    </script>
+
+    <h2>Window</h2>
+
+    <section>
+        <h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event">
+                Window.onload;
+            </a>
+        </h3>
+
+        <p>
+            Dieses event führt einen callback aus, wenn das browserfenster fertig geladen hat. Also wenn alle resourcen der angezeigten HTML datei heruntergeladen wurden.
+        </p>
+
+        <ul>
+            <li><code>window.addEventListener('load', (event) => {});</code></li>
+            <li><code>window.onload = (event) => {};</code></li>
+        </ul>
+
+        <script>
+            window.onload = (event) =>
+            {
+                console.log(".onload; - Die seite wurde fertig geladen", event);
+            }
+        </script>
+    </section>
+
+    <section>
+        <h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event">    
+                Window.onresize;
+            </a>
+        </h3>
+
+        <p>
+            Das .onresize; event wird ausgelöst wenn die größe des browserfensters verändert wird.
+        </p>
+
+        <ul>
+            <li><code>Window.addEventListener('resize', (event) => {});</code></li>
+            <li><code>Window.onresize = (event) => {};</code></li>
+        </ul>
+
+        <script>
+            window.onresize = (event) =>
+            {
+                if(window.innerWidth < 800)
+                {
+                    console.log('Unser browser ist dünner als 800 pixel');
+                }
+                else
+                {
+                    console.log('Unser browser ist breiter als 800 pixel')
+                }
+
+                console.log(window.innerWidth);
+                console.log(window.innerHeight);
+            }
+        </script>
+    </section>
+
+</body>
+</html>

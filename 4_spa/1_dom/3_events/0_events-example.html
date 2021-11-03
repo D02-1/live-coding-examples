@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="klickMich">Click</button>
+    <button id="andererButton">ClickClick</button>
+    
+    <script>
+
+        // im eventListener referenzieren wir nur den namen der funktion ohne ().
+        // so rufen wir sie nicht sofort auf.
+
+        document.getElementById("klickMich").addEventListener('click', reaktion);
+        document.getElementById("andererButton").addEventListener('click', reaktion);
+
+        function reaktion(event)
+        {
+            console.log("Hallo Welt!");
+            event.target.style.background = "tomato";
+            console.log(event.target);
+        }
+    </script>
+</body>
+</html>

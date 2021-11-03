@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Events</h1>
+
+    <h2>Forms</h2>
+
+    <section>
+        <h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onfocus">
+                GlobalEventHandlers.onfocus;
+            </a>
+        </h3>
+
+        <p>
+            Das event .onfocus; feuert ein callback wenn ein element in den focus gerät, also zum beispiel ein input element das angeklickt wurde.
+        </p>
+
+        <ul>
+            <li><code>element.addEventListener('focus', (event) => {});</code></li>
+            <li><code>element.onfocus = (event) => {};</code></li>
+        </ul>
+
+        <input type="text" id="focusElement">
+
+        <script>
+            document.getElementById('focusElement').onfocus = (event) =>
+            {
+                console.log('Wir haben das element im focus');
+                event.target.value = "hallo";
+            };
+        </script>
+    </section>
+
+    <section>
+        <h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onblur">
+                GlobalEventHandlers.onblur;
+            </a>
+        </h3>
+
+        <p>
+            Dieses event wird ausgelöst, wenn wir den focus von einem element verlieren, also zum beispiel wenn wir ein input feld verlassen.
+        </p>
+
+        <ul>
+            <li><code>element.addEventListener('blur', (event) => {});</code></li>
+            <li><code>element.onblur = (event) => {};</code></li>
+        </ul>
+
+        <input type="text" id="blurElement">
+
+        <script>
+            document.getElementById('blurElement').onblur = (event) =>
+            {
+                // "event.target.value" ist der wert der in einem input element steht.
+                console.log('Wir haben das element verlassen, und haben dies eingegeben:', event.target.value);
+            }
+        </script>
+    </section>
+
+    <section>
+        <h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onsubmit">
+                GlobalEventHandlers.onsubmit;
+            </a>
+        </h3>
+
+        <p>
+            Das event .onsubmit; wird abgefeuert wenn ein formular gesendet werden soll, oder ein button einen sendebefehl bekommt.
+        </p>
+
+        <ul>
+            <li><code>element.addEventListener('submit', (event) => {});</code></li>
+            <li><code>element.onsubmit = (event) => {};</code></li>
+        </ul>
+
+        <form id="unserFormular">
+            <p id="fertig" hidden style="color: red;">Das formular wurde abgeschickt</p>
+            <input type="text" id="formularInputElement">
+
+            <button type="submit">Abschicken</button>
+        </form>
+
+        <script>
+            const form = document.getElementById("unserFormular");
+
+            form.onsubmit = (event) =>
+            {
+                // Heutzutage in der welt der dynamischen webinhalte ist eines der wichtigsten fähigkeiten von events, das sie dafür sorgen können das man die defaultverhalten von elementen unterbinden kann, so zum beispiel kann man dafür sorgen dass das abschicken eines formulares NICHT die  seite neu läd.
+                // Dies erreichen wir mit der event methode .preventDefault();
+
+                event.preventDefault();
+
+                document.getElementById('fertig').removeAttribute('hidden');
+            }
+        </script>
+    </section>
+
+    <section>
+        <h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onchange">
+                GlobalEventHandlers.onchange;
+            </a>
+        </h3>
+
+        <p>
+            .onchange; wird immer dann abgefeuert wenn die werte eines inputs vom benutzer verändert werden, zum beispiel wenn der benutzer in eine textfeld schreibt.
+        </p>
+
+        <ul>
+            <li><code>element.addEventListener('change', (event) => {});</code></li>
+            <li><code>element.onchange = (event) => {};</code></li>
+        </ul>
+
+        <input type="text" id="changeEingabeElement">
+        <p id="changeAusgabeElement"></p>
+
+        <br>
+        <br>
+        <br>
+
+        <script>
+            const eingabeElement = document.querySelector('#changeEingabeElement');
+            const ausgabeElement = document.querySelector('#changeAusgabeElement');
+
+            eingabeElement.onchange = (event) =>
+            {
+                // Die inhalte des ausführenden elementes bekommen wir mit event.target
+                // Wenn wir uns dort des parameters "value" bedienen, bekommen wir den aktuellen wert, also den "value" den wir in das input element geschrieben haben.
+
+                ausgabeElement.innerText = event.target.value;
+            }
+        </script>
+    </section>
+
+    <section>
+        <h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick">
+                GlobalEventHandlers.onclick;
+            </a>
+        </h3>
+
+        <p>
+            Das event wird abgefeuert wenn der benutzer auf ein element klickt.
+        </p>
+
+        <i>
+            Ein klick wird ausgeführt, nachddem die maustaste im selben bereich sowohl runter gedrückt, wie auch losgelassen wurde.
+        </i>
+
+        <ul>
+            <li><code>element.addEventListener('click', (event) => {});</code></li>
+            <li><code>element.onclick = (event) => {};</code></li>
+        </ul>
+
+        <div id="clickElement" style="width: 200px; height: 200px; background: tomato;"></div>
+
+        <script>
+            document.getElementById('clickElement').onclick = (event) =>
+            {
+                event.target.style.backgroundColor = 'lime';
+                console.log('click');
+            }
+        </script>
+    </section>
+
+</body>
+</html>
