@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body oncontextmenu="return false;"> <!-- das rechtsklickmenu für die ganze seite deaktivieren -->
+
+    <h1>Events</h1>
+
+    <h2>Mouse</h2>
+
+    <section>
+        <h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmousemove">
+                GlobalEventHandlers.onmousemove;
+            </a>
+        </h3>
+
+        <p>
+            Dieses event abgefeuert wenn der benutzer die maus innerhalb eines selektierten elements bewegt.
+            Das kann das ganze dokument sein, oder auch einzelne elemente.
+        </p>
+
+        <ul>
+            <li><code>element.addEventListener("mousemove", (event) => {});</code></li>
+            <li><code>element.onmousemove = (event) => {};</code></li>
+        </ul>
+
+        <div id="mouseMoveElement" style="width: 200px; height: 200px; background: tomato;"></div>
+
+        <script>
+            let moveCounter = 0;
+
+            document.getElementById("mouseMoveElement").onmousemove = (event) =>
+            {
+                moveCounter++;
+
+                if(moveCounter === 1000)
+                {
+                    event.target.style.backgroundColor = "lime";
+                }
+
+                console.log(moveCounter, "wir sind über dem element");
+
+                console.log(event.clientX, event.clientY);
+            }
+        </script>
+    </section>
+
+    <section>
+        <h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseover">
+                GlobalEventHandlers.onmouseover;
+            </a>
+        </h3>
+
+        <p>
+            Dieses event wird abgefeuert wenn der benutzer die maus über ein element bewegt.
+            Der unterschied zwischen .onmousemove; und .onmouseover; ist das .onmouseover; nur einmal abgefeuert wird, wenn das element "gehovert" wird, während es bei .onmousemove; konstant abgefeuert wird.
+        </p>
+
+        <ul>
+            <li><code>element.addEventListener("mouseover", (event) => {});</code></li>
+            <li><code>element.onmouseover = (event) => {};</code></li>
+        </ul>
+
+        <div id="mouseoverElement" style="width: 200px; height: 200px; background: tomato;"></div>
+
+        <script>
+            let overCounter = 0;
+
+            document.getElementById("mouseoverElement").onmouseover = (event) =>
+            {
+                overCounter++;
+                console.log(overCounter, "wir befinden uns über dem element");
+            }
+        </script>
+    </section>
+
+    <section>
+        <h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseout">
+                GlobalEventHandlers.onmouseout;
+            </a>
+        </h3>
+
+        <p>
+            Dieses event wird abgefeuert wenn wir mit der maus ein element verlassen.
+        </p>
+
+        <ul>
+            <li><code>element.addEventListener('mouseout', (event) => {});</code></li>
+            <li><code>element.onmouseout = (event) => {};</code></li>
+        </ul>
+
+        <div id="mouseoutElement" style="width: 200px; height: 200px; background: tomato;"></div>
+
+        <script>
+            document.getElementById("mouseoutElement").onmouseout = (event) =>
+            {
+                console.log("wir haben das element verlassen");
+            }
+        </script>
+    </section>
+
+    <section>
+        <h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmousedown">
+                GlobalEventHandlers.onmousedown;
+            </a>
+        </h3>
+
+        <p>
+            Dieses event wird ausgelst wenn wir eine maustaste runterdrücken.
+        </p>
+
+        <ul>
+            <li><code>element.addEventListener('mousedown', (event) = {});</code></li>
+            <li><code>element.onmousedown = (event) => {};</code></li>
+        </ul>
+
+        <div id="mousedownElement" style="width: 200px; height: 200px; background: lime;"></div>
+
+        <script>
+            document.getElementById("mousedownElement").onmousedown = (event) =>
+            {
+                console.log(event.clientX, event.clientY);
+
+                // mit event.button bekommen wir die aktuell gedrückte maustaste
+                // - (0) linke maustaste
+                // - (1) mittlere maustaste
+                // - (2) rechte maustaste
+
+                console.log(event.button);
+
+                if(event.button === 0)
+                {
+                    console.log("wir haben die LINKE maustaste gedrückt");
+                }
+                else if(event.button === 1)
+                {
+                    console.log("wir haben die MITTLERE maustaste gedrückt");
+                }
+                else if(event.button === 2)
+                {
+                    // event.preventDefault(); würde auch das rechtsklick menu deaktivieren.
+                    console.log("wir haben die RECHTE maustaste gedrückt")
+                }
+            }
+
+            // kleines kommentar zu mousewheel movement... onwheel feuert ein event wenn das mausrad gedreht wird
+            document.getElementById("mousedownElement").onwheel = (event) =>
+            {
+                // das delta im plus bedeutet man scrollt runter, das delta im minus, man scrollt hoch.
+                console.log(event.deltaY);
+            }
+        </script>
+    </section>
+
+    <section>
+        <h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseup">
+                GlobalEventHandlers.onmouseup;
+            </a>
+        </h3>
+
+        <p>
+            Dieses event wird abgefeuert wenn wir eine maustaste loslassen
+        </p>
+
+        <i>
+            Das event .onclick; wird abgefeuert nachdem .onmousedown; und .onmouseup; auf dem selben element ausgeführt wurde.
+            <br>
+            <br>
+            <b>
+                element -> .onmousedown; -> .onmouseup; = .onlick;
+            </b>
+        </i>
+
+        <ul>
+            <li><code>element.addEventListener('mouseup', (event) => {});</code></li>
+            <li><code>element.onmouseup = (event) => {};</code></li>
+        </ul>
+
+        <div id="mouseupElement" style="width: 200px; height: 200px; background: cyan;"></div>
+
+        <script>
+            document.getElementById("mouseupElement").onmouseup = (event) =>
+            {
+                console.log("wir haben die maustaste losgelassen");
+            }
+        </script>
+    </section>
+</body>
+</html>
