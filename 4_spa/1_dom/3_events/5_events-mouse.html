@@ -189,6 +189,23 @@
         <div id="mouseupElement" style="width: 200px; height: 200px; background: cyan;"></div>
 
         <script>
+            // Ein beispiel wie wir styles injecten können, per objekt:
+            const obj = document.getElementById("mouseupElement");
+
+            const bgColor = "blue";
+
+            const styleSheet = {
+                background: bgColor,
+                border: "10px solid black",
+                borderRadius: "50%"
+            };
+
+            Object.assign(obj.style, styleSheet);
+
+            /// ---------
+
+            console.log(obj.style);
+
             document.getElementById("mouseupElement").onmouseup = (event) =>
             {
                 console.log("wir haben die maustaste losgelassen");
