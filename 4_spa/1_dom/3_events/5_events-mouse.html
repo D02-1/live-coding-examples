@@ -127,6 +127,7 @@
         <script>
             document.getElementById("mousedownElement").onmousedown = (event) =>
             {
+                // event.clientX gibt die horizontale position der maus wieder, event.clientY die vertikale.
                 console.log(event.clientX, event.clientY);
 
                 // mit event.button bekommen wir die aktuell gedrückte maustaste
