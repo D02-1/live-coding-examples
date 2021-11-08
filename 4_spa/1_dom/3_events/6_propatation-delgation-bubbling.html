@@ -183,5 +183,125 @@
             }
         </script>
     </section>
+
+    <section>
+        <h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/stopImmediatePropagation">
+                Event.stopImmediatePropagation()
+            </a>
+        </h3>
+
+        <p>
+            Diese methode verhindert das andere events für das aktuelle element ausgeführt werden. Dies passiert allerdings in code-leserichtung, was bedeutet das alle events, die VOR dem stop angelegt wurden auch ausgeführt werden.
+        </p>
+
+        <button id="stopButton">Klick Mich!</button>
+
+        <script>
+            const stopButton = document.getElementById("stopButton");
+
+            stopButton.addEventListener("click", (event) =>
+            {
+                console.log("Das erste Event wurde abgefeuert!");
+            });
+            
+            stopButton.addEventListener("click", (event) =>
+            {
+                console.log("Das zweite Event wurde abgefeuert!");
+                event.stopImmediatePropagation(); // bewegen
+            });
+            
+            stopButton.addEventListener("click", (event) =>
+            {
+                console.log("Das drite Event wurde abgefeuert!");
+            });
+        </script>
+    </section>
+
+    <h2>Event Delegation</h2>
+
+    <p>
+        Event-Delegation ist eine technik um events in unseren web apps zu behandeln. Delegation wird möglich weil javascript events "bubblen" kann, also über mehrere elemente im DOM baum ausbreiten kann. Tatsächlich basiert event-delegation auf dem konzept von event-bubbling, weswegen event-delegation immer dann möglich ist, wenn event-bubbling auch möglich ist.
+    </p>
+
+    <p>
+        Wenn wir event listener benutzen, und wir wissen das bubbling möglich ist, können wir uns so einige event listener sparen, um unseren code effizienter zu machen.
+    </p>
+
+    <p>
+        Meist haben unsere applikationen eine menge zu handlen, klick events, key events, mouse events und einige andere events. Umso größer unsere applikation wird, umso mehr events benötigen wir, für wieder und wieder die selben aktionen. was irgendwann zu performance problemen führen ... wird.
+    </p>
+
+    <p>
+        Sagen wir wir haben eine webseite mit einigen kategorien, all diese kategorien haben einen eigenen event handler. Wenn wir auf eine kategorie klicken, führen wir eine funktion aus.
+    </p>
+
+    <ul id="categoryList">
+        <li class="categoryItem" id="category1">Category 1</li>
+        <li class="categoryItem" id="category2">Category 2</li>
+        <li class="categoryItem" id="category3">Category 3</li>
+    </ul>
+
+    <script>
+        // Für jede dieser kategorien erstellen wir einen event listener
+
+        const categoryElement1 = document.querySelector('#category1');
+        categoryElement1.addEventListener('click', (event) =>
+        {
+            console.log('Category 1');
+        });
+
+        const categoryElement2 = document.querySelector('#category2');
+        categoryElement2.addEventListener('click', (event) =>
+        {
+            console.log('Category 2');
+        });
+
+        const categoryElement3 = document.querySelector('#category3');
+        categoryElement3.addEventListener('click', (event) =>
+        {
+            console.log('Cagegory 3');
+        });
+    </script>
+
+    <p>
+        Es funktioniert super, aber wo liegt das angesprochene problem?
+        <br>
+        Wir haben 3 li's und jedem einzelnen haben wir ein event angehangen.
+        Was wenn wir in zukunft mehr kategorien hinzufügen? müssen wir dann für jeden weiteren eintrag einen event handler hinzufügen?
+        <br>
+        können wir das problem vielleicht mit weniger code lösen, anstelle von mehr code? Ja.
+    </p>
+
+    <p>
+        Event delegation ist, anstelle das man jedem element und dessen kindes kindern manuell einen event listener zuweist, das event vom elternelement her zuzufügen. Was ändert sich dadurch? Das kindelement wird durch event-bubbling den event-listener im elternelment nutzen.
+    </p>
+
+    <i>Wie vorher auch, erstellen wir zum test eine liste:</i>
+
+    <ul id="userList">
+        <li id="user1">Max</li>
+        <li id="user2">James</li>
+        <li id="user3">Henry</li>
+        <li id="user4">Michael</li>
+        <li id="user5">George</li>
+    </ul>
+
+    <script>
+        // Wir holen uns das listen-element...
+        const userListElement = document.querySelector('#userList');
+
+        // ... und fügen einen event-listener hinzu:
+        userListElement.addEventListener('click', (event) =>
+        {
+            // Wenn wir jetzt event.target nutzen, bekommen wir....
+            console.log(event.target.id);
+            // ... die informationen vom kind-element.
+        });
+    </script>
+
+    <p>
+        Auf diese weise können wir uns VIEL code sparen, und entlasten die applikation, sparen also performance.
+    </p>
 </body>
 </html>
