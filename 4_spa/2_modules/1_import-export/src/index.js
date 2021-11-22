@@ -1,6 +1,5 @@
 // wir könenn einen default import so nennen wir wir wollen, einen standard konvention ist, sie bei klassen so zu nennen wie die klasse heisst. Also in unserem falle "app", das ist ein sogennanter namespace.
 import App from './app.js';
-
 import { makePage } from './utils.js';
 import * as User from './user.js';
 

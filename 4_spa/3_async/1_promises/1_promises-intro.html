@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Asyncronous</h1>
+
+    <h2>Promises</h2>
+
+    <h3>Was ist eine Promise?</h3>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">MDN Referenz link</a>
+
+    <p>
+        Eine "Promise" ist ein objekt das "höchstwarscheinlich in naher zukunft" einen wert zurückgibt, oder den grund, wieso dieser wert nicht zurück gegeben wurde.
+    </p>
+
+    <p>
+        Ein realbeispiel wäre zum beispiel: euer partner hat euch einkaufen geschickt. Er wartet jetzt darauf das ihr mit frischen erdbeeren wiederkommt. Eure "Promise", also euer "versprechend" ist essentiell nur, das ihr wiederkommt. Habt ihr die erbeeren dabei? waren sie ausverkauft? Das können wir hier beantworten.
+    </p>
+
+    <p>Eine Promise kann in 3 möglichen states zurückkommen:</p>
+
+    <ol>
+        <li>"fulfilled": also erfüllt, bedeutet ihr habt die leckeren erdbeeren mitgebracht</li>
+        <li>"rejected": also abgelehnt, bedeutet ihr habt in dem laden wo es die erdbeeren gibt, vielleicht hausverbot</li>
+        <li>"pending": also wartend, scheinbar sind grad keine erdbeeren da, und sie werden heute noch geliefert...irgendwann.</li>
+    </ol>
+
+    <p>
+        An eine promise können wir auch ein callback anhängen, bedeutet praktisch: wenn ihr also wieder gekommen seid, könnt ihr anhand des status der promise eine reaktion ausgeben: übergebt ihr freudig die erdbeeren oder müsst ihr zb beichten das ihr die erdbeeren nicht bekommen habt?
+    </p>
+
+    <h3>Wie funktionieren Promises?</h3>
+
+    Wie schon erwähnt kann eine promise 3 verschiedene states zurückgeben:
+
+    <ul>
+        <li>fulfilled: In javascript bekannt als ".resolved();"</li>
+        <li>rejected: In javascript bekannt als ".reject();"</li>
+        <li>pending... also wartend.</li>
+    </ul>
+
+    <p>
+        Eine wartende promise ist bisher weder erfüllt noch abgelehnt, weswegen eine promse nur dann erfüllt wurde wenn sie nicht mehr wartet. Welcher fall davon gerade eintritt weiss nur die promise.
+    </p>
+
+    <p>
+        Um zu zeigen was eine promise macht, haben wir hier ein beispiel, in dem wir den code per timeout stoppen, und dann erst ausführen, das "then" sagt uns was passieren soll, NACHDEM die promise erfüllt wurde.
+    </p>
+
+    <p>
+        "Wir sagen hier "warte 10 sekunden, dann gebe "hallo welt" auf der konsole aus.
+    </p>
+
+    <script>
+        // Wir erstellen eine funktion, die eine zeit wartet und dann ein callback ausführt:
+
+        function warteEtwas(time)
+        {
+            return new Promise((resolve, reject) =>
+            {
+                setTimeout(() =>
+                {
+                    resolve("Hallo Welt!");
+                    reject("fehler...");
+                }, time);
+            });
+        }
+
+        // Wir führen die funktion aus und übergeben die wartezeit, dann nutzen wir ".then()":
+        warteEtwas(10000).then(
+            (result) => // Wir übergeben die daten des resolved state
+            {
+                console.log(result);
+            },
+            (error) => // Wir übergeben die daten des reject state
+            {
+                console.log(error);
+            }
+        )
+
+        // then: funktion.then(erfolgreicher callback, nicht erfolgreicher callback);
+
+        // Es wird empfohlen, jede promise chain mit .catch(); zu beenden, damit werden fehler aufgefangen und das programm kann weiter laufen.
+        warteEtwas(3000).then(result => 
+        {
+            console.log(result);
+        }).catch((error) => 
+        {
+            console.log(error);
+        });
+
+        // Um eine reihe von promises zu erfüllen, gibr es .all();, diese methode wartet bis entweder alle promises gelöst wurden, oder eine abgelehnt wurde. mit resolve(); können wir auch selbst eein ergebnis erzwingen und etwas returnen.
+        
+        const promise1 = Promise.resolve("test");
+        const promise2 = Promise.resolve(false);
+        const promise3 = new Promise((resolve, reject) =>
+        {
+            setTimeout(() =>
+            {
+                resolve("Auf mich sollte man warten!");
+            }, 6000);
+        });
+
+        Promise.all([ "hallo", promise2, promise3 ]).then(values =>
+        {
+            console.log(values);
+        }).catch(error => console.log(error));
+        
+    </script>
+
+</body>
+</html>

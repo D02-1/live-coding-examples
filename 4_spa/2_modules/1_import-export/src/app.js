@@ -6,6 +6,7 @@ import {
     getTimesFour as getFour
 } from './utils.js';
 
+// auch: export default class App {}
 class App
 {
     constructor(value)
