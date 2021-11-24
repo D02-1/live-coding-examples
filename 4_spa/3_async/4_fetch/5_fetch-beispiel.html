@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #container
+        {
+            width: 200px;
+        }
+        #container *
+        {
+            display: block;
+            margin-top: 10px;
+        }
+        #page
+        {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Fetch/POST</h1>
+
+    <h2>Beispiel</h2>
+
+    <div id="container">
+        <h3>Login</h3>
+        <input type="text" id="usernameInput" placeholder="Username">
+        <input type="password" id="passwordInput" placeholder="Password">
+        <button id="loginButton">Login</button>
+        <p id="errorText"></p>
+    </div>
+
+    <div id="page">
+        User <span id="usernameOutput">Test</span> Logged in!
+    </div>
+
+    <script>
+        const containerElement = document.getElementById('container');
+        const usernameInputElement = document.getElementById('usernameInput');
+        const passwordInputElement = document.getElementById('passwordInput');
+        const loginButtonElement = document.getElementById('loginButton');
+        const pageElement = document.getElementById('page');
+        const usernameOutputElement = document.getElementById('usernameOutput');
+        const errorTextElement = document.getElementById('errorText');
+
+        loginButtonElement.onclick = (event) =>
+        {
+            if(usernameInputElement.value !== "" && passwordInputElement.value !== "")
+            {
+                fetch(
+                    'https://httpbin.org/post',
+                    {
+                        method: "POST",
+                        headers:
+                        {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ username: usernameInputElement.value })
+                    }
+                ).then(response =>
+                {
+                    return response.json();
+                }).then(data =>
+                {
+                    console.log(data);
+                    console.log(data.json);
+
+                    usernameOutputElement.innerText = data.json.username;
+
+                    containerElement.style.display = "none";
+                    pageElement.style.display = "block";
+                }).catch(err => console.log(err));
+            }
+            else
+            {
+                errorTextElement.innerText = "Login credentials incorrect!";
+            }
+        }
+    </script>
+    
+</body>
+</html>

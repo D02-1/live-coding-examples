@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Fetch</h1>
+
+    <a href="https://developer.mozilla.org/de/docs/Web/API/Fetch_API">MDN link</a>
+
+    <h2>Was ist fetch?</h2>
+
+    <p>
+        fetch(); ist eine moderne art resourcen von anderen quellen zu laden, dafür führt es einen XMLHttpRequest, 
+        kurz XHR, mithilfe von Promises aus, und erzeugt so keine callback-hell.
+        <br>
+        Dieser xhr-request sendet eine anfrage zu einem server und liefert, die angefragten daten, die sogenannte response. zurück.
+    </p>
+
+    <script>
+        /**
+         * @method window.fetch();
+         */
+
+        // Wir erstellen eine variable mit einer URL, die wir aufrufen wollen:
+        const url = "https://jsonplaceholder.typicode.com/todos/1";
+
+        // wir schreiben den fetch befehl, und fügen die url hinzu, dann fügen wir mehrere .then(); methoden und eine .catch(); methode an.
+        fetch(url).then(response =>
+        {
+            // es macht anfangs immer sinn, sich die response per console.log(); ausgeben zu lassen.
+            console.log(response);
+
+            // Hier können wir die übergebenen daten mit .json(); umwandeln.
+            return response.json();
+        }).then(data =>
+        {
+            // Hier können wir auf die daten zugreifen
+            console.log(data);
+        }).catch(err =>
+        {
+            // Hier können wir fehler abfangen, wie zum beispiel, das die URL nicht erreichbar ist.
+            console.log(err);
+        });
+
+        // window.fetch(); ist auch mit async/await nutzbar:
+        const fetchRequest = async() =>
+        {
+            const data = await fetch(url);
+            const jsonData = await data.json();
+
+            console.log(jsonData);
+        }
+
+        fetchRequest();
+        
+    </script>
+    
+</body>
+</html>

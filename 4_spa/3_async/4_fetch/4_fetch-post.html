@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Fetch/POST</h1>
+
+    <p>
+        Was ist post? Bei der HTTP methode POST senden wir daten an einen server, und bekommen eine antwort zurück, das macht zum beispiel sinn, wenn wir uns bei einer webseite einloggen, und der server uns validieren soll, er gibt, wenn unsere login daten korrekt waren, also zb username und password, ein "success: true", und zum beispiel unsere benutzerdaten zurück, was der webseite sagt, das wir tatsächlich einen account haben, und den mit den richtigen daten validiert haben. Wir haben das schon mal gesehen, als wir uns forms anschauten, und dort daten an formspree sendeten.
+    </p>
+
+    <p>
+        Im gegensatz zu GET, müssen wir bei POST ein paar dinge angeben, wenn wir unseren fetch ausführen wollen.
+    </p>
+
+    <p>
+        nicht nur müssen wir die methode angeben, die wir nutzen, also POST, wir müssen auch sogenannte header-daten anfügen, die dafür sorgen, das die verbindung informationen erhält, die sie benötigt um daten auszutauschen - denn dieser header wird mit unserem request versendet.
+    </p>
+
+    <script>
+        // Wir geben unsere URL für die API an:
+        const url = "https://httpbin.org/post";
+
+        // Wir erstellen ein objekt mit daten, die wir gerne senden wollen:
+        const data = { firstName: "Max", lastName: "Mustermann", age: 25, isAdmin: false };
+
+        // Wir schreiben den fetch befehl wie wir es gelernt haben, aber diesmal fügen wir bei fetch ein konfigurationsobjekt ein.
+        fetch(
+            url,
+            {
+                method: "POST", // Der default ist GET, weswegen wir diese zeile bei einem fetch/GET nicht angeben müssen.
+                headers: // Hier können wir einige konfigurationen vornehmen, für die daten die wir senden
+                {
+                    'Content-Type': 'application/json' // Wir teilen dem server mit, dsas wir die daten im format JSON senden.
+                },
+                body: JSON.stringify(data) // wir nehmen unser datenobjekt, und wandeln es in einen string um um es an den server zu schicken.
+            }
+        ).then(response =>
+        {
+            console.log(response);
+            return response.json();
+        }).then(data =>
+        {
+            console.log(data);
+        }).catch(err =>
+        {
+            console.log(err);
+        });
+
+    </script>
+    
+</body>
+</html>
