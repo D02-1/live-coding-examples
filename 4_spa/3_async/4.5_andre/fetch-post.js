@@ -9,9 +9,15 @@ button.addEventListener('click', (event) => {
 
   fetch(url, {
     method : "POST",
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
     body : JSON.stringify(umschlag)
   }).then( (ergebnis) => {
     console.log(ergebnis);
+    ergebnis.json().then( daten => {
+      console.log(daten);
+    })
   }).catch ( (grund) => {
     console.error(grund);
   })
