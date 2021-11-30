@@ -10,7 +10,7 @@ const baueHaus= (grundflaeche, etagen ) => {
 }
 
 try {
-  console.log(baueHaus(100, 15));
+  console.log(baueHaus(100, 5));
 } catch (fehler) {
   console.error(fehler);
 }
