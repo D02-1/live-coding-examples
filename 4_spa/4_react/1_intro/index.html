@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Single Page Application</h1>
+
+    <p>
+        Zu allererst ist es wichtig zu wissen, das wir alle bereits regelmäßig mit SPA's also single page applications arbeiten. oder sie in unserem täglichen leben oft benutzen.
+    </p>
+
+    <p>
+        Einige beispiele für SPA's wären...
+    </p>
+        
+    <ul>
+        <li>FaceBook</li>
+        <li>Instagram</li>
+        <li>Google Maps</li>
+        <li>Google Mail</li>
+        <li>Google Search</li>
+        <li>Alphabet Youtube</li>
+        <li>PayPal</li>
+        <li>SnapChat</li>
+        <li>Netflix</li>
+        <li>AirBNB</li>
+        <li>Microsoft Skype</li>
+        <li>Slack</li>
+    </ul>
+        
+    <p>
+        All diese anbieter verwenden SPA's damit ihre services einfach zu erweitern, managen und nutzen sind.
+    </p>
+
+    <h2>Was ist eine Single Page Application?</h2>
+
+    <p>
+        Single page applications sind einzelne seiten, die viele informationen liefern können, und spezifische inhalte aktualisieren, ohne die seite wechseln zu müssen.
+    </p>
+
+    <p>
+        Wenn wir beispielsweise auf GMAIL sind, und uns durch die emails und ordner klicken, sehen wir das sich ausser des hauptinhaltes nichts ändert, die seite läd nicht neu, nur spezifische inhalte werden aktualisiert.
+    </p>
+
+    <h2>SPA Architektur</h2>
+
+    <p>
+        Die Single Page Application ist eine Webanwendung oder "Webseite", die mit dem benutzer interagiert, indem sie die aktuelle seite dynamisch umschreibt, anstatt neue seiten vom server zu laden.
+    </p>
+    
+    <p>
+        Dieser ansatz minimiert die unterbechung der benutzererfahrung zwischen den aufeinanderfolgenden seiten, so das die anwendung sich mehr wie eine desktop anwendung, also ein "computerprogramm" verhält. 
+    </p>
+
+    <p>
+        Auf den meisten webseiten gibt es viele sich wiederholenden inhalte, einige davon bleiben immer gleich, egal wo der benutzer sich hinbewegt, zum beispiel der Header, der Footer, die Navigationsleiste, und so weiter. Allgemeinem bleiben viele elemente des layouts gleich.
+    </p>
+
+    <p>
+        Single Page Applications machen sich die wiederholung von elementen, sogenannten komponenten zu nutze.
+    </p>
+
+    <p>
+        Bei traditionellen Multi Page Applications, würden wir bei jeder seite die wir anfragen immer die ganze seite, mit allen inhalten geliefert kriegen.
+
+    </p>
+
+    <img src="https://giphy.com/gifs/8F9sWWRDqbcpKoqoz3/fullscreen" alt="">
+
+    <p>
+        Bei einer SPA (Single Page Application) hingegen, bekommt unser browser eine bauanleitung, wie er die seite zusammensetzen soll, und wo sich was wiederholt oder benutzt wird, und fügt es dann alles zusammen.
+    </p>
+
+    <img src="https://giphy.com/gifs/52FwconEHyJH73EuFt/fullscreen" alt="">
+
+    <p>
+        Die geschwingdigkeit der SPA kommt dadurch zu stande, das ab diesem zeitpunkt, nur noch einzelne informationen ausgetauscht werden müssen, aber keione webseite mit all ihren inhalten mehr komplett heruntergeladen werden muss, während bei der klassischen seite jetzt immernoch bei jeder anfrage, die seite mit allen inhalten neu geladen werden muss.#
+    </p>
+
+    <img src="https://giphy.com/gifs/Xpj7yINzSulzLa8Oq7/fullscreen" alt="">
+
+    <p>
+        Da bei SPA's die aufgabe des zusammensetzen der webseite auf seiten d es browsers liegt, kann der inhalt dynamisch neu geschrieben werden, anstelle komplett neu geladen werden zu müssen.
+    </p>
+
+    <img src="https://giphy.com/gifs/KWQVAfIlg5LXQm87cg/fullscreen" alt="">
+
+    <p>
+        Anstelle das wir die seite immer neu laden, sehen wir also nur die neuen ersetzen inhalte.
+    </p>
+
+    <img src="https://www.bloomreach.com/binaries/ninecolumn/content/gallery/bloomreach.com_2/blog-images/2018/07/spa/traditional-vs-spa.png" alt="">
+
+    <p>
+        Gerade im JavaScript bereich sind SPA's beliebt weil man schnell und einfach komplette webseiten, oder web-applikationen erschaffen und diese dann wie desktop apps nutzen kann.
+    </p>
+
+    <h2>Das Konzept MVC</h2>
+
+    <img src="https://miro.medium.com/max/875/0*A2NPgocJSjAa2YNe.png" alt="">
+
+    <p>
+        MVC Steht für Model-View-Controller, eine spezielle struktur für web applikationen, in der die applikation in 3 komponenten eingeteilt wird, die voneinander getrennt entwicklt werden können.
+    </p>
+
+    <ul>
+        <li>Model: Die datebankanbidung, die mit dem Controller verbunden ist um daten auszutauschen</li>
+        <li>View: Die darstellung der daten auf der HTML seite, die über den controller zum benutzer kommen.</li>
+        <li>Controller: Die steuerung der applikation, hier sitzt die programmlogik die die daten und die sichtbare webseite verbindet.</li>
+    </ul>
+
+    <p>
+        Der vorteil dieser flexiblen art der programierung liegt in der einfachen wiederverwendbarkeit, und wartung. Im team ist es auch einfacher an MVC's zu arbeiten, wenn jeder seine bestimmten aufgabenbereiche hat. Allerdings ist das setup um eine MVC aufzubauen komplizierter und man ist möglicherweise abhängig von modulen anderer entwickler.
+    </p>
+
+    <h2>Was ist React?</h2>
+
+    <p>
+        React ist eine Javascript framework von FaceBook (Meta), genau wie bootstrap von Zurb Twitter kommt, hat facebook also mit React einen großen einfluss auf das gehabt, was wir als modernes web kennen.
+    </p>
+
+    <p>
+        React wurde entwickelt um interaktive benutzeroberflächen zu erstellen. Der hauptvorteil von React ist, das man sehr einfach verschiedene Views oder einzelne kleine teile, genannt komponenten, erstellen kann, die auf anfrage einfach geupdated werden können. Jeder komponent ist in der lage, seine eigenen daten und strukturen zu managen, weswegen man sie fantastisch zu komplexen benutzeroberflächen zusammenfügen kann.
+    </p>
+
+    <p>
+        Da die applikation dann aus einzelnen komponenten besteht, kann man sie voneinander getrennt updaten oder warten, ohne die gesuchte stelle auf tausendne zeilen html oder javascript suchen zu müssen.
+    </p>
+
+
+
+</body>
+</html>
