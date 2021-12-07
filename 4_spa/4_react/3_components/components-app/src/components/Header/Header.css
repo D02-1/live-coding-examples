@@ -1,0 +1,12 @@
+.Header
+{
+    width: 100vw;
+    top: 0;
+    line-height: 80px;
+    text-align: center;
+    background-color: #ccc;
+}
+.Header h1
+{
+    margin-top: 0;
+}

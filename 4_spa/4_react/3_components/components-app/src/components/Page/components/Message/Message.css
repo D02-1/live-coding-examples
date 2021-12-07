@@ -1,0 +1,16 @@
+.Message
+{
+    border: 1px solid black;
+    font-size: 24px;
+    margin: 20px;
+    border-radius: 10px;
+    background: #ccc;
+}
+.Message.success
+{
+    background: lime;
+}
+.Message.failure
+{
+    background: tomato;
+}
