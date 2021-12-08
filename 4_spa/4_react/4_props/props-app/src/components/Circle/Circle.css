@@ -1,0 +1,16 @@
+.Circle
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: red;
+}
+.Circle .innerCircle
+{
+    background: white;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 200px;
+}
