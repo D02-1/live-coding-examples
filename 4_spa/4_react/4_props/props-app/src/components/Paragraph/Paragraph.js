@@ -14,7 +14,7 @@ const Paragraph = (props) =>
                     // Wir können auf jegliche übergebenen attribute in props zugreifen:
                     props.hasArrow && 
                     <span style={{ color: props.color }}>
-                        =>
+                        =&gt;
                     </span>
                 }
                 { props.children }
