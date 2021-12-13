@@ -132,7 +132,96 @@
         Da die applikation dann aus einzelnen komponenten besteht, kann man sie voneinander getrennt updaten oder warten, ohne die gesuchte stelle auf tausendne zeilen html oder javascript suchen zu müssen.
     </p>
 
+    <p>
+        React hat eine sogenannte state und prop verwaltung, das sind 2 wichtige konzepte von React.
+    </p>
 
+    <ul>
+        <li>
+            Props sind eigenschaften die von aussen an komponenten übergeben werden um die funktionaltät zu erweitern, diese properties können innerhalb des komponenten verwendet werden. Das ist vergleichbar mit parametern die wir an eine funktion übergeben.
+        </li>
+        <li>
+            States sind eigenschaften die innerhalb einer komponente sind, um einfluss auf den zustand des views haben zu können. Diese states müssen auf spezielle art und weise gesetzt, genutzt und verändert werden, damit sie in echtzeit dynamisch verwendet werden können. Dies ist auch der grund, wieso React, React heisst, denn wenn sich ein state innerhalb einer komponente verändert, wird automatisch die renderfunktion aufgerufen, was dazu führt das die neuen daten direkt angezeigt werden, es wird auso auf einen state reagiert...reacted.
+        </li>
+    </ul>
+
+    <p>
+        React arbeitet ausserdem mit sogenannten hooks, die die states die verschieden lebensphasen eines komponenten, wie zum beispiel den zeitpunkt des ladens des komponenten direkt managen können.
+    </p>
+
+    <h2>Fangen wir an mit React</h2>
+
+    <p>
+        Die einfachste möglichkeit am anfang mit react zu arbeiten, ist das terminal programm "create-react-app", das uns eine Rudimentäres react projekt erstellt, mit dem wir arbeiten können. Create-react-app können wir entweder mit npm installieren, oder die live-version nutzen, in dem wir npx nutzen.
+    </p>
+
+    <p>
+        Wir nutzen npx damit wir das auch mal sehen.
+    </p>
+
+    <p>
+        Wir erstellen einen ordner. gehen hinein und schreiben "npx create-react-app". und fügen am ende unseren projektnamen an.
+        (npx create-react-app first app)
+    </p>
+
+    <p>
+        Wie wir sehen installiert es react und einige andere module... also warten wir mal ab.
+    </p>
+
+    <p>
+        In der zwischenzeit können wir mal in den browser, und uns ein chrome plugin namens "React Developer Tools" installieren, 
+        das wir in zukunft öfter mal benutzen werden um uns unsere komponenten im detail anzuschauen.
+    </p>
+
+    <p>
+        Wir geben bei google "React developer tools" ein, klicken das gesuchte ergebnis auf der chrome web store an, und installieren es in den browser.
+    </p>
+
+    <a href="React Developer Tools">React Developer Tools</a>
+
+    <p>
+        create-react-app hat uns jetzt eine komplette applikation erstellt, die wir theoretisch einfach ausführen könnne, mit den befehlen die uns aus der package.json im terminal bereitgestellt wurden, aber schauen wir uns erst einaml an was wir jetzt haben.
+    </p>
+
+    <p>
+        Einige dateien und ordner wurden erstellt.
+    </p>
+
+    <p>
+        der node-modules ordner ist riesig, wie erwartet, hier ist alles drin, was wir zum starten von reat brauchen. Wenn wir unsere applikation erweitern, brauchen wir gegebenfalles noch andere module, aber für den anfang dürfte das reichen.
+    </p>
+
+    <p>
+        Außerdem haben wir die ordner public und src.
+    </p>
+
+    <p>
+        in public finden wir die haupt html datei, die die app ausführen wird, und alles was sonst noch zu der html datei gehört wie zum beispiel das favicon.
+    </p>
+
+    <p>
+        Im ordner src finden wir unser react projekt:
+    </p>
+
+    <ul>
+        <li>App.css beinhaltet unser css.</li>
+        <li>App.js ist unsere eigentliche applikation.</li>
+        <li>App.test.js beinhaltet tests für die erfolgreiche ausführung der applikation</li>
+        <li>index.css beinhaltet css für den body, und vordefinierte elemente.</li>
+        <li>index.js ist die dastei, die unsere app in der html datei aufruft.</li>
+    </ul>
+
+    <p>
+        Den rest können wir ignorieren, und uns mal die applikation anschauen.
+    </p>
+
+    <p>
+        Jetzt schreiben wir "npm run start" und sehen den live server von create-react-app laufen.
+    </p>
+
+    <p>
+        Wenn wir jetzt in der App.js änderungen machen, sehen wir, durch den live server, diese sofort.
+    </p>
 
 </body>
 </html>
