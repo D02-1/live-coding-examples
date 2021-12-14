@@ -27,7 +27,7 @@ function App()
             setLoading(false);
         });
         // 9. Sihe da, ee fetch wir nur noch ein einziges mal ausgelöst, jetzt können wir die daten an den state übergeben, und auch unser loading au false setzen.
-    });
+    }, []);
 
     return (
         <div style={{ marginLeft: "25px" }}>
