@@ -26,7 +26,8 @@ function App()
             setData(json);
             setLoading(false);
         });
-        // 9. Sihe da, ee fetch wir nur noch ein einziges mal ausgelöst, jetzt können wir die daten an den state übergeben, und auch unser loading au false setzen.
+
+        // 9. Siehe da, fetch wir nur noch ein einziges mal ausgelöst, jetzt können wir die daten an den state übergeben, und auch unser loading au false setzen.
     }, []);
 
     return (
