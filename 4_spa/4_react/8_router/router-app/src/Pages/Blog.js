@@ -1,12 +1,16 @@
-const Blog = () =>
+const Blog = ({ active }) =>
 {
     return(
         <div>
             <h1>Blog</h1>
 
-            <p>
-                Hier finden Sie unser Blog!
-            </p>
+            {
+                active ?
+                <p>Hier finden sie unseren Blog</p>
+                :
+                <p>Dieser Blog ist Inaktiv!</p>
+            }
+            
         </div>
     )
 }
