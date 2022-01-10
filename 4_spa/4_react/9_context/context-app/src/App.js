@@ -39,6 +39,7 @@ const App = () =>
 
             {/* Ich habe einen komponenten erstellen, um die buttons aus der App.js auszulagern. */}
             <CurrencySwitcher />
+            
             <div className="App">
                 <Books list={ bookArray } />
             </div>
