@@ -18,22 +18,26 @@ const Shopping = () =>
         {
             title: "Flowers",
             description: "A beautiful flower bouquet",
-            price: 10.99
+            price: 10.99,
+            vat: 1.07
         },
         {
             title: "Thank you Card",
             description: "A Thank you card, with a personalized drawing",
-            price: 5
+            price: 5,
+            vat: 1.19
         },
         {
             title: "Collection of Chocolate candy",
             description: "A wonderful, tasty collection of chocolate candy",
-            price: 15
+            price: 15,
+            vat: 1.19
         },
         {
             title: "Bag of Candy",
             description: "A colorful bag of candy",
-            price: 3.50
+            price: 3.50,
+            vat: 1.19
         }
     ];
 
@@ -50,7 +54,7 @@ const Shopping = () =>
                                 <h2>{ article.title }</h2>
                                 <p>{ article.description }</p>
                                 <p>Price:&nbsp;
-                                    <b>${ article.price }</b>
+                                    <b>${ article.price } + { ((article.vat - 1) * 100).toFixed() }%</b>
                                 </p>
                                 {
                                     loggedInState &&

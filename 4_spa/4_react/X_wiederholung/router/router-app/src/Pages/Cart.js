@@ -12,7 +12,7 @@ const Cart = () =>
 
         cartContent.forEach(item =>
         {
-            total += item.price;
+            total += item.price * item.vat;
         });
 
         return total.toFixed(2);
@@ -46,7 +46,7 @@ const Cart = () =>
                                     return (
                                         <li key={ i }>
                                             <button onClick={ () => deleteItem(item.id) }>x</button>&nbsp;
-                                            { item.title } - ${ item.price }
+                                            { item.title } - ${ ((item.price) * item.vat).toFixed(2) }
                                         </li>
                                     )
                                 })
@@ -55,7 +55,7 @@ const Cart = () =>
 
                         <hr />
 
-                        <i>Total: ${ getTotal() }</i>
+                        <i>Total: ${ getTotal() } (including shipping and VAT!)</i>
                     </div>
                 )
             }
