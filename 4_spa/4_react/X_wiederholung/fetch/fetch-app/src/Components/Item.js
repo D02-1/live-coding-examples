@@ -2,9 +2,9 @@
 const Item = ({ item }) => {
     return(
         <li key={ item.id }>
-            <h2>
+            <h3>
                 {item.title}
-            </h2>
+            </h3>
             <p>
                 { item.body }
             </p>
