@@ -1,5 +1,3 @@
-https://dmitripavlutin.com/react-context-and-usecontext/
-
 import { useState } from 'react';
 
 import { UserDetailsContext } from './UserDetailsContext';
@@ -23,6 +21,8 @@ function App()
         <UserDetailsContext.Provider value={ value }>
             <div className="App">
                 <UserDetails/>
+
+                <hr />
 
                 <h2>
                     Change { userDetails.firstName }'s Age:
