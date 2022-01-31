@@ -27,6 +27,7 @@ const avg = (numArr) =>
     return sum(numArr) / numArr.length;
 }
 
+// Wir finden heraus falls ein eintrag keine nummer ist, und geben aus welcher eintrag nicht stimmte.
 const errNumber = numbers.find(input =>
 {
     if(Number(input) >= 0 === false)
@@ -47,7 +48,7 @@ switch(calcType)
         break;
     default:
         error = true;
-        console.log(`Fehler: Kann ${ calcType } nicht berechnen...`);
+        console.log(`Fehler: Kann "${ calcType }" nicht berechnen...`);
         break;
 }
 
