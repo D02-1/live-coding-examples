@@ -1,8 +1,11 @@
 // Wir holen uns die argumente aus process.argv heraus.
-const [ node, scripts, ...args] = process.argv;
+const [ node, scripts, ...args ] = process.argv;
 
 // Wir holen uns den Kalkulationstyp und die nummern dynamisch als spread operator aus args.
 const [ calcType, ...numbers ] = args;
+
+// calcType = "sum";
+// numbers = [ "1", "2", "3", "4" ];
 
 // Wir erstellen eine variable fürs ergebnis und eine für den error state.
 let result = 0;
