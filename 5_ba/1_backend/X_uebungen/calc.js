@@ -1,6 +1,9 @@
 // Wir holen uns die argumente aus process.argv heraus.
 const [ node, scripts, ...args ] = process.argv;
 
+// process.argv[0] = node;
+// process.argv[1] = scripts;
+
 // Wir holen uns den Kalkulationstyp und die nummern dynamisch als spread operator aus args.
 const [ calcType, ...numbers ] = args;
 
