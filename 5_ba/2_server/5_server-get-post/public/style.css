@@ -1,0 +1,19 @@
+.container
+{
+    margin: 0 auto;
+    width: 400px;
+    background: #cccccc;
+    padding: 10px;
+}
+
+input
+{
+    display: block;
+    width: calc(100% - 10px);
+    margin-bottom: 10px;
+}
+
+button
+{
+    width: 100%;
+}
