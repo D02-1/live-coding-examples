@@ -1,0 +1,45 @@
+require('dotenv').config();
+const http = require('http');
+const fs = require('fs');
+
+const port = process.env.PORT;
+
+const server = http.createServer((req, res) =>
+{
+	switch(req.url)
+	{
+		case "/":
+			fs.readFile('./dist/index.html', (err, content) =>
+			{
+				if(err) throw err;
+
+				res.writeHead(200, { 'Content-Type': 'text/html' });
+				res.write(content);
+				res.end();
+			});
+			break;
+		case "/favicon.png":
+			fs.readFile('./dist/favicon.png', (err, content) =>
+			{
+				if(err) throw err;
+
+				res.writeHead(200, { 'Content-Type': 'text/html' });
+				res.write(content)
+				res.end();
+			}
+			break;
+		case "/style.css":
+			fs.readFile('./dist/style.css', (err, content) =>
+			{
+				if(err) throw err;
+
+				res.writeHead(200, { 'Content-Type': 'image/cs' });
+				res.write(content);
+				res.end();
+			}
+			break;
+	}
+});
+
+server.listen(port, () => console.log(`Server läuft auf ${ port }`));
+
