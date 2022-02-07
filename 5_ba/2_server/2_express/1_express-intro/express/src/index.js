@@ -1,11 +1,20 @@
-// Wir importieren das modul express:
+// Wir importieren das modul express, das wir vorher mit "npm install express" installiert haben;
 const express = require('express');
 
 // Wir importieren path, um mit pfaden auf dem system arbeiten zu können;
 const path = require('path');
 
+// wir importieren den body-parser, den wir vorher mit "npm install body-parser" installiert haben, damit wir den body in post requests auslesen können:
+const bodyParser = require('body-parser');
+
 // Wir setzeen eine express instanz auf eine variable, in standardkonvention heisst diese 'app'
 const app = express();
+
+// wir sagen express, es soll als middleware den body parser nutzen, um die daten der url zu dekodieren, die standardeinstellung { extended: true } wird dabei immer übergeben:
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// damit express auch json lesen kann, falls wir mal ein frontend bauen, und mit axios oder fetch arbeiten, können wir außerdem noch die body-parser middleware .json(); hinzufügen um json zu dekodieren:
+app.use(bodyParser.json());
 
 // auch hier setzten wir den port fest:
 const port = 3000;
