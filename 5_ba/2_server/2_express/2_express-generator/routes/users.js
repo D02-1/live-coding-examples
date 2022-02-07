@@ -1,11 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
-const { home, create, update } = require('./../controllers/users.js');
+const { home, create, update, test } = require('./../controllers/users.js');
 /* GET users listing. */
 
 router.get('/', home);          // /users
-router.post('/create', create); // /users/create
+router.get('/create', create);  // /users/create
 router.put('/update', update);  // /users/update
+router.get('/test', test);      // /users/test
 
 module.exports = router;
