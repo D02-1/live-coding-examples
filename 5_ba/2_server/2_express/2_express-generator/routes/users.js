@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
+const { home, create, update } = require('./../controllers/users.js');
 /* GET users listing. */
 
-// das ist also: /users/
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/', home);          // /users
+router.post('/create', create); // /users/create
+router.put('/update', update);  // /users/update
 
 module.exports = router;
