@@ -1,0 +1,25 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "brand": "Ford",
+      "name": "Kuga",
+      "type": "suv",
+      "year": 2019
+    },
+    {
+      "id": 2,
+      "brand": "Ford",
+      "name": "Mustang",
+      "type": "sport",
+      "year": 2022
+    },
+    {
+      "id": 4,
+      "brand": "Jaguar",
+      "name": "F-Pace",
+      "type": "SUV",
+      "year": 2020
+    }
+  ]
+}

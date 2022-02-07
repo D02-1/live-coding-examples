@@ -65,7 +65,7 @@ const app = async () =>
         const data = res.data;
 
         console.log(
-            `Is is now ${ formatTemperature(data) } in ${ formatCity(data) }\n` +
+            `It is now ${ formatTemperature(data) } in ${ formatCity(data) }\n` +
             `The current weather conditions are: ${ data.weather[0].description }\n\n` + 
             "Forecast:"
         );
