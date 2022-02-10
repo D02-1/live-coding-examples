@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Wir importieren axios von einem CDN -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>Login</h1>
+
+    <!-- Wir legen 2 input felder für username und passwort an, das passwort übertragen wir in diesem beispiel als string, DIES WIRD IN PRODUKTION NIEEEEEEEMALS passieren. -->
+    <input
+        id="username-field"
+        type="text"
+        name="username"
+        placeholder="Username"
+    >
+    <br/>
+    <input
+        id="password-field"
+        type="password"
+        name="password"
+        placeholder="Password"
+    >
+    <br/>
+    <!-- Wir legen einen button zum absenden der daten an, wir nutzen in diesem beispiel NICHT das element form -->
+    <button id="login-button">Anmelden</button>
+    
+    <!-- Wir legen ein element an um fehler auszugeben -->
+    <div id="error-message"></div>
+
+    <script>
+        // Wir holen uns die 4 elemente
+        const usernameInputElement = document.getElementById('username-field');
+        const passwordInputElement = document.getElementById('password-field');
+        const loginButtonElement = document.getElementById('login-button');
+        const errorMessageElement = document.getElementById('error-message');
+
+        // wir erstellen ein button event in dem wir die daten an das backend übergeben:
+        loginButtonElement.onclick = (e) =>
+        {
+            const username = usernameInputElement.value;
+            const password = passwordInputElement.value;
+
+            axios.post("/login", {
+                username,
+                password
+            }).then(res =>
+            {
+                if(res.data.success === true)
+                {
+                    // wir schauen ob wir die userdaten bekommen (dies würde auch in produktion anders laufen, da wir auch hier offenkundig das passwort nicht übertragen)
+                    console.log(res.data.user);
+
+                    // wir speichern den loginstate in der localstorage
+                    window.localStorage.setItem("loggedIn", true);
+                    window.localStorage.setItem("sessionID", "sugfogsdiogw((§IFfh353r5trubdgbeg");
+
+                    // wir wecheln die adresse auf unser dashboard
+                    window.location.href = "http://localhost:3000/dashboard";
+                }
+                else
+                {
+                    errorMessageElement.innerText = res.data.message;
+                }
+            });
+        }
+    </script>
+</body>
+</html>
