@@ -3,7 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 
-// wir importieren mongoose:
+// wir importieren mongoose, weitere informationen zu mongoose findet ihr in der dokumentation: https://mongoosejs.com/docs/guide.html
 const mongoose = require('mongoose');
 
 // wir importieren unser modell:
@@ -121,8 +121,76 @@ app.get('/cars/:id', (req, res) =>
     });
 });
 
-// PUT /cars/:id
-// DELETE /cars/:id
+// PUT /cars/:id - einen eintrag anhand seiner id verändern
+app.put('/cars/:id', (req, res) =>
+{
+    // auch hier holen wir uns die ID aus den params
+    const { id } = req.params;
+
+    // es gibt verschiedene möglichkeiten ein dokument zu ändern, wenn wir das dokument anhand einer id suchen, gibt es dafür zum beispiel eine eigene methode namens .findByIdAndUpdate();, di das dokument sucht, und wenn gefunden, angefügte daten direkt einfügen kann.
+
+    // wir nutzen diesmal als beispiel allerdings wieder .find(); in der variation .findOne(); um spezfisch das erste dokument zurückzubekommen das gefunden wird. und speichern innerhalb des callbacks, so sehen wir, das wir auch hier auf die dokumenten daten zugreifen können und diese anpassen können:
+    Car.findOne({ _id: id}, (err, car) =>
+    {
+        if(err)
+        {
+            return res.status(400).json({
+                success: false,
+                message: err.message
+            });
+        }
+
+        // wir holen uns die daten vom gefundenen fahrzeug objekt und ersetzen sie mit den daten aus dem body, als default geben wir dieser die gefundenen daten an:
+        car.brand = req.body.brand || car.brand;
+        car.name = req.body.name || car.name;
+        car.type = req.body.type || car.type;
+        car.year = req.body.year || car.year;
+
+        // wir nutzen jetzt wieder den befehl .save(); und speichern so unsere neuen daten ab.
+        car.save((err, updatedCar) =>
+        {
+            if(err)
+            {
+                return res.status(400).json({
+                    success: false,
+                    message: err.message
+                });
+            }
+
+            return res.status(200).json({
+                success: true,
+                // wir fügen zu visuellen vereinfachung für uns noch die neu übertragenen daten ein:
+                newData: req.body,
+                data: updatedCar
+            });
+        });
+    });
+});
+
+
+// DELETE /cars/:id - einen eintrag anhand seiner id löschen
+app.delete('/cars/:id', (req, res) =>
+{
+    // wir holen uns die id aus den params:
+    const { id } = req.params;
+
+    // wir nutzen die methode .deleteOne(); um spezifisch das erste gefundene dokument zu löschen.
+    Car.deleteOne({ _id: id })
+    .then(() =>
+    {
+        return res.status(200).json({
+            success: true,
+            message: "Eintrag mit id " + id + " wurde gelöscht!"
+        });
+    })
+    .catch(err =>
+    {
+        return res.status(400).json({
+            success: false,
+            message: err.message
+        });
+    });
+});
 
 app.listen(port, () =>
 {
