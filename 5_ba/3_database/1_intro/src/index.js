@@ -139,9 +139,12 @@ const run = async () =>
     .catch(err => console.log(err));
 
     // da eine leere datenbank nicht angezeigt wird, könenn wir dies jetzt nur schwer testen, aber eine komplette datenbank löschen wir mit der mehtode .dropDatabase();, in unserem falle bekommen wir fehler, da die datenbank sowieso nicht mehr existiert.
-    db.dropDatabase('intro')
+    await db.dropDatabase('intro')
     .then(console.log("Datenbank gelöscht"))
     .catch(err => console.log(err));
+
+    // um die verbindung zur mongodb zu schließen nutzen wir den .close(); befehl:
+    await mongoose.connection.close();
 }
 
 run();
