@@ -131,7 +131,7 @@ const run = async () =>
     // mit mongoose können wir aus unserer app heraus sogar komplette kollektionen oder datenbanken droppen, also löschen.
 
     // alle dokumente innerhalb einer kollektion löschen wir mit:
-    // await Book.collection.drop();
+    await Book.collection.drop();
 
     // eine kollektion löschen wir mit:
     await db.dropCollection('books')
@@ -139,7 +139,9 @@ const run = async () =>
     .catch(err => console.log(err));
 
     // da eine leere datenbank nicht angezeigt wird, könenn wir dies jetzt nur schwer testen, aber eine komplette datenbank löschen wir mit der mehtode .dropDatabase();, in unserem falle bekommen wir fehler, da die datenbank sowieso nicht mehr existiert.
-    // db.dropDatabase('intro');
+    db.dropDatabase('intro')
+    .then(console.log("Datenbank gelöscht"))
+    .catch(err => console.log(err));
 }
 
 run();
