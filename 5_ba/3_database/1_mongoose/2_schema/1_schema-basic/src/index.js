@@ -24,7 +24,7 @@ app.post('/users', (req, res) =>
     // wir kümmern uns manuell um die neuen daten, so können wir in diesem beispiel besser kontrollieren was wir machen:
     newUser.firstname = "     Max               ";
     newUser.lastname = "             Mustermann";
-    newUser.username = "TestUser7";
+    newUser.username = "TestUser10";
     newUser.role = "Admin"; // wir überschreiben den default wert
     newUser.birthday = { day: 27, month: 8, year: 1984 }; // wir können direkt daten in ein objekt schieben
     newUser.test = "abc"; // Wenn wir einen schlüssel hinzufügen, den wir nicht im schema anlegen, wird dieser beim speichern ignoriert.
@@ -36,7 +36,6 @@ app.post('/users', (req, res) =>
         if(err) throw err;
 
         // bei erfolg geben wir die angelegten daten zurück:
-        console.log(user);
         res.json(user);
     });
 });

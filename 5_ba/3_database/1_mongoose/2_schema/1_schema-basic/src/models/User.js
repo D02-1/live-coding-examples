@@ -26,6 +26,11 @@ const schema = new Schema({
 {
     // in einem weiteren objekt können wir optionen angeben:
     timestamps: true // wir können automatisch timestamps anlegen lassen, diese werden angelegt, wenn das dokument erstellt wird (createdAt) und wenn das dokument verändert wird (updatedAt)
+})
+// schmemas besitzen auch events, die wir nach dem ausführen, oder vor dem ausführen einer aktion abfeuern können, zum beispiel können wir etwas direkt nach dem speichern ausführen
+.post('save', (doc) =>
+{
+    console.log(doc);
 });
 
 // wir erstellen ein modell, anhand der daten des schemas
