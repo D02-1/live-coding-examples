@@ -283,7 +283,7 @@ const showNewspaper = async (newspaperId) =>
         {
             console.log(article.title);
             console.log("\nvon " + article.author.lastname);
-            
+
             console.log('\n' + "-".repeat(100) + "\n");
         });
 
@@ -292,4 +292,3 @@ const showNewspaper = async (newspaperId) =>
 
 // wir lassen uns das newspaper anzeigen:
 showNewspaper("621ca79e81174fd8ae034f76");
-
