@@ -286,7 +286,6 @@ const showNewspaper = async (newspaperId) =>
 
             console.log('\n' + "-".repeat(100) + "\n");
         });
-
     });
 }
 
