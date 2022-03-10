@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Upload Image Beispiel</h1>
+
+    <!-- wir erstellen ein POST form element, geben als action den pfad unserer upload route an, und setzen den enctype auf multipart/form-data -->
+    <form action="/uploadphoto" enctype="multipart/form-data" method="POST">
+        <!-- um ein file upload feld in einem formular zu erstellen, setzen wir den input type auf "file" und geben bei accept an, was wir erlauben wollen, in unserem falle, akzeptieren wir nur images -->
+        <input type="file" name="testImage" accept="image/*">
+        <input type="text" name="testInput">
+        <input type="submit" value="Abschicken">
+    </form>
+
+</body>
+</html>
