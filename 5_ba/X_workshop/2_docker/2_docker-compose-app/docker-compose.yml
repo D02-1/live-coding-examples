@@ -1,0 +1,57 @@
+# Die docker-compose datei hat einige informationen, mit dene nwor das docker environment aufbauen.
+# wichtig ist, das wir uns bei .yml dateien genaustens an die einrückungen halten!
+
+# die docker compose version:
+version: '3.8'
+
+# die microservices die wir anlegen wollen:
+services:
+
+  # wir wollen mongodb starten
+  # wir nennen den service mongo:
+  mongo:
+    # wir nutzen das neueste mongodb image
+    image: mongo
+    # wir sagen mongodb soll bei jedem fehler oder verbindungsproblem neu starten:
+    restart: always
+    # wir sagen, wir wollen auf dem localhost port 27000 den port 27017 aus dem container mappen
+    ports:
+      - 27000:27017
+    # wir geben an, das wir mongos /data/db storage als "mongodb" erreichen wollen
+    volumes:
+      - mongodb:/data/db
+    # wir könen unsere env variablen hier angeben:
+    environment:
+      # der mongodb username
+      MONGO_INITDB_ROOT_USERNAME: admin
+      # das mongodb passwort
+      MONGO_INITDB_ROOT_PASSWORD: test1234
+
+  # web stellt unser frontend da, und im mern stack meist auch unser backend
+  # wenn wir docker-compose in unserem projekt ausführen, ist dies KEIN image, sondern wir builden es direkt
+  web:
+    # wir sagen wo der inhalt ist, den wir builden wollen:
+    build:
+      context: ./
+    # wir geben an, wie der container heißen soll:
+    container_name: node-app
+    #wir sagen, daws wir zum speichern der datieen ein volume nutzen wollen, eine art virutelle festplatte, dies ist in unserem ordner src, der im container erreichbar ist, und app/src
+    volumes:
+      - ./src:/app/src
+    # wir geben an, das wir als start kommando npm run start:dev nutzen wollen:
+    command: npm run start:dev
+    # wir sagen unsere app soll immer neu starten, wenn es fehler oder problem gibt
+    restart: always
+    # wir geben die ports an, die wir freigeben wollen, wir wollen port 3000 aus dem container auf port 5000 außerhalb mappen:
+    ports:
+      - 5000:3000
+    # wir geben an, das erst die datenbank gestartet sein muss, bevor der webservice gestartet wird:
+    depends_on:
+      - mongo
+    # wir können unsere env variablen aus der .env auch direkt importieren
+    env_file:
+      - .env
+
+# wir geben ein volume an, auf das alle services zugreifen können
+volumes:
+  mongodb:
